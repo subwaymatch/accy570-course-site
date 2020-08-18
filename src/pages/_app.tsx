@@ -28,7 +28,7 @@ const rrfProps = {
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
-  console.log(`App.router.route=${router.route}`);
+  console.log(`router.asPath=${router.asPath}`);
 
   return (
     <Provider store={store}>
@@ -40,7 +40,7 @@ export default function App({ Component, pageProps }: AppProps) {
           }}
         >
           <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
-            <Component {...pageProps} key={router.route} />
+            <Component {...pageProps} key={router.asPath} />
           </AnimatePresence>
         </IconContext.Provider>
       </ReactReduxFirebaseProvider>
