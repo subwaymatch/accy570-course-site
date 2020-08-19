@@ -3,8 +3,8 @@
 <a href="https://deepscan.io/dashboard#view=project&tid=10181&pid=13441&bid=226261"><img src="https://deepscan.io/api/teams/10181/projects/13441/branches/226261/badge/grade.svg" alt="DeepScan grade"></a>
 <a href="https://www.codacy.com/manual/subwaymatch/accy570-course-site?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=subwaymatch/accy570-course-site&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/3d567c86733347cd91477a4191859cb7"/></a>
 
-ACCY 570 Fall 2020 - Data Analytics Foundations for Accountancy (Section AD5, OD5)
-
+ACCY 570 Fall 2020 - Data Analytics Foundations for Accountancy (Section AD5, OD5)<br />
+This site is only used for Park's section (AD5 & OD5).
 
 Vercel Project - [https://vercel.com/subwaymatch/accy570](https://vercel.com/subwaymatch/accy570)
 
