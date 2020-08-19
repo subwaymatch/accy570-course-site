@@ -1,22 +1,18 @@
-# ByQuiz
-<a href="https://deepscan.io/dashboard#view=project&tid=10181&pid=12879&bid=206032"><img src="https://deepscan.io/api/teams/10181/projects/12879/branches/206032/badge/grade.svg" alt="DeepScan grade"></a>
-<a href="https://www.codacy.com/manual/subwaymatch/byquiz-prototype?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=subwaymatch/byquiz-prototype&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/f44c518a3b884f5b9a4c917206ad116d"/></a>
+# ACCY 570 Course Site
 
-<blockquote>Learn to code by solving problems - both inside and outside the classroom.</blockquote>
+<a href="https://deepscan.io/dashboard#view=project&tid=10181&pid=13441&bid=226261"><img src="https://deepscan.io/api/teams/10181/projects/13441/branches/226261/badge/grade.svg" alt="DeepScan grade"></a>
+<a href="https://www.codacy.com/manual/subwaymatch/accy570-course-site?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=subwaymatch/accy570-course-site&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/3d567c86733347cd91477a4191859cb7"/></a>
 
-**This project is in development.**
+ACCY 570 Fall 2020 - Data Analytics Foundations for Accountancy (Section AD5, OD5)
 
-Vercel Project - [https://vercel.com/subwaymatch/byquiz-prototype](https://vercel.com/subwaymatch/byquiz-prototype)
+
+Vercel Project - [https://vercel.com/subwaymatch/accy570](https://vercel.com/subwaymatch/accy570)
 
 ## Overview
 
-Learning to code - whether it's hardcore C/C++, less-hardcore Python, or SQL - is challenging. Hands-on coding experince is a must. But orchestrating a learning experience in a classroom environment poses multiple challenges. 
-
-- You can't embed code exercises into the Powerpoint slides. Switching between the slides and code exercises is an overhead for both the instructor and the students.
-- There is no way to check whether a learner's progress when working on code exercises. An instructor can walk around to see how everyone's doing.
 
 
-## Getting Started with Development
+## Local Development
 
 Run the development server:
 
@@ -42,4 +38,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ![next-vercel-illustration](https://user-images.githubusercontent.com/1064036/89702608-860a2900-d908-11ea-83ad-aa228b4322ae.jpg)
 
-[ByQuiz](https://byquiz.com) is built with [Next.js](https://nextjs.org/) and is continuously deployed to [Vercel](https://vercel.com/).
+[This site](https://accy570.org) is built with [Next.js](https://nextjs.org/) and is continuously deployed to [Vercel](https://vercel.com/).
