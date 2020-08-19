@@ -10,7 +10,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <Head>
-        <title>ByQuiz</title>
+        <title>ACCY 570</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
