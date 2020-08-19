@@ -5,6 +5,7 @@ import CourseModulePageContent from 'src/components/course/course-module-page-co
 import CourseModulePageQuestions from 'src/components/course/course-module-page-questions';
 import CourseModulePagesNavigation from 'src/components/course/course-module-pages-navigation';
 import CourseModulePageBottomNavigation from 'src/components/course/course-module-page-bottom-navigation';
+import { motion } from 'framer-motion';
 
 type PropTypes = {
   course: ICourse;
@@ -84,18 +85,35 @@ export default function CoursePageComponent({ course, pageData }: PropTypes) {
         </div>
 
         <div className="col-9">
-          <CourseModulePageContent pageData={pageData} />
+          <motion.div
+            key="course-module-page-content-wrapper"
+            variants={{
+              hidden: {
+                x: 50,
+                opacity: 0,
+              },
+              visible: {
+                x: 0,
+                opacity: 1,
+              },
+            }}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+          >
+            <CourseModulePageContent pageData={pageData} />
 
-          <CourseModulePageQuestions questions={pageData.questions} />
+            <CourseModulePageQuestions questions={pageData.questions} />
 
-          <CourseModulePageBottomNavigation
-            prevHref={prevHref}
-            prevModuleLabel={prevModuleLabel}
-            prevPageLabel={prevPageLabel}
-            nextHref={nextHref}
-            nextModuleLabel={nextModuleLabel}
-            nextPageLabel={nextPageLabel}
-          />
+            <CourseModulePageBottomNavigation
+              prevHref={prevHref}
+              prevModuleLabel={prevModuleLabel}
+              prevPageLabel={prevPageLabel}
+              nextHref={nextHref}
+              nextModuleLabel={nextModuleLabel}
+              nextPageLabel={nextPageLabel}
+            />
+          </motion.div>
         </div>
       </div>
     </div>

@@ -22,14 +22,14 @@ export default function CourseIndexPage({ courses }: CourseIndexPageProps) {
         exit="hidden"
         variants={{
           hidden: {
-            scale: 0.8,
+            y: 30,
             opacity: 0,
           },
           visible: {
-            scale: 1,
+            y: 0,
             opacity: 1,
             transition: {
-              delay: 0.4,
+              duration: 0.5,
             },
           },
         }}
@@ -55,7 +55,9 @@ export default function CourseIndexPage({ courses }: CourseIndexPageProps) {
                           href="/course/[courseId]/[moduleId]/[pageId]"
                           as={`/course/${course.id}/${cm.id}/${cm.pages[0].id}`}
                         >
-                          <a className={styles.moduleItem}>{cm.title}</a>
+                          <motion.a className={styles.moduleItem}>
+                            {cm.title}
+                          </motion.a>
                         </Link>
                       );
                     })}

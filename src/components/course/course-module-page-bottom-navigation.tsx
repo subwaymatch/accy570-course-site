@@ -26,7 +26,7 @@ export default function CourseModulePageBottomNavigation({
     <div className={styles.navigationWrapper}>
       <nav className={styles.navigation}>
         {prevHref ? (
-          <Link href={prevHref}>
+          <Link href="/course/[courseId]/[moduleId]/[pageId]" as={prevHref}>
             <div className={cx('navItem', 'navPrev')}>
               <BsChevronLeft className={cx('navArrowIcon')} />
               <div className={cx('label')}>
@@ -40,7 +40,7 @@ export default function CourseModulePageBottomNavigation({
         <div className={cx('spacer')} />
 
         {nextHref && (
-          <Link href={nextHref}>
+          <Link href="/course/[courseId]/[moduleId]/[pageId]" as={nextHref}>
             <div className={cx('navItem', 'navNext')}>
               <div className={cx('label')}>
                 <span className={cx('moduleLabel')}>{nextModuleLabel}</span>

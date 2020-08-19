@@ -21,7 +21,7 @@ export default function HeaderComponent({ headerTitle }: HeaderComponentProps) {
     <header className={styles.header}>
       <div className={styles.headerLeft}>
         <Link href="/">
-          <a className={styles.siteTitle}>ByQuiz</a>
+          <a className={styles.siteTitle}>Accy 570</a>
         </Link>
       </div>
 

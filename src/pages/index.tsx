@@ -33,16 +33,6 @@ export default function Home() {
               Learn anything by solving problems.
             </p>
           </motion.div>
-
-          <motion.div
-            variants={heroVariants}
-            className={styles.heroImageWrapper}
-          >
-            <img
-              src="/images/3d-colourful-layered-geometric-shapes-for-landing-pages-001@2x.png"
-              alt="3d Colorful Geometric Shapes for Landing Pages"
-            />
-          </motion.div>
         </div>
       </motion.div>
     </Layout>
