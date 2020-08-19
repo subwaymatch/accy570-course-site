@@ -3,10 +3,13 @@ import { ToastContainer } from 'react-toastify';
 import HeaderComponent from 'src/components/header';
 import SlideMenu from 'src/components/burger-menu';
 import styles from './layout.module.scss';
+import classNames from 'classnames';
 
-type LayoutProps = { children: React.ReactNode };
+const cx = classNames.bind(styles);
 
-export default function Layout({ children }: LayoutProps) {
+type LayoutProps = { children: React.ReactNode; fluid?: boolean };
+
+export default function Layout({ children, fluid }: LayoutProps) {
   return (
     <>
       <Head>
@@ -14,17 +17,26 @@ export default function Layout({ children }: LayoutProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div id="layout-wrapper" className={styles.layoutWrapper}>
+      <div
+        className={cx('layoutWrapper', {
+          fluid,
+          fixed: !fluid,
+        })}
+      >
         <SlideMenu />
 
         <div id="page-wrap" className={styles.pageWrapper}>
           <HeaderComponent />
 
-          <main className={styles.main}>
-            <div className="container">
-              <div className="row">{children}</div>
-            </div>
-          </main>
+          {fluid ? (
+            children
+          ) : (
+            <main className={styles.main}>
+              <div className="container">
+                <div className="row">{children}</div>
+              </div>
+            </main>
+          )}
         </div>
       </div>
 

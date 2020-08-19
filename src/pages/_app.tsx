@@ -28,8 +28,6 @@ const rrfProps = {
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
-  console.log(`router.asPath=${router.asPath}`);
-
   return (
     <Provider store={store}>
       <ReactReduxFirebaseProvider {...rrfProps}>

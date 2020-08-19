@@ -1,0 +1,38 @@
+@use 'sass:color';
+@import 'src/styles/variables';
+
+.pageWrapper {
+  background-color: #fffff5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .inner {
+    width: 50rem;
+
+    label {
+      display: block;
+      color: #6c4613;
+    }
+
+    input {
+      font-size: 1.9rem;
+      font-weight: 300;
+      display: block;
+      width: 100%;
+      border-radius: 0.5rem;
+      padding: 2rem;
+      border: none;
+      box-shadow: 0 0 1rem rgba(175, 175, 32, 0.08);
+      margin-top: 1rem;
+    }
+
+    input[type='submit'] {
+      color: white;
+      background-color: #6c4613;
+      cursor: pointer;
+    }
+  }
+}

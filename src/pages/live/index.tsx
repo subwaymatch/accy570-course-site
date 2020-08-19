@@ -3,6 +3,10 @@ import Layout from 'src/components/layout';
 import { motion } from 'framer-motion';
 import socketIOClient from 'socket.io-client';
 import { GetStaticProps } from 'next';
+import styles from './live.module.scss';
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(styles);
 
 let socket;
 
@@ -33,35 +37,40 @@ export default function SocketPage({ socketIOEndpoint }) {
   };
 
   return (
-    <Layout>
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        exit="hidden"
-        variants={{
-          visible: { opacity: 1 },
-          hidden: { opacity: 0 },
-        }}
-      >
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            joinLiveSession();
+    <Layout fluid>
+      <div className={cx('pageWrapper')}>
+        <motion.div
+          className={cx('inner')}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          variants={{
+            visible: { opacity: 1 },
+            hidden: { opacity: 0 },
           }}
         >
-          <input
-            type="text"
-            value={userName}
-            onChange={(e) => {
+          <form
+            className={cx('joinForm')}
+            onSubmit={(e) => {
               e.preventDefault();
-              setUserName(e.target.value);
+              joinLiveSession();
             }}
-          />
+          >
+            <label>NetID</label>
+            <input
+              type="text"
+              value={userName}
+              onChange={(e) => {
+                e.preventDefault();
+                setUserName(e.target.value);
+              }}
+            />
 
-          <input type="submit" value="Join" />
-        </form>
-        It's <time dateTime={response}>{response}</time>
-      </motion.div>
+            <input type="submit" value="Join" />
+          </form>
+          It's <time dateTime={response}>{response}</time>
+        </motion.div>
+      </div>
     </Layout>
   );
 }

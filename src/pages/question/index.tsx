@@ -14,22 +14,17 @@ type QuestionHomeProps = {
 const transition = { duration: 0.3, ease: [0.43, 0.13, 0.23, 0.96] };
 
 const thumbnailVariants = {
-  initial: { scale: 0.9, opacity: 0 },
-  enter: { scale: 1, opacity: 1, transition },
-  exit: {
-    scale: 0.8,
-    opacity: 0,
-    transition,
-  },
+  hidden: { scale: 0.9, opacity: 0 },
+  visible: { scale: 1, opacity: 1, transition },
 };
 
 export default function QuestionHome({ mcQuestions }: QuestionHomeProps) {
   return (
     <Layout>
       <motion.div
-        initial="initial"
-        animate="enter"
-        exit="exit"
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
         variants={thumbnailVariants}
       >
         <h1>List of Multiple Choice Questions</h1>
