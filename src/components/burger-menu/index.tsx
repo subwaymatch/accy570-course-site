@@ -59,7 +59,7 @@ export default function SlideMenu() {
           <div>
             <a
               className={styles.menuItem}
-              href="https://github.com/subwaymatch/byquiz-prototype"
+              href="https://github.com/subwaymatch/accy570-course-site"
             >
               <GoMarkGithub className={styles.menuItemIcon} />
               <span>GitHub</span>
