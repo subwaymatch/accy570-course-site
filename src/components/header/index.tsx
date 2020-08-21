@@ -1,10 +1,8 @@
 import Link from 'next/link';
-import styles from './header.module.scss';
-import { motion } from 'framer-motion';
-import { BsFillLayersFill } from 'react-icons/bs';
-import { IoIosFiling } from 'react-icons/io';
-import { FaPython } from 'react-icons/fa';
 import { useRouter } from 'next/router';
+import styles from './header.module.scss';
+import { BsFillLayersFill, BsCalendar, BsBook } from 'react-icons/bs';
+import { FaPython } from 'react-icons/fa';
 import classNames from 'classnames/bind';
 import MenuItem from './header-menu-item';
 
@@ -31,12 +29,19 @@ export default function HeaderComponent({ headerTitle }: HeaderComponentProps) {
         ) : (
           <nav className={styles.headerMainMenu}>
             <MenuItem
+              href="/"
+              active={false}
+              iconChild={<BsCalendar />}
+              label="Schedule"
+            />
+
+            <MenuItem
               href="/course"
               active={
                 router.pathname === '/course' ||
                 router.pathname.startsWith('/course/')
               }
-              iconChild={<BsFillLayersFill />}
+              iconChild={<BsBook />}
               label="Learn"
             />
 
@@ -46,7 +51,7 @@ export default function HeaderComponent({ headerTitle }: HeaderComponentProps) {
                 router.pathname === '/question' ||
                 router.pathname.startsWith('/question/')
               }
-              iconChild={<IoIosFiling />}
+              iconChild={<BsFillLayersFill />}
               label="Questions"
             />
 

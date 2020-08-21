@@ -2,6 +2,8 @@ import Link from 'next/link';
 import classNames from 'classnames/bind';
 import styles from './course-module-page-bottom-navigation.module.scss';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
+import { motion } from 'framer-motion';
+import { clickableVariants } from 'src/animations/variants';
 
 const cx = classNames.bind(styles);
 
@@ -27,13 +29,18 @@ export default function CourseModulePageBottomNavigation({
       <nav className={styles.navigation}>
         {prevHref ? (
           <Link href="/course/[courseId]/[moduleId]/[pageId]" as={prevHref}>
-            <div className={cx('navItem', 'navPrev')}>
+            <motion.div
+              className={cx('navItem', 'navPrev')}
+              variants={clickableVariants}
+              whileHover="hover"
+              whileTap="tap"
+            >
               <BsChevronLeft className={cx('navArrowIcon')} />
               <div className={cx('label')}>
                 <span className={cx('moduleLabel')}>{prevModuleLabel}</span>
                 <span className={cx('pageLabel')}>{prevPageLabel}</span>
               </div>
-            </div>
+            </motion.div>
           </Link>
         ) : null}
 
@@ -41,13 +48,18 @@ export default function CourseModulePageBottomNavigation({
 
         {nextHref && (
           <Link href="/course/[courseId]/[moduleId]/[pageId]" as={nextHref}>
-            <div className={cx('navItem', 'navNext')}>
+            <motion.div
+              className={cx('navItem', 'navNext')}
+              variants={clickableVariants}
+              whileHover="hover"
+              whileTap="tap"
+            >
               <div className={cx('label')}>
                 <span className={cx('moduleLabel')}>{nextModuleLabel}</span>
                 <span className={cx('pageLabel')}>{nextPageLabel}</span>
               </div>
               <BsChevronRight className={cx('navArrowIcon')} />
-            </div>
+            </motion.div>
           </Link>
         )}
       </nav>
