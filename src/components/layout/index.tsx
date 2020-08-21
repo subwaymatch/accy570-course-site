@@ -18,6 +18,7 @@ export default function Layout({ children, fluid }: LayoutProps) {
       </Head>
 
       <div
+        id="layout-wrapper"
         className={cx('layoutWrapper', {
           fluid,
           fixed: !fluid,

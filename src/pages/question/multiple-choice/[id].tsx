@@ -1,11 +1,12 @@
 import {
-  getAllMultipleChoiceQuestions,
+  getAllMultipleChoiceQuestionIds,
   getMultipleChoiceQuestion,
 } from 'lib/questions';
 import MultipleChoiceQuestion from 'src/components/question/multiple-choice';
 import { IMultipleChoiceQuestion } from 'typing/question';
 import Layout from 'src/components/layout';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { motion } from 'framer-motion';
 
 type MultipleChoiceQuestionPageProps = {
   question: IMultipleChoiceQuestion;
@@ -16,26 +17,36 @@ export default function MultipleChoiceQuestionPage({
 }: MultipleChoiceQuestionPageProps) {
   return (
     <Layout>
-      <div>Question ID: {question.id}</div>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
+        }}
+      >
+        <div>Question ID: {question.id}</div>
 
-      <MultipleChoiceQuestion
-        question={question}
-        onCorrectSubmission={() => {
-          // do nothing
-        }}
-        onIncorrectAttempt={() => {
-          // do nothing
-        }}
-      />
+        <MultipleChoiceQuestion
+          question={question}
+          onCorrectSubmission={() => {
+            // do nothing
+          }}
+          onIncorrectAttempt={() => {
+            // do nothing
+          }}
+        />
+      </motion.div>
     </Layout>
   );
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const mcQuestions = await getAllMultipleChoiceQuestions();
-  const paths = mcQuestions.map((question) => ({
+  const questionIds = await getAllMultipleChoiceQuestionIds();
+  const paths = questionIds.map((questionId) => ({
     params: {
-      id: question.id,
+      id: questionId,
     },
   }));
 

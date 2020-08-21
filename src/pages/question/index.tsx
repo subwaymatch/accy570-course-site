@@ -1,60 +1,97 @@
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import Layout from 'src/components/layout';
-import { getAllMultipleChoiceQuestions } from 'lib/questions';
-import { IMultipleChoiceQuestion } from 'typing/question';
+import {
+  getAllMultipleChoiceQuestionIds,
+  getAllPythonCodingQuestionIds,
+} from 'lib/questions';
 
 import styles from './index.module.scss';
 import { motion } from 'framer-motion';
 
 type QuestionHomeProps = {
-  mcQuestions: IMultipleChoiceQuestion[];
+  multipleChoiceIds: string[];
+  pythonCodingIds: string[];
 };
 
 const transition = { duration: 0.3, ease: [0.43, 0.13, 0.23, 0.96] };
 
 const thumbnailVariants = {
   hidden: { scale: 0.9, opacity: 0 },
-  visible: { scale: 1, opacity: 1, transition },
+  visible: { x: 0, scale: 1, opacity: 1, transition },
+  exit: {
+    x: -20,
+    scale: 0.9,
+    opacity: 0,
+    transition: {
+      staggerChildren: 0.2,
+      ...transition,
+    },
+  },
 };
 
-export default function QuestionHome({ mcQuestions }: QuestionHomeProps) {
+export default function QuestionHome({
+  multipleChoiceIds,
+  pythonCodingIds,
+}: QuestionHomeProps) {
   return (
-    <Layout>
+    <Layout fluid>
       <motion.div
+        className="container"
         initial="hidden"
         animate="visible"
         exit="hidden"
         variants={thumbnailVariants}
       >
-        <h1>List of Multiple Choice Questions</h1>
+        <div className="row">
+          <div className="col-12">
+            <h1>List of Questions</h1>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-6">
+            <h2>Multiple Choice</h2>
+            {multipleChoiceIds.map((questionId) => (
+              <Link
+                key={questionId}
+                href="/question/multiple-choice/[id]"
+                as={`/question/multiple-choice/${questionId}`}
+              >
+                <motion.a className={styles['questionLink']}>
+                  {questionId}
+                </motion.a>
+              </Link>
+            ))}
+          </div>
 
-        <motion.div
-          variants={{ exit: { transition: { staggerChildren: 0.2 } } }}
-        >
-          {mcQuestions.map((mcQuestion) => (
-            <Link
-              key={mcQuestion.id}
-              href="/question/multiple-choice/[id]"
-              as={`/question/multiple-choice/${mcQuestion.id}`}
-            >
-              <motion.a className={styles['questionLink']}>
-                {mcQuestion.id}
-              </motion.a>
-            </Link>
-          ))}
-        </motion.div>
+          <div className="col-6">
+            <h2>Python Coding</h2>
+            {pythonCodingIds.map((questionId) => (
+              <Link
+                key={questionId}
+                href="/question/python-coding/[id]"
+                as={`/question/python-coding/${questionId}`}
+              >
+                <motion.a className={styles['questionLink']}>
+                  {questionId}
+                </motion.a>
+              </Link>
+            ))}
+          </div>
+        </div>
       </motion.div>
     </Layout>
   );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const mcQuestions = await getAllMultipleChoiceQuestions();
+  const multipleChoiceIds = await getAllMultipleChoiceQuestionIds();
+  const pythonCodingIds = await getAllPythonCodingQuestionIds();
 
   return {
     props: {
-      mcQuestions,
+      multipleChoiceIds,
+      pythonCodingIds,
     },
   };
 };

@@ -36,20 +36,13 @@ export async function getMultipleChoiceQuestion(
   return questionData;
 }
 
-export async function getAllMultipleChoiceQuestions(): Promise<
-  IMultipleChoiceQuestion[]
-> {
+export async function getAllMultipleChoiceQuestionIds(): Promise<string[]> {
   const fileNames = fs.readdirSync(multipleChoicePath);
   const questionIds = fileNames.map((fileName) =>
     fileName.replace(/\.yaml$/, '')
   );
-  const questions = Promise.all(
-    questionIds.map(
-      async (questionId) => await getMultipleChoiceQuestion(questionId)
-    )
-  );
 
-  return questions;
+  return questionIds;
 }
 
 export async function getPythonCodingQuestion(
@@ -93,6 +86,14 @@ export async function getPythonCodingQuestion(
     templateCode,
     content: questionMarkdown,
   } as IPythonCodingQuestion;
+}
+
+export async function getAllPythonCodingQuestionIds(): Promise<string[]> {
+  const questionIds = fs
+    .readdirSync(pythonCodingPath)
+    .filter((f) => fs.statSync(path.join(pythonCodingPath, f)).isDirectory());
+
+  return questionIds;
 }
 
 // Full Id refers to "{question-type}/{question-id}"
