@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import classNames from 'classnames/bind';
 import styles from './header-menu-item.module.scss';
+import { clickableVariants } from 'src/animations/variants';
 
 const cx = classNames.bind(styles);
 
@@ -25,15 +26,9 @@ export default function HeaderMenuItem({
         className={cx('menuItem', {
           active,
         })}
-        whileHover={{
-          y: 2,
-          transition: {
-            duration: 0.1,
-          },
-        }}
-        whileTap={{
-          scale: 0.97,
-        }}
+        variants={clickableVariants}
+        whileHover="hover"
+        whileTap="tap"
       >
         <div className={cx('menuIconWrapper')}>{iconChild}</div>
 

@@ -11,8 +11,6 @@ import store from 'src/store';
 import 'src/styles/global.scss';
 import 'react-toastify/dist/ReactToastify.css';
 
-function handleExitComplete() {}
-
 const rrfConfig = {
   userProfile: 'users',
   useFirestoreForProfile: true,
@@ -37,7 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
             style: { verticalAlign: 'middle' },
           }}
         >
-          <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
+          <AnimatePresence exitBeforeEnter>
             <Component {...pageProps} key={router.asPath} />
           </AnimatePresence>
         </IconContext.Provider>
