@@ -37,7 +37,7 @@ export default function HeaderComponent({ headerTitle }: HeaderComponentProps) {
                 router.pathname.startsWith('/course/')
               }
               iconChild={<BsFillLayersFill />}
-              text="Courses"
+              label="Learn"
             />
 
             <MenuItem
@@ -47,14 +47,14 @@ export default function HeaderComponent({ headerTitle }: HeaderComponentProps) {
                 router.pathname.startsWith('/question/')
               }
               iconChild={<IoIosFiling />}
-              text="Challenges"
+              label="Questions"
             />
 
             <MenuItem
               href="/pyodide-test"
               active={router.pathname.startsWith('/playground')}
               iconChild={<FaPython />}
-              text="Playground"
+              label="Playground"
             />
           </nav>
         )}

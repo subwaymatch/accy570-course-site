@@ -9,14 +9,14 @@ const cx = classNames.bind(styles);
 type PropTypes = {
   href: string;
   iconChild: ReactChild;
-  text: string;
+  label: string;
   active: boolean;
 };
 
 export default function HeaderMenuItem({
   href,
   iconChild,
-  text,
+  label,
   active,
 }: PropTypes) {
   return (
@@ -37,7 +37,7 @@ export default function HeaderMenuItem({
       >
         <div className={cx('menuIconWrapper')}>{iconChild}</div>
 
-        <span>{text}</span>
+        <span>{label}</span>
       </motion.a>
     </Link>
   );
