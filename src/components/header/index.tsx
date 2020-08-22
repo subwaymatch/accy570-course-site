@@ -27,7 +27,7 @@ export default function HeaderComponent({ headerTitle }: HeaderComponentProps) {
         {headerTitle ? (
           <h1>{headerTitle}</h1>
         ) : (
-          <nav className={styles.headerMainMenu}>
+          <nav className={cx('is-hidden-touch', 'headerMainMenu')}>
             <MenuItem
               href="/"
               active={false}

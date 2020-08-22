@@ -3,7 +3,7 @@ import { ToastContainer } from 'react-toastify';
 import HeaderComponent from 'src/components/header';
 import SlideMenu from 'src/components/burger-menu';
 import styles from './layout.module.scss';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
@@ -15,11 +15,16 @@ export default function Layout({ children, fluid }: LayoutProps) {
       <Head>
         <title>ACCY 570</title>
         <link rel="icon" href="/favicon.ico" />
+
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        ></meta>
       </Head>
 
       <div
         id="layout-wrapper"
-        className={cx('layoutWrapper', {
+        className={cx(styles.layoutWrapper, {
           fluid,
           fixed: !fluid,
         })}
@@ -29,15 +34,13 @@ export default function Layout({ children, fluid }: LayoutProps) {
         <div id="page-wrap" className={styles.pageWrapper}>
           <HeaderComponent />
 
-          {fluid ? (
-            children
-          ) : (
-            <main className={styles.main}>
-              <div className="container">
-                <div className="row">{children}</div>
-              </div>
-            </main>
-          )}
+          <section className={cx('section', 'main')}>
+            {fluid ? (
+              children
+            ) : (
+              <div className="container is-widescreen">{children}</div>
+            )}
+          </section>
         </div>
       </div>
 

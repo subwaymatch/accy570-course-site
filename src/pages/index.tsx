@@ -22,12 +22,12 @@ export default function Home() {
   return (
     <Layout>
       <motion.div
-        className="row"
+        className="columns"
         initial="hidden"
         animate="visible"
         exit="hidden"
       >
-        <div className="col-12">
+        <div className="column">
           <motion.div variants={heroVariants}>
             <p className={styles.heroText}>
               Learn anything by solving problems.
