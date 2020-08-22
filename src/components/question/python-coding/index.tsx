@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import classNames from 'classnames/bind';
-import styles from './python-coding-question.module.scss';
+import pyodideManager from 'lib/pyodide/manager';
 import { editor } from 'monaco-editor/esm/vs/editor/editor.api';
 import {
   monaco,
@@ -8,6 +7,8 @@ import {
   ControlledEditor,
   ControlledEditorOnChange,
 } from '@monaco-editor/react';
+import classNames from 'classnames/bind';
+import styles from './python-coding-question.module.scss';
 import { IPythonCodingQuestion } from 'typings/question';
 import { CodeResult } from 'typings/pyodide';
 import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
@@ -47,61 +48,12 @@ export default function PythonCodingQuestion({
   const [showHint, setShowHint] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
 
-  const pyodideWorkerRef = useRef<Worker>();
-
   useEffect(() => {
-    pyodideWorkerRef.current = new Worker('lib/pyodide/worker.js', {
-      type: 'module',
+    pyodideManager.loadPyodide().then(() => {
+      pyodideManager.loadPackages(['nose']).then(() => {
+        setIsPyodideReady(true);
+      });
     });
-
-    pyodideWorkerRef.current.onmessage = (evt) => {
-      const data = evt.data;
-
-      console.log(evt);
-
-      switch (data.type) {
-        case 'PYODIDE_LOAD_COMPLETE':
-          setIsPyodideReady(true);
-
-          break;
-
-        case 'CODE_RUN_COMPLETE':
-          setCodeResult(data.result);
-          setIsPyodideReady(true);
-
-          toast(`Finished running code`);
-
-          break;
-
-        case 'CODE_RUN_AND_CHECK_COMPLETE':
-          setCodeResult(data.result);
-          setIsCorrect(data.result.isCorrect);
-
-          if (data.result.isCorrect) {
-            toast(`Very nice!`);
-          } else {
-            toast(`Oops, let's give that another try...`);
-          }
-
-          setIsSubmitComplete(true);
-          setIsPyodideReady(true);
-
-          break;
-
-        default:
-          // do nothing
-          break;
-      }
-    };
-
-    // Request to load Pyodide in worker thread
-    pyodideWorkerRef.current.postMessage({
-      type: 'LOAD_PYODIDE',
-    });
-
-    return () => {
-      pyodideWorkerRef.current.terminate();
-    };
   }, []);
 
   const toggleHint = () => {
@@ -109,23 +61,30 @@ export default function PythonCodingQuestion({
   };
 
   const runCode = async () => {
+    console.log('runCode');
     setIsPyodideReady(false);
 
-    pyodideWorkerRef.current.postMessage({
-      type: 'RUN_CODE',
-      userCode: editorValue,
-    });
+    const codeResult = await pyodideManager.runCode(editorValue);
+
+    console.log(codeResult);
+    setCodeResult(codeResult);
+
+    setIsPyodideReady(true);
   };
 
   const runAndCheckCode = async () => {
     setIsPyodideReady(false);
-    setSubmittedCode(editorValue);
 
-    pyodideWorkerRef.current.postMessage({
-      type: 'RUN_AND_CHECK_CODE',
-      userCode: editorValue,
-      checkCode: question.checkCode,
-    });
+    // setSubmittedCode(editorValue);
+
+    const codeResult = await pyodideManager.runAndCheckCode(
+      editorValue,
+      question.checkCode
+    );
+
+    setCodeResult(codeResult);
+
+    setIsPyodideReady(true);
   };
 
   const handleEditorDidMount: EditorDidMount = (_, editor) => {

@@ -17,7 +17,11 @@ export default function PyodideTest(props: any) {
           visible: { opacity: 1 },
         }}
       >
-        <PythonCodingQuestion question={props.question} />
+        <div className="columns">
+          <div className="column">
+            <PythonCodingQuestion question={props.question} />
+          </div>
+        </div>
       </motion.div>
     </Layout>
   );

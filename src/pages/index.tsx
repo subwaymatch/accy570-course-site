@@ -30,7 +30,7 @@ export default function Home() {
         <div className="column">
           <motion.div variants={heroVariants}>
             <p className={styles.heroText}>
-              Learn anything by solving problems.
+              Data Analytics Foundations for Accountancy
             </p>
           </motion.div>
         </div>
