@@ -67,10 +67,10 @@ export default function CoursePageComponent({ course, pageData }: PropTypes) {
     : null;
 
   return (
-    <div>
-      <div className="row">
-        <div className="col-3">&nbsp;</div>
-        <div className="col-9">
+    <>
+      <div className="columns">
+        <div className="column is-one-quarter">&nbsp;</div>
+        <div className="column is-three-quarters">
           <CourseModulePagesNavigation
             courseId={course.id}
             moduleId={currentModule.id}
@@ -79,12 +79,12 @@ export default function CoursePageComponent({ course, pageData }: PropTypes) {
           />
         </div>
       </div>
-      <div className="row">
-        <div className="col-3">
+      <div className="columns">
+        <div className="column is-one-quarter">
           <CourseSidebar course={course} currentModuleId={pageData.moduleId} />
         </div>
 
-        <div className="col-9">
+        <div className="column is-three-quarters">
           <motion.div
             key="course-module-page-content-wrapper"
             variants={{
@@ -116,6 +116,6 @@ export default function CoursePageComponent({ course, pageData }: PropTypes) {
           </motion.div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -15,7 +15,7 @@ type CourseIndexPageProps = {
 
 export default function CourseIndexPage({ courses }: CourseIndexPageProps) {
   return (
-    <Layout>
+    <Layout backgroundColor="#f5f5f5">
       <motion.div
         initial="hidden"
         animate="visible"
@@ -38,37 +38,39 @@ export default function CourseIndexPage({ courses }: CourseIndexPageProps) {
         <div className="columns">
           <div className="column">
             <h1 className={cx('pageTitle')}>All Courses</h1>
-
-            {courses.map((course) => (
-              <div key={course.id} className={cx('courseItem')}>
-                <div className="frame">
-                  <div className={cx('courseInfo')}>
-                    <h2 className={cx('courseTitle')}>{course.title}</h2>
-                    <p>{course.description}</p>
-                  </div>
-
-                  {course.modules && (
-                    <div>
-                      {course.modules.map((cm) => {
-                        return (
-                          <Link
-                            key={cm.id}
-                            href="/course/[courseId]/[moduleId]/[pageId]"
-                            as={`/course/${course.id}/${cm.id}/${cm.pages[0].id}`}
-                          >
-                            <motion.a className={styles.moduleItem}>
-                              {cm.title}
-                            </motion.a>
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
           </div>
         </div>
+
+        {courses.map((course) => (
+          <div key={course.id} className={cx('columns', 'courseItem')}>
+            <div className="column is-one-quarter">Course Image</div>
+
+            <div className="column is-three-quarters">
+              <div className={cx('courseInfo')}>
+                <h2 className={cx('courseTitle')}>{course.title}</h2>
+                <p>{course.description}</p>
+              </div>
+
+              {course.modules && (
+                <div>
+                  {course.modules.map((cm) => {
+                    return (
+                      <Link
+                        key={cm.id}
+                        href="/course/[courseId]/[moduleId]/[pageId]"
+                        as={`/course/${course.id}/${cm.id}/${cm.pages[0].id}`}
+                      >
+                        <motion.a className={styles.moduleItem}>
+                          {cm.title}
+                        </motion.a>
+                      </Link>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
       </motion.div>
     </Layout>
   );

@@ -7,9 +7,23 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-type LayoutProps = { children: React.ReactNode; fluid?: boolean };
+type LayoutProps = {
+  children: React.ReactNode;
+  fluid?: boolean;
+  backgroundColor?: string;
+};
 
-export default function Layout({ children, fluid }: LayoutProps) {
+export default function Layout({
+  children,
+  fluid,
+  backgroundColor,
+}: LayoutProps) {
+  const mainStyle: {
+    backgroundColor?: string;
+  } = {};
+
+  if (backgroundColor) mainStyle.backgroundColor = backgroundColor;
+
   return (
     <>
       <Head>
@@ -34,13 +48,15 @@ export default function Layout({ children, fluid }: LayoutProps) {
         <div id="page-wrap" className={styles.pageWrapper}>
           <HeaderComponent />
 
-          <section className={cx('section', 'main')}>
+          <main className={cx('main')} style={mainStyle}>
             {fluid ? (
               children
             ) : (
-              <div className="container is-widescreen">{children}</div>
+              <section className={cx('section')}>
+                <div className="container is-widescreen">{children}</div>
+              </section>
             )}
-          </section>
+          </main>
         </div>
       </div>
 

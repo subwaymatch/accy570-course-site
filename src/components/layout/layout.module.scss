@@ -1,20 +1,19 @@
 .layoutWrapper {
-  // .pageWrapper {
-  //   min-height: 100vh;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   align-items: center;
-  //   background: yellow;
+  .pageWrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
 
-  //   .main {
-  //     padding: 2rem 0;
-  //     flex-grow: 1;
-  //     display: flex;
-  //     flex-direction: column;
-  //     justify-content: center;
-  //     align-items: center;
-  //     background: yellowgreen;
-  //   }
-  // }
+    .main {
+      flex-grow: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
