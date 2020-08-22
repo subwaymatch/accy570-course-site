@@ -59,9 +59,7 @@ export default function QuestionHome({
                 href="/question/multiple-choice/[id]"
                 as={`/question/multiple-choice/${questionId}`}
               >
-                <motion.a className={styles['questionLink']}>
-                  {questionId}
-                </motion.a>
+                <motion.a className={cx('questionLink')}>{questionId}</motion.a>
               </Link>
             ))}
           </div>
@@ -74,9 +72,7 @@ export default function QuestionHome({
                 href="/question/python-coding/[id]"
                 as={`/question/python-coding/${questionId}`}
               >
-                <motion.a className={styles['questionLink']}>
-                  {questionId}
-                </motion.a>
+                <motion.a className={cx('questionLink')}>{questionId}</motion.a>
               </Link>
             ))}
           </div>
