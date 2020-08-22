@@ -8,14 +8,12 @@ const cx = classNames.bind(styles);
 
 type MultipleChoiceQuestionProps = {
   question: IMultipleChoiceQuestion;
-  onCorrectSubmission?: () => void;
-  onIncorrectAttempt?: () => void;
+  afterSubmit?: (isCorrect) => void;
 };
 
 export default function MultipleChoiceQuestion({
   question,
-  onCorrectSubmission,
-  onIncorrectAttempt,
+  afterSubmit,
 }: MultipleChoiceQuestionProps) {
   const { options, correctOptions, text, hint, explanation } = question;
 
@@ -62,14 +60,8 @@ export default function MultipleChoiceQuestion({
 
     setDidSubmit(true);
 
-    if (isCorrectTemp) {
-      if (onCorrectSubmission) {
-        onCorrectSubmission();
-      }
-    } else {
-      if (onIncorrectAttempt) {
-        onIncorrectAttempt();
-      }
+    if (afterSubmit) {
+      afterSubmit(isCorrectTemp);
     }
   };
 

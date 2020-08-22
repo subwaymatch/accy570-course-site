@@ -49,6 +49,7 @@ class PyodideManager {
 
   async runCode(code: string) {
     if (!this.isLoaded) await this.loadPyodide();
+
     try {
       // TODO: Reset global environment (clear global variables)
 

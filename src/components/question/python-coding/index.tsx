@@ -82,7 +82,14 @@ export default function PythonCodingQuestion({
       question.checkCode
     );
 
+    console.log('runAndCheckCode complete!');
+    console.log(codeResult);
+
     setCodeResult(codeResult);
+
+    if (!codeResult.hasError) {
+      setIsCorrect(true);
+    }
 
     setIsPyodideReady(true);
   };
