@@ -53,7 +53,7 @@ export default function Layout({
               children
             ) : (
               <section className={cx('section')}>
-                <div className="container is-widescreen">{children}</div>
+                <div className="container">{children}</div>
               </section>
             )}
           </main>

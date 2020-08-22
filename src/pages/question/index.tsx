@@ -5,9 +5,11 @@ import {
   getAllMultipleChoiceQuestionIds,
   getAllPythonCodingQuestionIds,
 } from 'lib/questions';
-
 import styles from './index.module.scss';
 import { motion } from 'framer-motion';
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(styles);
 
 type QuestionHomeProps = {
   multipleChoiceIds: string[];
@@ -35,21 +37,21 @@ export default function QuestionHome({
   pythonCodingIds,
 }: QuestionHomeProps) {
   return (
-    <Layout fluid>
+    <Layout>
       <motion.div
-        className="container"
         initial="hidden"
         animate="visible"
         exit="hidden"
         variants={thumbnailVariants}
       >
-        <div className="row">
-          <div className="col-12">
+        <div className="columns">
+          <div className="column is-full">
             <h1>List of Questions</h1>
           </div>
         </div>
-        <div className="row">
-          <div className="col-6">
+
+        <div className="columns">
+          <div className="column is-half">
             <h2>Multiple Choice</h2>
             {multipleChoiceIds.map((questionId) => (
               <Link
@@ -64,7 +66,7 @@ export default function QuestionHome({
             ))}
           </div>
 
-          <div className="col-6">
+          <div className="column is-half">
             <h2>Python Coding</h2>
             {pythonCodingIds.map((questionId) => (
               <Link
