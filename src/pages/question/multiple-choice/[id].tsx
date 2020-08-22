@@ -30,10 +30,7 @@ export default function MultipleChoiceQuestionPage({
 
         <MultipleChoiceQuestion
           question={question}
-          onCorrectSubmission={() => {
-            // do nothing
-          }}
-          onIncorrectAttempt={() => {
+          afterSubmit={() => {
             // do nothing
           }}
         />
