@@ -3,7 +3,7 @@ import {
   QuestionType,
   IMultipleChoiceQuestion,
   IPythonCodingQuestion,
-} from 'typing/question';
+} from 'typings/question';
 import MultipleChoiceQuestion from './multiple-choice';
 import PythonCodingQuestion from './python-coding';
 

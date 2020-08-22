@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import classNames from 'classnames/bind';
 import styles from './course-module-pages-navigation.module.scss';
-import { ICourseModulePageMeta } from 'typing/course';
+import { ICourseModulePageMeta } from 'typings/course';
 import { clickableVariants } from 'src/animations/variants';
 
 const cx = classNames.bind(styles);

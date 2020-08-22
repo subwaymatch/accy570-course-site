@@ -5,7 +5,7 @@ import {
   IMultipleChoiceQuestion,
   QuestionType,
   IPythonCodingQuestion,
-} from 'typing/question';
+} from 'typings/question';
 import { readMarkdownFile, getFileContents } from './utils';
 
 const questionContentPath = path.join(process.cwd(), 'content', 'question');

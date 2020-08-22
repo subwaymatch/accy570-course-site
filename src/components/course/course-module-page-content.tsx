@@ -1,4 +1,4 @@
-import { ICourseModulePageData } from 'typing/course';
+import { ICourseModulePageData } from 'typings/course';
 import classNames from 'classnames/bind';
 import styles from './course-module-page-content.module.scss';
 

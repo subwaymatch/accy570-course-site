@@ -5,7 +5,7 @@ import {
   ICourseModule,
   ICourseModulePageData,
   ICourseModulePageMeta,
-} from 'typing/course';
+} from 'typings/course';
 import { readYamlFile, readFileFrontMatter, readMarkdownFile } from './utils';
 
 import { getQuestionByFullId } from './questions';

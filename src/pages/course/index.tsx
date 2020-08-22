@@ -1,4 +1,4 @@
-import { ICourse } from 'typing/course';
+import { ICourse } from 'typings/course';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import classNames from 'classnames/bind';

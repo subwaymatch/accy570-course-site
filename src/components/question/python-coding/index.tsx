@@ -8,8 +8,8 @@ import {
   ControlledEditor,
   ControlledEditorOnChange,
 } from '@monaco-editor/react';
-import { IPythonCodingQuestion } from 'typing/question';
-import { CodeResult } from 'typing/pyodide';
+import { IPythonCodingQuestion } from 'typings/question';
+import { CodeResult } from 'typings/pyodide';
 import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
 import { FiArrowDownRight } from 'react-icons/fi';
 import { RiLightbulbLine } from 'react-icons/ri';

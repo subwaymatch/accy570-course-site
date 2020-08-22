@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import classNames from 'classnames/bind';
 import _ from 'lodash';
-import { ICourse } from 'typing/course';
+import { ICourse } from 'typings/course';
 import styles from './course-sidebar.module.scss';
 import { GoCheck } from 'react-icons/go';
 import { motion } from 'framer-motion';

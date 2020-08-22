@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import Layout from 'src/components/layout';
 import PythonCodingQuestion from 'src/components/question/python-coding';
-import { IPythonCodingQuestion } from 'typing/question';
+import { IPythonCodingQuestion } from 'typings/question';
 import { getQuestionByFullId } from 'lib/questions';
 import { motion } from 'framer-motion';
 

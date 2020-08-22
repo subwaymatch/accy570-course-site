@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { ICourse, ICourseModule, ICourseModulePageData } from 'typing/course';
+import { ICourse, ICourseModule, ICourseModulePageData } from 'typings/course';
 import CourseSidebar from 'src/components/course/course-sidebar';
 import CourseModulePageContent from 'src/components/course/course-module-page-content';
 import CourseModulePageQuestions from 'src/components/course/course-module-page-questions';
