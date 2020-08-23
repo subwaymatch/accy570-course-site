@@ -11,12 +11,14 @@ type LayoutProps = {
   children: React.ReactNode;
   fluid?: boolean;
   backgroundColor?: string;
+  className?: string;
 };
 
 export default function Layout({
   children,
   fluid,
   backgroundColor,
+  className,
 }: LayoutProps) {
   const mainStyle: {
     backgroundColor?: string;
@@ -60,7 +62,7 @@ export default function Layout({
 
       <div
         id="layout-wrapper"
-        className={cx(styles.layoutWrapper, {
+        className={cx(styles.layoutWrapper, className, {
           fluid,
           fixed: !fluid,
         })}

@@ -6,14 +6,14 @@ import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import socketIOClient from 'socket.io-client';
 import Layout from 'src/components/layout';
-import styles from './live.module.scss';
+import styles from './join.module.scss';
 import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
 let socket;
 
-export default function SocketPage({ socketIOEndpoint }) {
+export default function LiveJoinPage({ socketIOEndpoint }) {
   const router = useRouter();
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
@@ -51,45 +51,41 @@ export default function SocketPage({ socketIOEndpoint }) {
   };
 
   return (
-    <Layout backgroundColor="#fffff5" fluid>
-      <div className={cx('pageWrapper')}>
-        <div className="container">
-          <div className="columns">
-            <div className="column is-full">
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                variants={{
-                  visible: { opacity: 1 },
-                  hidden: { opacity: 0 },
+    <Layout className={cx('joinPage')} backgroundColor="#fffff5">
+      <div className="columns">
+        <div className="column is-full">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={{
+              visible: { opacity: 1 },
+              hidden: { opacity: 0 },
+            }}
+          >
+            <form
+              className={cx('joinForm')}
+              onSubmit={(e) => {
+                e.preventDefault();
+                joinLiveSession();
+              }}
+            >
+              <label>NetID</label>
+              <input
+                type="text"
+                value={userName}
+                onChange={(e) => {
+                  e.preventDefault();
+                  setUserName(e.target.value);
                 }}
-              >
-                <form
-                  className={cx('joinForm')}
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    joinLiveSession();
-                  }}
-                >
-                  <label>NetID</label>
-                  <input
-                    type="text"
-                    value={userName}
-                    onChange={(e) => {
-                      e.preventDefault();
-                      setUserName(e.target.value);
-                    }}
-                  />
+              />
 
-                  <input type="submit" value="Join" />
-                </form>
-                It's <time dateTime={response}>{response}</time>
-                <br />
-                UserName: {user.userName}
-              </motion.div>
-            </div>
-          </div>
+              <input type="submit" value="Join" />
+            </form>
+            It's <time dateTime={response}>{response}</time>
+            <br />
+            UserName: {user.userName}
+          </motion.div>
         </div>
       </div>
     </Layout>
