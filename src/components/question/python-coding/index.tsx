@@ -51,9 +51,7 @@ export default function PythonCodingQuestion({
 
   useEffect(() => {
     pyodideManager.loadPyodide().then(() => {
-      pyodideManager.loadPackages(['nose']).then(() => {
-        setIsPyodideReady(true);
-      });
+      setIsPyodideReady(true);
     });
   }, []);
 
@@ -92,10 +90,14 @@ export default function PythonCodingQuestion({
 
     if (!codeResult.hasError) {
       setIsCorrect(true);
-      afterSubmit(true);
+      if (afterSubmit) {
+        afterSubmit(true);
+      }
     } else {
       setIsCorrect(false);
-      afterSubmit(false);
+      if (afterSubmit) {
+        afterSubmit(false);
+      }
     }
 
     setIsPyodideReady(true);

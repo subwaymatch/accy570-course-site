@@ -1,3 +1,4 @@
-from nose.tools import assert_equal
+import unittest
 
-assert_equal(mylist, [-4, "cat", 8.7])
+tc = unittest.TestCase()
+tc.assertEqual(mylist, [-4, "cat", 8.7])

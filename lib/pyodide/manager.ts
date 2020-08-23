@@ -3,13 +3,15 @@ import _ from 'lodash';
 
 declare let window: PyodideEnabledWindow;
 
+type RunCodeOptions = {
+  reset?: boolean;
+};
+
 class PyodideManager {
   isLoaded: boolean;
-  loadedPackages: string[];
 
   constructor() {
     this.isLoaded = false;
-    this.loadedPackages = [];
 
     // Only run if in browser
     if (typeof window !== 'undefined') {
@@ -18,18 +20,18 @@ class PyodideManager {
   }
 
   async loadPyodide() {
-    console.log(`loadPyodide isLoaded=${this.isLoaded}`);
-
     if (this.isLoaded) {
-      console.log('pyodide already loaded');
       return;
     }
-
-    console.log('now loading pyodide');
 
     return new Promise((resolve, reject) => {
       window.languagePluginLoader
         .then(() => {
+          // Intercept Python stdout & stderr to StringIO
+          window.pyodide.runPython(`import io, sys
+sys.stdout = io.StringIO()
+sys.stderr = io.StringIO()`);
+
           this.isLoaded = true;
 
           resolve();
@@ -42,27 +44,28 @@ class PyodideManager {
 
   async loadPackages(packages) {
     await window.pyodide.loadPackage(packages);
-
-    console.log('loadPackages');
-    console.log(window.pyodide.loadedPackages);
   }
 
-  async runCode(code: string) {
+  async runCode(code: string, options?: RunCodeOptions) {
     if (!this.isLoaded) await this.loadPyodide();
 
-    try {
-      // TODO: Reset global environment (clear global variables)
+    // Assign default options
+    options = Object.assign(
+      {
+        reset: true,
+      },
+      options
+    );
 
-      // Intercept Python stdout & stderr to StringIO
-      window.pyodide.runPython(`import io, sys
-sys.stdout = io.StringIO()
+    try {
+      if (options.reset === true) {
+        window.pyodide.runPython(`sys.stdout = io.StringIO()
 sys.stderr = io.StringIO()`);
+      }
 
       const output = window.pyodide.runPython(code);
       const stdout = window.pyodide.runPython('sys.stdout.getvalue()');
-      const stderr = await window.pyodide.runPythonAsync(
-        'sys.stderr.getvalue()'
-      );
+      const stderr = window.pyodide.runPython('sys.stderr.getvalue()');
 
       return {
         hasError: false,
@@ -81,12 +84,14 @@ sys.stderr = io.StringIO()`);
   async runAndCheckCode(code: string, checkCode: string) {
     let codeResult = await this.runCode(code);
 
-    let runAndCheckResult = Object.assign(codeResult, {
+    let runAndCheckResult = Object.assign({}, codeResult, {
       isCorrect: false,
     });
 
     if (!codeResult.hasError) {
-      const checkResult = await this.runCode(checkCode);
+      const checkResult = await this.runCode(checkCode, {
+        reset: false,
+      });
 
       runAndCheckResult = Object.assign({}, codeResult, {
         hasError: checkResult.hasError,
