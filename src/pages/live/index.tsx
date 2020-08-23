@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
-import Layout from 'src/components/layout';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectUser, updateUserName } from 'lib/slices/liveUserSlice';
+import { GetStaticProps } from 'next';
 import { motion } from 'framer-motion';
 import socketIOClient from 'socket.io-client';
-import { GetStaticProps } from 'next';
+import Layout from 'src/components/layout';
 import styles from './live.module.scss';
 import classNames from 'classnames/bind';
 
@@ -11,7 +13,10 @@ const cx = classNames.bind(styles);
 let socket;
 
 export default function SocketPage({ socketIOEndpoint }) {
-  const [userName, setUserName] = useState('');
+  const dispatch = useDispatch();
+  const user = useSelector(selectUser);
+
+  const [userName, setUserName] = useState(user.userName);
   const [response, setResponse] = useState('');
 
   console.log(`socketIOEndpoint=${socketIOEndpoint}`);
@@ -30,17 +35,19 @@ export default function SocketPage({ socketIOEndpoint }) {
   }, []);
 
   const joinLiveSession = () => {
-    socket.emit('joinRequest', {
-      userName,
-      sessionName: 'AD5',
-    });
+    // socket.emit('joinRequest', {
+    //   userName,
+    //   sessionName: 'AD5',
+    // });
+    console.log(`joinLiveSession(${userName})`);
+    dispatch(updateUserName(userName));
   };
 
   return (
     <Layout backgroundColor="#fffff5" fluid>
       <div className={cx('pageWrapper')}>
         <motion.div
-          className={cx('inner')}
+          className="container"
           initial="hidden"
           animate="visible"
           exit="hidden"
@@ -69,6 +76,8 @@ export default function SocketPage({ socketIOEndpoint }) {
             <input type="submit" value="Join" />
           </form>
           It's <time dateTime={response}>{response}</time>
+          <br />
+          UserName: {user.userName}
         </motion.div>
       </div>
     </Layout>
