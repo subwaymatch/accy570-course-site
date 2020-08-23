@@ -20,7 +20,10 @@ export default function PythonCodingQuestionPage(props: any) {
           visible: { opacity: 1 },
         }}
       >
-        <PythonCodingQuestion question={props.question} />
+        <PythonCodingQuestion
+          question={props.question}
+          afterSubmit={() => {}}
+        />
       </motion.div>
     </Layout>
   );

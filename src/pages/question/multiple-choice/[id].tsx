@@ -26,8 +26,6 @@ export default function MultipleChoiceQuestionPage({
           visible: { opacity: 1 },
         }}
       >
-        <div>Question ID: {question.id}</div>
-
         <MultipleChoiceQuestion
           question={question}
           afterSubmit={() => {

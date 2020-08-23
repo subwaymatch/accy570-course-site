@@ -43,9 +43,9 @@
 }
 
 .correctResultBox .inner {
-  color: color.scale($color-primary, $lightness: -60%, $saturation: 20%);
+  color: color.scale($color-correct, $lightness: -60%, $saturation: 20%);
   background-color: color.scale(
-    $color-primary,
+    $color-correct,
     $lightness: 92%,
     $saturation: 10%
   );
@@ -55,19 +55,23 @@
   }
 
   .boxLabel {
-    color: $color-primary;
+    color: $color-correct;
   }
 }
 
 .incorrectResultBox .inner {
-  color: color.scale(#ff44bb, $lightness: -60%, $saturation: 20%);
-  background-color: color.scale(#ff44bb, $lightness: 92%, $saturation: 10%);
+  color: color.scale($color-incorrect, $lightness: -60%, $saturation: 20%);
+  background-color: color.scale(
+    $color-incorrect,
+    $lightness: 92%,
+    $saturation: 10%
+  );
 
   img.characterImage {
     width: 4.5rem;
   }
 
   .boxLabel {
-    color: #ff44bb;
+    color: $color-incorrect;
   }
 }

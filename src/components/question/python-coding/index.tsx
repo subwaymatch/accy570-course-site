@@ -14,7 +14,6 @@ import { CodeResult } from 'typings/pyodide';
 import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
 import { FiArrowDownRight } from 'react-icons/fi';
 import { RiLightbulbLine } from 'react-icons/ri';
-import { toast } from 'react-toastify';
 import { RunCodeButton, SubmitButton } from 'src/components/question/buttons';
 import {
   HintBox,
@@ -26,10 +25,12 @@ const cx = classNames.bind(styles);
 
 type PythonCodingQuestionProps = {
   question: IPythonCodingQuestion;
+  afterSubmit?: (isCorrect) => void;
 };
 
 export default function PythonCodingQuestion({
   question,
+  afterSubmit,
 }: PythonCodingQuestionProps) {
   const defaultCodeResult: CodeResult = {
     hasError: false,
@@ -87,8 +88,14 @@ export default function PythonCodingQuestion({
 
     setCodeResult(codeResult);
 
+    setIsSubmitComplete(true);
+
     if (!codeResult.hasError) {
       setIsCorrect(true);
+      afterSubmit(true);
+    } else {
+      setIsCorrect(false);
+      afterSubmit(false);
     }
 
     setIsPyodideReady(true);
