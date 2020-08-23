@@ -1,13 +1,79 @@
+@use 'sass:color';
 @import 'src/styles/variables';
 
-p.heroText {
-  text-align: center;
-  font-size: 6rem;
-  line-height: 7.5rem;
-  font-weight: 900;
-  color: black;
-}
+.homePage {
+  font-size: 1.15rem;
+  line-height: 1.9;
 
-.heroImageWrapper {
-  margin-top: 2rem;
+  .section {
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-weight: 500;
+  }
+
+  h3 {
+    color: color.scale($color-secondary, $lightness: 75%, $saturation: -70%);
+    font-size: 1rem;
+    letter-spacing: 0;
+  }
+
+  a {
+    color: $color-secondary;
+  }
+
+  p {
+    color: #444;
+    margin-bottom: 1.6rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .syllabusHeader {
+    text-align: center;
+
+    .meetingTimes {
+      color: #bbb;
+      font-size: 1rem;
+    }
+  }
+
+  .zoomLinksSection {
+    margin-top: 1rem;
+
+    a.zoomLink {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 1rem;
+      background-color: #2d8cff;
+      box-shadow: 0 0 1rem rgba(#2d8cff, 0.4);
+      border-radius: 0.5rem;
+
+      .zoomIcon {
+        color: white;
+        font-size: 5rem;
+        margin-right: 0.5rem;
+      }
+
+      .label {
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 300;
+      }
+
+      &:hover {
+        background-color: color.scale(#2d8cff, $lightness: -5%);
+      }
+    }
+  }
 }
