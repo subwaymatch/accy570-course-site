@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styles from './header.module.scss';
-import { BsFillLayersFill, BsCalendar, BsBook } from 'react-icons/bs';
+import { BsCalendar, BsBook } from 'react-icons/bs';
+import { BiBroadcast } from 'react-icons/bi';
 import { FaPython } from 'react-icons/fa';
 import classNames from 'classnames/bind';
 import MenuItem from './header-menu-item';
@@ -34,7 +35,6 @@ export default function HeaderComponent({ headerTitle }: HeaderComponentProps) {
               iconChild={<BsCalendar />}
               label="Schedule"
             />
-
             <MenuItem
               href="/course"
               active={
@@ -44,7 +44,12 @@ export default function HeaderComponent({ headerTitle }: HeaderComponentProps) {
               iconChild={<BsBook />}
               label="Learn"
             />
-
+            <MenuItem
+              href="/live"
+              active={router.pathname.startsWith('/live')}
+              iconChild={<BiBroadcast />}
+              label="Live"
+            />
             <MenuItem
               href="/pyodide-test"
               active={router.pathname.startsWith('/playground')}

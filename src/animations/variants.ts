@@ -9,3 +9,14 @@ export const clickableVariants = {
     scale: 0.97,
   },
 };
+
+export const fadeUpDownVariants = {
+  hidden: {
+    y: 20,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};

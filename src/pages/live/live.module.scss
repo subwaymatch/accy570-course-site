@@ -2,9 +2,7 @@
 @import 'src/styles/variables';
 
 .pageWrapper {
-  .inner {
-    max-width: 32rem;
-  }
+  width: 100%;
 
   label {
     display: block;
@@ -21,11 +19,17 @@
     border: none;
     box-shadow: 0 0 1rem rgba(175, 175, 32, 0.08);
     margin-top: 1rem;
+    outline: none;
+
+    &:focus {
+      box-shadow: 0 0 1.5rem rgba(175, 175, 32, 0.24);
+    }
   }
 
   input[type='submit'] {
     color: white;
     background-color: #6c4613;
+    font-weight: 300;
     cursor: pointer;
   }
 }
