@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { push as Menu } from 'react-burger-menu';
 import { RiHome2Line, RiArrowDropRightLine } from 'react-icons/ri';
 import { BsFillLayersFill } from 'react-icons/bs';
-import { AiFillBank } from 'react-icons/ai';
 import { GoMarkGithub } from 'react-icons/go';
 
 import styles from './burger-menu.module.scss';
@@ -79,15 +78,6 @@ export default function SlideMenu() {
             <a className={styles.menuItem}>
               <BsFillLayersFill className={styles.menuItemIcon} />
               <span>Courses</span>
-              <RiArrowDropRightLine className={styles.hoverIndicatorIcon} />
-            </a>
-          </Link>
-        </div>
-        <div>
-          <Link href="/question">
-            <a className={styles.menuItem}>
-              <AiFillBank className={styles.menuItemIcon} />
-              <span>Question Bank</span>
               <RiArrowDropRightLine className={styles.hoverIndicatorIcon} />
             </a>
           </Link>

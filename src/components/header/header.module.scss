@@ -13,10 +13,12 @@
   }
 
   .siteTitle {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     display: inline-block;
     padding: 0.5rem 1rem;
     font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.04rem;
 
     color: black;
     cursor: pointer;

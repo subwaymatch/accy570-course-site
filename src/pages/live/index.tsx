@@ -37,7 +37,7 @@ export default function SocketPage({ socketIOEndpoint }) {
   };
 
   return (
-    <Layout fluid>
+    <Layout backgroundColor="#fffff5" fluid>
       <div className={cx('pageWrapper')}>
         <motion.div
           className={cx('inner')}

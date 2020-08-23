@@ -46,16 +46,6 @@ export default function HeaderComponent({ headerTitle }: HeaderComponentProps) {
             />
 
             <MenuItem
-              href="/question"
-              active={
-                router.pathname === '/question' ||
-                router.pathname.startsWith('/question/')
-              }
-              iconChild={<BsFillLayersFill />}
-              label="Questions"
-            />
-
-            <MenuItem
               href="/pyodide-test"
               active={router.pathname.startsWith('/playground')}
               iconChild={<FaPython />}
