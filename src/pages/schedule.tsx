@@ -6,17 +6,9 @@ import CourseCalendar from 'src/components/course-calendar';
 
 const cx = classNames.bind(styles);
 
-enum ScheduleType {
-  Lecture,
-  AfterClassAssignment,
-  Quiz,
-  Midterm,
-  FinalProject,
-}
-
 export default function SchedulePage() {
   return (
-    <Layout backgroundColor="#f5f5f5" fluid>
+    <Layout backgroundColor="#eee" fluid>
       <motion.div exit={{}}></motion.div>
       <CourseCalendar />
     </Layout>
