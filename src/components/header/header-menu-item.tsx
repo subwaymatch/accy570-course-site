@@ -22,8 +22,6 @@ export default function HeaderMenuItem({
   active,
   show,
 }: PropTypes) {
-  console.log(`show=${show}`);
-
   if (show === undefined) {
     show = true;
   }

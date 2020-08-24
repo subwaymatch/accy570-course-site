@@ -1,7 +1,5 @@
 ---
-title: 'Prime numbers'
-questions:
-  - multiple-choice/find-prime-numbers
+title: 'Instructor'
 ---
 
 ### Prime Numbers?

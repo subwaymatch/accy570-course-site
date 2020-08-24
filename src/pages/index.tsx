@@ -221,11 +221,14 @@ export default function Home() {
         <div className="column is-three-quarters">
           <p>
             This is a graduate-level course and I hate to grade attendance.
-            However, the cost of skipping is very high in this course. If you
-            skip class, you are likely to fall behind for the entire semester
-            (even worse, throughout subsequent Data Analytics courses in future
-            semesters). To incentivize to attend class, I will take attendance
-            and grade it. Up to 2 absences are allowed without a prior approval
+            However, the cost of skipping is <strong>very</strong> high in this
+            course. If you skip class, you are likely to fall behind for the
+            entire semester (even worse, throughout subsequent Data Analytics
+            courses in future semesters). To incentivize to attend class, I will
+            take attendance and grade it.{' '}
+            <strong>
+              Up to 2 absences are allowed without a prior approval
+            </strong>{' '}
             (no points will be deducted for the first 2 absences). Once you have
             used up the 2 allowances, please email me in advance if you cannot
             attend the class with your explanation.
@@ -239,12 +242,6 @@ export default function Home() {
         </div>
 
         <div className="column is-three-quarters">
-          <p>
-            I understand that speaking up in class is not easy. It wasn’t easy
-            for me either. However, expressing your ideas to others is a
-            critical skill in business. I encourage you to overcome your fears
-            and participate in class.
-          </p>
           <p>
             Your participation grades are based on two criteria – 1)
             participation in discussion and 2) participation in in-class
@@ -264,8 +261,10 @@ export default function Home() {
         <div className="column is-three-quarters">
           <p>
             While the TAs and I will make every effort to grade your work
-            accurately, grading errors can occur. If you believe your grade for
-            an assignment or an exam doens't accurately reflect your
+            accurately, grading errors can occur. If you believe a grading error
+            exists on your assignment/project, please e-mail me{' '}
+            <strong>within one week</strong> from the day the grades were
+            released.
           </p>
         </div>
       </div>
