@@ -38,7 +38,7 @@ export default function HeaderComponent({ headerTitle }: HeaderComponentProps) {
             />
             <MenuItem
               href="/schedule"
-              active={false}
+              active={router.pathname === '/schedule'}
               iconChild={<BsCalendar />}
               label="Schedule"
             />
@@ -56,12 +56,6 @@ export default function HeaderComponent({ headerTitle }: HeaderComponentProps) {
               active={router.pathname.startsWith('/live')}
               iconChild={<BiBroadcast />}
               label="Live"
-            />
-            <MenuItem
-              href="/pyodide-test"
-              active={router.pathname.startsWith('/playground')}
-              iconChild={<FaPython />}
-              label="Playground"
             />
           </nav>
         )}

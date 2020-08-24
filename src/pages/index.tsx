@@ -64,7 +64,11 @@ const GradeComponent = ({
 
     <div className={cx('gradeSubcomponents')}>
       {subcomponents &&
-        subcomponents.map((sc) => <span className={cx('item')}>{sc}</span>)}
+        subcomponents.map((sc, idx) => (
+          <span key={idx} className={cx('item')}>
+            {sc}
+          </span>
+        ))}
     </div>
   </div>
 );
@@ -272,9 +276,11 @@ export default function Home() {
 
         <div className="column is-two-quarters">
           <p>
-            I will deduct points on all late submissions. The amount of
+            Points are deducted from all late submissions. The amount of
             deduction will be <strong>10%</strong> of the total available points
-            for the assignment per day.
+            for the assignment per day. For example, if you turn in an
+            assignment a day late and score 90%, your adjusted points will be
+            80%.
           </p>
         </div>
 
