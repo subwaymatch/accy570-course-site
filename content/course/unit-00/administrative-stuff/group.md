@@ -2,4 +2,9 @@
 title: 'Group Work'
 ---
 
-Multiplication is one of the four elementary mathematical operations of arithmetic, with the others being addition, subtraction and division. The result of a multiplication operation is called the product.
+![Group](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/group-01%402x.png)
+
+- Groups of 1~3
+- Can work as an individual
+- Peer-evaluation
+- Free-rider? Talk to me if peer-evaluation isn't enough.

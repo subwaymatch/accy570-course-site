@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { push as Menu } from 'react-burger-menu';
 import { RiHome2Line, RiArrowDropRightLine } from 'react-icons/ri';
-import { BsFillLayersFill } from 'react-icons/bs';
-import { GoMarkGithub } from 'react-icons/go';
+import { BsBook, BsCalendar } from 'react-icons/bs';
+import { IoIosFiling } from 'react-icons/io';
 
 import styles from './burger-menu.module.scss';
 
@@ -55,20 +55,19 @@ export default function SlideMenu() {
         }
       >
         <div>
-          <div>
-            <a
-              className={styles.menuItem}
-              href="https://github.com/subwaymatch/accy570-course-site"
-            >
-              <GoMarkGithub className={styles.menuItemIcon} />
-              <span>GitHub</span>
-              <RiArrowDropRightLine className={styles.hoverIndicatorIcon} />
-            </a>
-          </div>
           <Link href="/">
             <a className={styles.menuItem}>
-              <RiHome2Line className={styles.menuItemIcon} />
-              <span>Home</span>
+              <IoIosFiling className={styles.menuItemIcon} />
+              <span>Syllabus</span>
+              <RiArrowDropRightLine className={styles.hoverIndicatorIcon} />
+            </a>
+          </Link>
+        </div>
+        <div>
+          <Link href="/schedule">
+            <a className={styles.menuItem}>
+              <BsCalendar className={styles.menuItemIcon} />
+              <span>Schedule</span>
               <RiArrowDropRightLine className={styles.hoverIndicatorIcon} />
             </a>
           </Link>
@@ -76,8 +75,8 @@ export default function SlideMenu() {
         <div>
           <Link href="/course">
             <a className={styles.menuItem}>
-              <BsFillLayersFill className={styles.menuItemIcon} />
-              <span>Courses</span>
+              <BsBook className={styles.menuItemIcon} />
+              <span>Learn</span>
               <RiArrowDropRightLine className={styles.hoverIndicatorIcon} />
             </a>
           </Link>
