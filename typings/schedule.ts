@@ -4,6 +4,6 @@ export enum ScheduleType {
   AfterClassAssignment = 'AfterClassAssignment',
   Quiz = 'Quiz',
   Midterm = 'Midterm',
-  FinalProject = 'FinalProject',
+  Final = 'Final',
   ProblemSet = 'ProblemSet',
 }

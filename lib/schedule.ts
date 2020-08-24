@@ -15,7 +15,7 @@ const events = [
   {
     date: '0827',
     type: ScheduleType.AfterClassAssignment,
-    text: 'After Class Exercise #1 Due by 11:59pm',
+    text: 'After Class Exercise #1 due by 11:59pm',
   },
   {
     date: '0831',
@@ -25,7 +25,7 @@ const events = [
   {
     date: '0901',
     type: ScheduleType.AfterClassAssignment,
-    text: 'After Class Exercise #2 Due by 11:59pm',
+    text: 'After Class Exercise #2 due by 11:59pm',
   },
   {
     date: '0902',
@@ -40,7 +40,7 @@ const events = [
   {
     date: '0903',
     type: ScheduleType.AfterClassAssignment,
-    text: 'After Class Exercise #3 Due by 11:59pm',
+    text: 'After Class Exercise #3 due by 11:59pm',
   },
   {
     date: '0907',
@@ -55,7 +55,7 @@ const events = [
   {
     date: '0910',
     type: ScheduleType.AfterClassAssignment,
-    text: 'After Class Exercise #4 Due by 11:59pm',
+    text: 'After Class Exercise #4 due by 11:59pm',
   },
   {
     date: '0914',
@@ -65,7 +65,7 @@ const events = [
   {
     date: '0915',
     type: ScheduleType.AfterClassAssignment,
-    text: 'After Class Exercise #5 Due by 11:59pm',
+    text: 'After Class Exercise #5 due by 11:59pm',
   },
   {
     date: '0916',
@@ -75,7 +75,7 @@ const events = [
   {
     date: '0917',
     type: ScheduleType.AfterClassAssignment,
-    text: 'After Class Exercise #6 Due by 11:59pm',
+    text: 'After Class Exercise #6 due by 11:59pm',
   },
   {
     date: '0921',
@@ -90,7 +90,7 @@ const events = [
   {
     date: '0922',
     type: ScheduleType.AfterClassAssignment,
-    text: 'After Class Exercise #7 Due by 11:59pm',
+    text: 'After Class Exercise #7 due by 11:59pm',
   },
   {
     date: '0923',
@@ -100,7 +100,7 @@ const events = [
   {
     date: '0927',
     type: ScheduleType.ProblemSet,
-    text: 'Problem Set #1 Due by 11:59pm',
+    text: 'Problem Set #1 due by 11:59pm',
   },
   {
     date: '0928',
@@ -115,7 +115,7 @@ const events = [
   {
     date: '1002',
     type: ScheduleType.AfterClassAssignment,
-    text: 'After Class Exercise #8 Due by 11:59pm',
+    text: 'After Class Exercise #8 due by 11:59pm',
   },
   {
     date: '1005',
@@ -135,7 +135,7 @@ const events = [
   {
     date: '1008',
     type: ScheduleType.AfterClassAssignment,
-    text: 'After Class Exercise #9 Due by 11:59pm',
+    text: 'After Class Exercise #9 due by 11:59pm',
   },
   {
     date: '1012',
@@ -145,22 +145,17 @@ const events = [
   {
     date: '1014',
     type: ScheduleType.Lecture,
-    text: 'Intro to working with data',
-  },
-  {
-    date: '1014',
-    type: ScheduleType.Lecture,
-    text: 'Files and file systems, CSV files',
+    text: ['Intro to working with data', 'Files and file systems, CSV files'],
   },
   {
     date: '1015',
     type: ScheduleType.AfterClassAssignment,
-    text: 'After Class Exercise #10 Due by 11:59pm',
+    text: 'After Class Exercise #10 due by 11:59pm',
   },
   {
     date: '1018',
     type: ScheduleType.ProblemSet,
-    text: 'Problem Set #2 Due by 11:59pm',
+    text: 'Problem Set #2 due by 11:59pm',
   },
   {
     date: '1019',
@@ -175,17 +170,160 @@ const events = [
   {
     date: '1021',
     type: ScheduleType.Lecture,
-    text: 'Loading data into Pandas',
-  },
-  {
-    date: '1021',
-    type: ScheduleType.Lecture,
-    text: 'Data cleaning',
+    text: ['Loading data into Pandas', 'Data cleaning'],
   },
   {
     date: '1022',
     type: ScheduleType.AfterClassAssignment,
-    text: 'After Class Exercise #11 Due by 11:59pm',
+    text: 'After Class Exercise #11 due by 11:59pm',
+  },
+  {
+    date: '1026',
+    type: ScheduleType.Lecture,
+    text: ['Finishing up dates', 'Exploring data'],
+  },
+  {
+    date: '1028',
+    type: ScheduleType.Lecture,
+    text: 'Selecting and filtering data',
+  },
+  {
+    date: '1029',
+    type: ScheduleType.AfterClassAssignment,
+    text: 'After Class Exercise #12 due by 11:59pm',
+  },
+  {
+    date: '1030',
+    type: ScheduleType.Midterm,
+    text: 'Midterm Project due by 11:59pm',
+  },
+  {
+    date: '1102',
+    type: ScheduleType.Quiz,
+    text: 'Quiz 5',
+  },
+  {
+    date: '1102',
+    type: ScheduleType.Lecture,
+    text: ['Missing values', 'Creating new columns'],
+  },
+  {
+    date: '1103',
+    type: ScheduleType.AfterClassAssignment,
+    text: 'After Class Exercise #13 due by 11:59pm',
+  },
+  {
+    date: '1104',
+    type: ScheduleType.Lecture,
+    text: 'Sorting and modifying data in Pandas',
+  },
+  {
+    date: '1105',
+    type: ScheduleType.AfterClassAssignment,
+    text: 'After Class Exercise #14 due by 11:59pm',
+  },
+  {
+    date: '1109',
+    type: ScheduleType.Lecture,
+    text: ['Data analysis', 'Descriptive Statistics'],
+  },
+  {
+    date: '1110',
+    type: ScheduleType.AfterClassAssignment,
+    text: 'After Class Exercise #15 due by 11:59pm',
+  },
+  {
+    date: '1111',
+    type: ScheduleType.Lecture,
+    text: 'Pivot tables',
+  },
+  {
+    date: '1112',
+    type: ScheduleType.AfterClassAssignment,
+    text: 'After Class Exercise #16 due by 11:59pm',
+  },
+  {
+    date: '1113',
+    type: ScheduleType.ProblemSet,
+    text: 'Problem Set #3 due by 11:59pm',
+  },
+  {
+    date: '1116',
+    type: ScheduleType.Quiz,
+    text: 'Quiz 6',
+  },
+  {
+    date: '1116',
+    type: ScheduleType.Lecture,
+    text: 'Pivot tables',
+  },
+  {
+    date: '1117',
+    type: ScheduleType.AfterClassAssignment,
+    text: 'After Class Exercise #17 due by 11:59pm',
+  },
+  {
+    date: '1118',
+    type: ScheduleType.Lecture,
+    text: 'Regression',
+  },
+
+  {
+    date: '1123',
+    type: ScheduleType.NoLecture,
+    text: 'Thanksgiving Break',
+  },
+  {
+    date: '1125',
+    type: ScheduleType.NoLecture,
+    text: 'Thanksgiving Break',
+  },
+
+  {
+    date: '1130',
+    type: ScheduleType.Lecture,
+    text: 'Intro to robotic process automation (RPA)',
+  },
+  {
+    date: '1202',
+    type: ScheduleType.Lecture,
+    text: 'UiPath software for RPA',
+  },
+  {
+    date: '1202',
+    type: ScheduleType.ProblemSet,
+    text: 'Problem Set #4 due by 11:59pm',
+  },
+  {
+    date: '1203',
+    type: ScheduleType.AfterClassAssignment,
+    text: 'After Class Exercise #18 due by 11:59pm',
+  },
+
+  {
+    date: '1207',
+    type: ScheduleType.Quiz,
+    text: 'Quiz 7',
+  },
+  {
+    date: '1207',
+    type: ScheduleType.Lecture,
+    text: 'For loops and if statements in RPA',
+  },
+  {
+    date: '1208',
+    type: ScheduleType.AfterClassAssignment,
+    text: 'After Class Exercise #19 due by 11:59pm',
+  },
+  {
+    date: '1209',
+    type: ScheduleType.Lecture,
+    text: 'Work on final project in class',
+  },
+  {
+    date: '1212',
+    type: ScheduleType.Final,
+    text: 'Final Project due by 11:59pm',
   },
 ];
 

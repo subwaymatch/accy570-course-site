@@ -12,6 +12,7 @@ type PropTypes = {
   iconChild: ReactChild;
   label: string;
   active: boolean;
+  show?: boolean;
 };
 
 export default function HeaderMenuItem({
@@ -19,8 +20,15 @@ export default function HeaderMenuItem({
   iconChild,
   label,
   active,
+  show,
 }: PropTypes) {
-  return (
+  console.log(`show=${show}`);
+
+  if (show === undefined) {
+    show = true;
+  }
+
+  return show === true ? (
     <Link href={href}>
       <motion.a
         className={cx('menuItem', {
@@ -35,5 +43,5 @@ export default function HeaderMenuItem({
         <span>{label}</span>
       </motion.a>
     </Link>
-  );
+  ) : null;
 }

@@ -56,6 +56,7 @@ export default function HeaderComponent({ headerTitle }: HeaderComponentProps) {
               active={router.pathname.startsWith('/live')}
               iconChild={<BiBroadcast />}
               label="Live"
+              show={false}
             />
           </nav>
         )}
