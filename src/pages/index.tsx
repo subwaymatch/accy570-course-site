@@ -264,7 +264,8 @@ export default function Home() {
         <div className="column is-three-quarters">
           <p>
             While the TAs and I will make every effort to grade your work
-            accurately, grading errors can occur.
+            accurately, grading errors can occur. If you believe your grade for
+            an assignment or an exam doens't accurately reflect your
           </p>
         </div>
       </div>

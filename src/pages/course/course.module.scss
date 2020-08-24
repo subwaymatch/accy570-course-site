@@ -27,7 +27,7 @@
         top: 0.5rem;
       }
 
-      h2.courseTitle {
+      .courseTitle {
         color: $color-primary;
         font-size: 1.8rem;
         font-weight: 500;
@@ -36,6 +36,17 @@
 
       .courseDescription {
         color: #fff;
+      }
+
+      &:hover {
+        .unitNumber,
+        .courseTitle {
+          color: color.scale($color-primary, $lightness: -10%);
+        }
+
+        .courseDescription {
+          color: #ddd;
+        }
       }
     }
 
@@ -48,11 +59,11 @@
         align-items: center;
         justify-content: space-between;
         cursor: pointer;
-        color: #777;
+        color: #888;
         padding: 0.2rem 0;
 
         &:hover {
-          color: color.scale($color-primary, $lightness: -10%);
+          color: $color-primary;
         }
       }
     }

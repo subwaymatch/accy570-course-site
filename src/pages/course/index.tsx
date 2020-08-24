@@ -16,7 +16,7 @@ type CourseIndexPageProps = {
 
 export default function CourseIndexPage({ courses }: CourseIndexPageProps) {
   return (
-    <Layout backgroundColor="#000">
+    <Layout backgroundColor="#111">
       <motion.div
         initial="hidden"
         animate="visible"
