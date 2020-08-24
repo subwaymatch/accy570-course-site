@@ -1,0 +1,10 @@
+.calendar {
+  font-size: 1.1rem;
+  width: 90%;
+
+  .weekday {
+    display: block;
+    padding: 0.3rem 0;
+    border-top: 1px solid black;
+  }
+}

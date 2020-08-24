@@ -16,7 +16,7 @@ enum ScheduleType {
 
 export default function SchedulePage() {
   return (
-    <Layout>
+    <Layout backgroundColor="#f5f5f5" fluid>
       <motion.div exit={{}}></motion.div>
       <CourseCalendar />
     </Layout>
