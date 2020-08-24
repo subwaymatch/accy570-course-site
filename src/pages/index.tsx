@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import classNames from 'classnames/bind';
 import { clickableVariants } from 'src/animations/variants';
 import { SiZoom } from 'react-icons/si';
+import _ from 'lodash';
 
 const cx = classNames.bind(styles);
 
@@ -36,6 +37,36 @@ const ZoomLinkButton = ({ label, href }: { label: string; href: string }) => (
   </motion.a>
 );
 
+const GradeComponent = ({
+  className,
+  title,
+  points,
+  percentage,
+  subcomponents,
+}: {
+  className?: string;
+  title: string;
+  points: string | number;
+  percentage: string | number;
+  subcomponents?: React.ReactNode[];
+}) => (
+  <div className={cx('gradeComponent', className)}>
+    <div className={cx('gradeComponentTitle')}>{title}</div>
+
+    <div className={cx('gradeComponentPoints')}>{points}</div>
+
+    <div className={cx('gradeComponentPercentage')}>
+      {percentage}
+      {_.isNumber(percentage) && '%'}
+    </div>
+
+    <div className={cx('gradeSubcomponents')}>
+      {subcomponents &&
+        subcomponents.map((sc) => <span className={cx('item')}>{sc}</span>)}
+    </div>
+  </div>
+);
+
 export default function Home() {
   return (
     <Layout className={cx('homePage')}>
@@ -48,7 +79,7 @@ export default function Home() {
       >
         <div className="column is-full">
           <div className={cx('syllabusHeader')}>
-            <h1>ACCY 570: Data Analytics Foundations for Accuntancy</h1>
+            <h1>ACCY 570: Data Analytics Foundations for Accountancy</h1>
 
             <div className={cx('meetingTimes')}>
               <div>Section AD5 (MW 3:30-4:50 PM) - BIF 2063</div>
@@ -68,10 +99,16 @@ export default function Home() {
         <div className="column is-three-quarters">
           <div className="columns">
             <div className="column is-half">
-              <ZoomLinkButton label="for Lectures" href="/" />
+              <ZoomLinkButton
+                label="for Lectures"
+                href="https://illinois.zoom.us/j/92043278937?pwd=TDUzdXB0ZGp4T2tiZlhWWW1Td2Z4dz09"
+              />
             </div>
             <div className="column is-half">
-              <ZoomLinkButton label="for Lab Sessions" href="/" />
+              <ZoomLinkButton
+                label="for Lab Sessions"
+                href="https://illinois.zoom.us/j/98711107937?pwd=WVVOMzhyNEFjM1ZrUGNCQWhCQitEZz09"
+              />
             </div>
           </div>
         </div>
@@ -110,7 +147,63 @@ export default function Home() {
         </div>
 
         <div className="column is-three-quarters">
-          After-class Exercises 100 10%
+          <GradeComponent
+            className={cx('header')}
+            title="Component"
+            points="Pts"
+            percentage="%"
+            subcomponents={['Notes']}
+          />
+          <GradeComponent
+            title="After-class Exercises"
+            points={100}
+            percentage={10}
+          />
+          <GradeComponent
+            title="Problem Sets"
+            subcomponents={['4 @ 80 Points']}
+            points={320}
+            percentage={32}
+          />
+          <GradeComponent
+            title="Quizzes"
+            subcomponents={['6 @ 20 Points']}
+            points={120}
+            percentage={12}
+          />
+          <GradeComponent
+            title="Midterm"
+            subcomponents={[
+              'Content - 130 Points',
+              'Peer Evaluation - 20 Points',
+            ]}
+            points={150}
+            percentage={15}
+          />
+          <GradeComponent
+            title="Final Project"
+            subcomponents={[
+              'Content - 130 Points',
+              'Presentation - 50 Points',
+              'Peer Evaluation - 20 Points',
+            ]}
+            points={200}
+            percentage={20}
+          />
+          <GradeComponent title="Attendance" points={40} percentage={4} />
+          <GradeComponent title="Participation" points={70} percentage={7} />
+          <GradeComponent
+            title="Extra Credit"
+            subcomponents={['ARL Subject Pool']}
+            points={10}
+            percentage={1}
+          />
+          <GradeComponent
+            className={cx('footer')}
+            title="Total"
+            points={1000}
+            percentage={100}
+          />
         </div>
       </div>
 

@@ -62,7 +62,7 @@ export default function Layout({
 
       <div
         id="layout-wrapper"
-        className={cx(styles.layoutWrapper, className, {
+        className={cx(styles.layoutWrapper, {
           fluid,
           fixed: !fluid,
         })}
@@ -72,7 +72,7 @@ export default function Layout({
         <div id="page-wrap" className={styles.pageWrapper}>
           <HeaderComponent />
 
-          <main className={cx('main')} style={mainStyle}>
+          <main className={cx('main', className)} style={mainStyle}>
             {fluid ? (
               children
             ) : (

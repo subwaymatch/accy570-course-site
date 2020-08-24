@@ -1,4 +1,3 @@
-import LiveSessionWaitImage from 'src/images/live-session-wait.png';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { selectUser } from 'lib/slices/liveUserSlice';
@@ -7,6 +6,7 @@ import { motion } from 'framer-motion';
 import styles from './wait.module.scss';
 import Layout from 'src/components/layout';
 import { fadeUpDownVariants } from 'src/animations/variants';
+import LiveSessionWaitImage from 'src/images/live-session-wait.png';
 
 export default function LiveSessionWaitPage() {
   const router = useRouter();

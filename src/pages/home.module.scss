@@ -55,24 +55,80 @@
       align-items: center;
       justify-content: center;
       padding: 0.5rem 1rem;
-      background-color: #2d8cff;
-      box-shadow: 0 0 1rem rgba(#2d8cff, 0.4);
+      background-color: #fff;
+      box-shadow: 0 0 1rem rgba(#000, 0.08);
       border-radius: 0.5rem;
 
       .zoomIcon {
-        color: white;
+        color: #2d8cff;
         font-size: 5rem;
         margin-right: 0.5rem;
       }
 
       .label {
-        color: white;
+        color: #555;
         font-size: 1.2rem;
-        font-weight: 300;
       }
 
       &:hover {
-        background-color: color.scale(#2d8cff, $lightness: -5%);
+        box-shadow: 0 0 1rem rgba(#2d8cff, 0.4);
+
+        .label {
+          color: #2d8cff;
+        }
+      }
+    }
+  }
+
+  .gradeComponent {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+
+    .gradeComponentTitle {
+      color: #555;
+      flex: 4;
+    }
+
+    .gradeComponentPoints {
+      color: $color-primary;
+      flex: 1;
+    }
+
+    .gradeComponentPercentage {
+      color: #777;
+      flex: 1;
+    }
+
+    .gradeSubcomponents {
+      flex: 4;
+      font-size: 1rem;
+      color: color.scale($color-secondary, $lightness: 75%, $saturation: -70%);
+
+      .item {
+        display: block;
+      }
+    }
+
+    &.header {
+      font-weight: 600;
+      border-top-color: #222;
+    }
+
+    &.footer {
+      border-top: 2px solid #222;
+      font-weight: 600;
+    }
+
+    &.header,
+    &.footer {
+      .gradeComponentTitle,
+      .gradeComponentPoints,
+      .gradeComponentPercentage,
+      .gradeSubcomponents {
+        color: #222;
       }
     }
   }
