@@ -5,6 +5,8 @@ import classNames from 'classnames/bind';
 import { clickableVariants } from 'src/animations/variants';
 import { SiZoom } from 'react-icons/si';
 import _ from 'lodash';
+import RunningAlarmClockImage from 'src/images/running-alarm-clock-02.svg';
+import GradingDisputeImage from 'src/images/grading-dispute-01.svg';
 
 const cx = classNames.bind(styles);
 
@@ -257,19 +259,27 @@ export default function Home() {
 
         <div className="column is-three-quarters">
           <p>
-            I understand that speaking up in class is not easy. It wasn’t easy
-            for me either. However, expressing your ideas to others is a
-            critical skill in business. I encourage you to overcome your fears
-            and participate in class.
+            While the TAs and I will make every effort to grade your work
+            accurately, grading errors can occur.
           </p>
+        </div>
+      </div>
+
+      <div className={cx('columns', 'section')}>
+        <div className="column is-one-quarter">
+          <h2>Late Submissions</h2>
+        </div>
+
+        <div className="column is-two-quarters">
           <p>
-            Your participation grades are based on two criteria – 1)
-            participation in discussion and 2) participation in in-class
-            exercises. Your participation grades are purely subjective. Over the
-            course of the semester, I will observer who speaks up in classes,
-            who helps their classmates, and who puts in efforts on in-class
-            exercises. I will reward the quality, not quantity of participation.
+            I will deduct points on all late submissions. The amount of
+            deduction will be <strong>10%</strong> of the total available points
+            for the assignment per day.
           </p>
+        </div>
+
+        <div className="column is-one-quarter">
+          <img src={RunningAlarmClockImage} alt="Running Alarm Clock" />
         </div>
       </div>
     </Layout>

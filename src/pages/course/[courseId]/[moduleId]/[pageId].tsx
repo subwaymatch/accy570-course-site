@@ -9,7 +9,7 @@ import Layout from 'src/components/layout';
 
 export default function CourseModulePage({ course, pageData }) {
   return (
-    <Layout>
+    <Layout backgroundColor="#fafbfd">
       <CourseModulePageComponent course={course} pageData={pageData} />
     </Layout>
   );
