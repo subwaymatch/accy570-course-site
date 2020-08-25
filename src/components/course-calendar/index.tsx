@@ -100,23 +100,31 @@ export default function CourseCalendar() {
                         )}
 
                       {dayEvents.hasOwnProperty(ScheduleType.NoLecture) &&
-                        dayEvents[ScheduleType.NoLecture].map((text) => (
-                          <div className={cx('noLecture', 'box')}>{text}</div>
+                        dayEvents[ScheduleType.NoLecture].map((text, idx) => (
+                          <div key={idx} className={cx('noLecture', 'box')}>
+                            {text}
+                          </div>
                         ))}
 
                       {dayEvents.hasOwnProperty(ScheduleType.ProblemSet) &&
-                        dayEvents[ScheduleType.ProblemSet].map((text) => (
-                          <div className={cx('problemSet', 'box')}>{text}</div>
+                        dayEvents[ScheduleType.ProblemSet].map((text, idx) => (
+                          <div key={idx} className={cx('problemSet', 'box')}>
+                            {text}
+                          </div>
                         ))}
 
                       {dayEvents.hasOwnProperty(ScheduleType.Midterm) &&
-                        dayEvents[ScheduleType.Midterm].map((text) => (
-                          <div className={cx('midterm', 'box')}>{text}</div>
+                        dayEvents[ScheduleType.Midterm].map((text, idx) => (
+                          <div key={idx} className={cx('midterm', 'box')}>
+                            {text}
+                          </div>
                         ))}
 
                       {dayEvents.hasOwnProperty(ScheduleType.Final) &&
-                        dayEvents[ScheduleType.Final].map((text) => (
-                          <div className={cx('final', 'box')}>{text}</div>
+                        dayEvents[ScheduleType.Final].map((text, idx) => (
+                          <div key={idx} className={cx('final', 'box')}>
+                            {text}
+                          </div>
                         ))}
                     </div>
                   )}
