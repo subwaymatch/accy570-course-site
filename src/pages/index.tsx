@@ -2,15 +2,16 @@ import Layout from 'src/components/layout';
 import styles from './home.module.scss';
 import { motion } from 'framer-motion';
 import classNames from 'classnames/bind';
-import { clickableVariants } from 'src/animations/variants';
-import { SiZoom } from 'react-icons/si';
 import _ from 'lodash';
 import RunningAlarmClockImage from 'src/images/running-alarm-clock-02.svg';
-import GradingDisputeImage from 'src/images/grading-dispute-01.svg';
+import {
+  ZoomLinkButton,
+  ZoomPasswordMessage,
+} from 'src/components/zoom-button';
 
 const cx = classNames.bind(styles);
 
-const heroVariants = {
+const courseTitleVariants = {
   hidden: {
     y: 40,
     scale: 0.8,
@@ -25,19 +26,6 @@ const heroVariants = {
     },
   },
 };
-
-const ZoomLinkButton = ({ label, href }: { label: string; href: string }) => (
-  <motion.a
-    variants={clickableVariants}
-    whileHover="hover"
-    whileTap="tap"
-    className={cx('zoomLink')}
-    href={href}
-  >
-    <SiZoom className={cx('zoomIcon')} />
-    <span className={cx('label')}>{label}</span>
-  </motion.a>
-);
 
 const GradeComponent = ({
   className,
@@ -81,7 +69,7 @@ export default function Home() {
         initial="hidden"
         animate="visible"
         exit="hidden"
-        variants={heroVariants}
+        variants={courseTitleVariants}
       >
         <div className="column is-full">
           <div className={cx('syllabusHeader')}>
@@ -106,15 +94,19 @@ export default function Home() {
           <div className="columns">
             <div className="column is-half">
               <ZoomLinkButton
-                label="for Lectures"
+                label="Lecture"
                 href="https://illinois.zoom.us/j/92043278937?pwd=TDUzdXB0ZGp4T2tiZlhWWW1Td2Z4dz09"
               />
+              <ZoomPasswordMessage />
             </div>
             <div className="column is-half">
               <ZoomLinkButton
-                label="for Lab Sessions"
+                label="Lab Session"
                 href="https://illinois.zoom.us/j/98711107937?pwd=WVVOMzhyNEFjM1ZrUGNCQWhCQitEZz09"
               />
+              <span className={cx('zoomPasswordMessage')}>
+                <ZoomPasswordMessage />
+              </span>
             </div>
           </div>
         </div>
@@ -142,6 +134,61 @@ export default function Home() {
             <div className="column is-full">
               <h3>Office Hours</h3>
               Thursdays 4-5 PM via Zoom and by appointment
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={cx('columns', 'section')}>
+        <div className="column is-one-quarter">
+          <h2>Lab Instructor</h2>
+        </div>
+
+        <div className="column is-three-quarters">
+          <div className="columns is-full">
+            <div className="column is-half">
+              <h3>Name</h3>
+              Linden Lu
+            </div>
+
+            <div className="column is-half">
+              <h3>Email</h3>
+              <a href="mailto:zllu2@illinois.edu">zllu2@illinois.edu</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={cx('columns', 'section')}>
+        <div className="column is-one-quarter">
+          <h2>Teaching Assistant</h2>
+        </div>
+
+        <div className="column is-three-quarters">
+          <div className="columns is-full">
+            <div className="column is-half">
+              <h3>Name</h3>
+              Michael Yip
+            </div>
+
+            <div className="column is-half">
+              <h3>Email</h3>
+              <a href="mailto:myip5@illinois.edu">myip5@illinois.edu</a>
+            </div>
+          </div>
+
+          <div className="columns is-full">
+            <div className="column is-half">
+              <h3>Office Hours</h3>
+              Mondays 11 AM – 12 PM
+            </div>
+
+            <div className="column is-half">
+              <ZoomLinkButton
+                label="Micheal's Office Hours"
+                href="https://illinois.zoom.us/j/93933077792?pwd=VlBPTVZKQzZTdW5WUEZIbHFZak1ZZz09"
+              />
+              <ZoomPasswordMessage />
             </div>
           </div>
         </div>
