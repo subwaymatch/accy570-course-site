@@ -1,5 +1,6 @@
 @use 'sass:color';
 @import 'src/styles/variables';
+@import 'src/styles/mixins';
 
 .courseIndexWrapper {
   color: white;
@@ -25,6 +26,12 @@
         position: relative;
         left: -2rem;
         top: 0.5rem;
+
+        @include media-touch {
+          position: relative;
+          left: 0;
+          top: 0;
+        }
       }
 
       .courseTitle {

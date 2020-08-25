@@ -1,5 +1,6 @@
 @use 'sass:color';
 @import 'src/styles/variables';
+@import 'src/styles/mixins';
 
 .calendar {
   padding: 2rem 0;
@@ -7,6 +8,10 @@
   letter-spacing: -0.01rem;
   line-height: 1.6;
   width: 90%;
+
+  @include media-touch {
+    font-size: 1rem;
+  }
 
   .day {
     margin: 0.8rem 0;
