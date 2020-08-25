@@ -220,12 +220,11 @@ export default function Home() {
 
         <div className="column is-three-quarters">
           <p>
-            This is a graduate-level course and I hate to grade attendance.
-            However, the cost of skipping is <strong>very</strong> high in this
-            course. If you skip class, you are likely to fall behind for the
-            entire semester (even worse, throughout subsequent Data Analytics
-            courses in future semesters). To incentivize to attend class, I will
-            take attendance and grade it.{' '}
+            I will grade attendance. It's only to incentivize you to not fall
+            behind. Building a solid foundation in 570 will enable you to Excel
+            in other data analytics courses.
+          </p>
+          <p>
             <strong>
               Up to 2 absences are allowed without a prior approval
             </strong>{' '}
@@ -243,12 +242,16 @@ export default function Home() {
 
         <div className="column is-three-quarters">
           <p>
-            Your participation grades are based on two criteria – 1)
-            participation in discussion and 2) participation in in-class
-            exercises. Your participation grades are purely subjective. Over the
-            course of the semester, I will observer who speaks up in classes,
-            who helps their classmates, and who puts in efforts on in-class
-            exercises. I will reward the quality, not quantity of participation.
+            Normally, your participation grades would be based on two criteria.
+          </p>
+          <ol>
+            <li>Participation in discussion</li>
+            <li>Participation in in-class exercises</li>
+          </ol>
+          <p>
+            Since our class structure (simultaneous in-person and Zoom-delivery)
+            makes it diffcult to facilitate discussions, your participation
+            grade will be mostly based on #2 (in-class exercises).
           </p>
         </div>
       </div>
