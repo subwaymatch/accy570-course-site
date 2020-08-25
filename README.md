@@ -34,6 +34,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [WebAssembly](https://webassembly.org/) is used to integrate Python 3.8 runtime to the browser using [Pyodide](https://github.com/iodide-project/pyodide). Please check WebAssembly support in your browser at [https://caniuse.com/#feat=wasm](https://caniuse.com/#feat=wasm).
 - ~~[Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) are used to run Python scripts in non-main threads. You need to use a browser that supports Web Workers. You can check the browser support at [https://caniuse.com/#feat=webworkers](https://caniuse.com/#feat=webworkers).~~ Due to a [maximum stack size issue](https://github.com/iodide-project/pyodide/issues/441) in Safari when loading Pyodide and Python packages in Safari, I'm no longer using workers to run Pyodide :disappointed_relieved:. This will freeze main UI when the browser is running Python code. Later plan is to use workers for Chrome/Firefox/Edge and main thread for Safari.
 
+## Branches
+
+`master` contains latest commits that may break. Commits to `production` are continuously deployed to [Vercel](https://vercel.com/).
+
+![accy570-course-branches](https://user-images.githubusercontent.com/1064036/91170497-98bd8580-e69e-11ea-9af7-f04700039d2c.png)
+
 ## Deployment
 
 ![next-vercel-illustration](https://user-images.githubusercontent.com/1064036/89702608-860a2900-d908-11ea-83ad-aa228b4322ae.jpg)
