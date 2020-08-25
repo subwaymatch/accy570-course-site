@@ -34,13 +34,13 @@ export default function CourseCalendar() {
   return (
     <div className={cx('calendar')}>
       {calendar.map((week) => (
-        <div key={week} className="columns">
+        <div key={week} className={cx('calendarRow')}>
           {week.map((day) => {
             const dayKey = day.format('MMDD');
             const dayEvents = eventsByDate[dayKey];
 
             return (
-              <div key={dayKey} className="column">
+              <div key={dayKey} className={cx('calendarCell')}>
                 <div
                   className={cx('day', {
                     empty: !Boolean(dayEvents),

@@ -7,10 +7,6 @@
   margin-right: auto;
 
   @include media-touch {
-    width: #{$tablet - 32px};
-  }
-
-  @include media-mobile() {
-    width: 97%;
+    width: 100%;
   }
 }
