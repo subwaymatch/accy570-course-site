@@ -1,16 +1,5 @@
 @import 'bulma/sass/utilities/initial-variables';
-
-@mixin media-mobile {
-  @media screen and (max-width: #{$tablet - 1px}) {
-    @content;
-  }
-}
-
-@mixin media-touch {
-  @media screen and (max-width: #{$desktop - 1px}) {
-    @content;
-  }
-}
+@import './mixins';
 
 .container {
   width: $desktop - (2 * $gap);
@@ -18,10 +7,10 @@
   margin-right: auto;
 
   @include media-touch {
-    width: 90%;
+    width: #{$tablet - 32px};
   }
 
   @include media-mobile() {
-    width: 94%;
+    width: 97%;
   }
 }

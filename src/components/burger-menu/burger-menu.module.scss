@@ -1,13 +1,19 @@
 @import 'src/styles/variables';
+@import 'src/styles/mixins';
 
 /* Position and sizing of burger button */
 .burgerButton {
   position: fixed;
   width: 40px;
   height: 40px;
-  top: 16px;
+  top: 11px;
   right: 22px;
   padding: 5px;
+  visibility: hidden;
+
+  @include media-touch {
+    visibility: visible;
+  }
 
   button {
     outline: none;
