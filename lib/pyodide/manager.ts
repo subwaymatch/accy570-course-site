@@ -47,7 +47,9 @@ sys.stderr = io.StringIO()`);
   }
 
   async runCode(code: string, options?: RunCodeOptions) {
-    if (!this.isLoaded) await this.loadPyodide();
+    if (!this.isLoaded) {
+      await this.loadPyodide();
+    }
 
     // Assign default options
     options = Object.assign(

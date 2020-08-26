@@ -13,7 +13,7 @@ const endWeek = moment('20201212').week();
 
 let calendar = [];
 
-for (var week = startWeek; week <= endWeek; week++) {
+for (let week = startWeek; week <= endWeek; week++) {
   calendar.push(
     Array(7)
       .fill(0)

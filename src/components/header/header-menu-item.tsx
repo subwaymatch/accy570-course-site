@@ -22,7 +22,7 @@ export default function HeaderMenuItem({
   active,
   show,
 }: PropTypes) {
-  if (show === undefined) {
+  if (typeof show === 'undefined') {
     show = true;
   }
 

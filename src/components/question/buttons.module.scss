@@ -1,6 +1,7 @@
 @use 'sass:color';
 @import 'src/styles/variables';
 
+.resetButton,
 .runCodeButton,
 .submitButton {
   display: inline-flex;
@@ -31,12 +32,31 @@
   }
 }
 
+.resetButton {
+  color: #888;
+  background-color: #fff;
+  border: 1px solid #f5f5f5;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.06);
+
+  .buttonIcon {
+    font-size: 0.75em;
+  }
+
+  &:hover {
+    color: #666;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.12);
+  }
+}
+
 .runCodeButton {
   background-color: $color-secondary;
+  margin-left: 0.8rem;
   border: 1px solid color.scale($color-secondary, $lightness: -7%);
+  box-shadow: 0 0 0.5rem rgba($color-secondary, 0.3);
 
   &:hover {
     background-color: color.scale($color-secondary, $lightness: 3%);
+    box-shadow: 0 0 0.5rem rgba($color-secondary, 0.6);
   }
 }
 
@@ -44,9 +64,11 @@
   background-color: $color-primary;
   margin-left: 0.8rem;
   border: 1px solid color.scale($color-primary, $lightness: -7%);
+  box-shadow: 0 0 0.5rem rgba($color-primary, 0.3);
 
   &:hover {
     background-color: color.scale($color-primary, $lightness: 3%);
+    box-shadow: 0 0 0.5rem rgba($color-primary, 0.6);
   }
 
   .buttonIcon {

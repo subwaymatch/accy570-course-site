@@ -14,7 +14,12 @@ import { CodeResult } from 'typings/pyodide';
 import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
 import { FiArrowDownRight } from 'react-icons/fi';
 import { RiLightbulbLine } from 'react-icons/ri';
-import { RunCodeButton, SubmitButton } from 'src/components/question/buttons';
+import { FaUndo } from 'react-icons/fa';
+import {
+  ResetButton,
+  RunCodeButton,
+  SubmitButton,
+} from 'src/components/question/buttons';
 import {
   HintBox,
   CorrectResultBox,
@@ -59,8 +64,19 @@ export default function PythonCodingQuestion({
     setShowHint(!showHint);
   };
 
+  const reset = async () => {
+    console.log('reset');
+
+    if (
+      window.confirm(
+        'Do you really want to reset your code? Your code will be lost.'
+      )
+    ) {
+      setEditorValue(question.templateCode ? question.templateCode : '');
+    }
+  };
+
   const runCode = async () => {
-    console.log('runCode');
     setIsPyodideReady(false);
 
     const codeResult = await pyodideManager.runCode(editorValue);
@@ -81,7 +97,6 @@ export default function PythonCodingQuestion({
       question.checkCode
     );
 
-    console.log('runAndCheckCode complete!');
     console.log(codeResult);
 
     setCodeResult(codeResult);
@@ -151,25 +166,31 @@ export default function PythonCodingQuestion({
         />
 
         <div className={cx('editorBox', 'commandBox')}>
-          <a
-            className={cx('hintButton', {
-              isOpen: showHint,
-            })}
-            onClick={(e) => {
-              e.preventDefault();
-              toggleHint();
-            }}
-          >
-            <RiLightbulbLine className={styles.hintIcon} />
-            <span>{showHint ? 'Hide Hint' : 'See Hint'}</span>
-            {showHint ? (
-              <IoMdArrowDropup className={styles.toggleIcon} />
-            ) : (
-              <IoMdArrowDropdown className={styles.toggleIcon} />
-            )}
-          </a>
+          {question.hint ? (
+            <a
+              className={cx('hintButton', {
+                isOpen: showHint,
+              })}
+              onClick={(e) => {
+                e.preventDefault();
+                toggleHint();
+              }}
+            >
+              <RiLightbulbLine className={styles.hintIcon} />
+              <span>{showHint ? 'Hide Hint' : 'See Hint'}</span>
+              {showHint ? (
+                <IoMdArrowDropup className={styles.toggleIcon} />
+              ) : (
+                <IoMdArrowDropdown className={styles.toggleIcon} />
+              )}
+            </a>
+          ) : (
+            <div />
+          )}
 
           <div className={styles.commandButtons}>
+            <ResetButton onClick={reset} />
+
             <RunCodeButton onClick={runCode} disabled={!isPyodideReady} />
 
             <SubmitButton
@@ -179,7 +200,9 @@ export default function PythonCodingQuestion({
           </div>
         </div>
 
-        <HintBox hintMarkdown={question.hint} show={showHint} />
+        {question.hint && (
+          <HintBox hintMarkdown={question.hint} show={showHint} />
+        )}
 
         <CorrectResultBox
           explanation={question.explanation}

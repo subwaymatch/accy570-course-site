@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { MdPlayArrow, MdPlayForWork } from 'react-icons/md';
+import { FaUndo } from 'react-icons/fa';
 import styles from './buttons.module.scss';
 
 const buttonVariants = {
@@ -68,6 +69,28 @@ export const SubmitButton = ({
     >
       <MdPlayForWork className={styles.buttonIcon} />
       <span>{label ? label : 'Submit'}</span>
+    </motion.button>
+  );
+};
+
+type ResetButtonProps = {
+  label?: string;
+  disabled?: boolean;
+  onClick(): void;
+};
+
+export const ResetButton = ({ label, disabled, onClick }: ResetButtonProps) => {
+  return (
+    <motion.button
+      className={styles.resetButton}
+      onClick={onClick}
+      disabled={disabled}
+      variants={buttonVariants}
+      whileHover="hover"
+      whileTap="tap"
+    >
+      <FaUndo className={styles.buttonIcon} />
+      <span>{label ? label : 'Reset'}</span>
     </motion.button>
   );
 };
