@@ -3,6 +3,7 @@
 
 .navigationWrapper {
   margin-top: 5rem;
+  margin-bottom: 4rem;
 
   nav.navigation {
     display: flex;
@@ -29,7 +30,7 @@
       .moduleLabel {
         font-size: 1rem;
         letter-spacing: 0;
-        color: #d5d5d5;
+        color: #999;
       }
 
       .pageLabel {
@@ -56,10 +57,10 @@
       }
 
       &:hover {
-        color: $color-primary;
+        color: $color-secondary;
 
         .moduleLabel {
-          color: color.scale($color-primary, $lightness: 50%);
+          color: color.scale($color-primary, $lightness: 10%);
         }
 
         .navArrowIcon {

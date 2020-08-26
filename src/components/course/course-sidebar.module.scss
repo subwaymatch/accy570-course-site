@@ -1,11 +1,17 @@
 @use 'sass:color';
 @import 'src/styles/variables';
+@import 'src/styles/mixins';
 
 $indicator-width: 20px;
 $current-circle-width: 10px;
 
 .sidebarWrapper {
   font-size: 1.1rem;
+  margin-top: 3.2rem;
+
+  @include media-touch {
+    margin-top: 0;
+  }
 
   .sidebarTitle {
     display: block;

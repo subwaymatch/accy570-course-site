@@ -69,7 +69,10 @@ export default function CoursePageComponent({ course, pageData }: PropTypes) {
   return (
     <>
       <div className="columns">
-        <div className="column is-one-quarter">&nbsp;</div>
+        <div className="column is-one-quarter">
+          <CourseSidebar course={course} currentModuleId={pageData.moduleId} />
+        </div>
+
         <div className="column is-three-quarters">
           <CourseModulePagesNavigation
             courseId={course.id}
@@ -77,14 +80,7 @@ export default function CoursePageComponent({ course, pageData }: PropTypes) {
             currentPageId={pageData.id}
             pagesMeta={currentModule.pages}
           />
-        </div>
-      </div>
-      <div className="columns">
-        <div className="column is-one-quarter">
-          <CourseSidebar course={course} currentModuleId={pageData.moduleId} />
-        </div>
 
-        <div className="column is-three-quarters">
           <motion.div
             key="course-module-page-content-wrapper"
             variants={{

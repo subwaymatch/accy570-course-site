@@ -6,6 +6,7 @@ import { BsCalendar, BsBook } from 'react-icons/bs';
 import { BiBroadcast } from 'react-icons/bi';
 import classNames from 'classnames/bind';
 import MenuItem from './header-menu-item';
+import LiveSessionBar from './live-session-bar';
 
 const cx = classNames.bind(styles);
 
@@ -18,13 +19,8 @@ export default function HeaderComponent({ headerTitle }: HeaderComponentProps) {
 
   return (
     <header className={styles.header}>
-      <div className={styles.headerMessageBar}>
-        <BiBroadcast />
-        <p>Live Session in Progress</p>
-        <Link href="/live">
-          <a>Join Now →</a>
-        </Link>
-      </div>
+      <LiveSessionBar show={false} />
+
       <div className={styles.headerMain}>
         <div className={styles.headerLeft}>
           <Link href="/">
