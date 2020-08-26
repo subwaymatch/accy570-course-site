@@ -3,3 +3,4 @@ description: Computers are dumb. Then cannot think. However, they can be extreme
 modules:
   - announcements
   - computer-programs
+  - logic
