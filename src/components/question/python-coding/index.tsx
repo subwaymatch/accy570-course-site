@@ -149,7 +149,7 @@ export default function PythonCodingQuestion({
 
       <div className={cx('codeEditorWrapper')}>
         <ControlledEditor
-          height="20vh"
+          height="30vh"
           value={editorValue}
           editorDidMount={handleEditorDidMount}
           onChange={handleEditorChange}
@@ -162,6 +162,7 @@ export default function PythonCodingQuestion({
               enabled: false,
             },
             extraEditorClassName: styles.codeEditor,
+            scrollBeyondLastLine: false,
           }}
         />
 
