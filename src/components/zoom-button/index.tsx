@@ -26,11 +26,21 @@ export const ZoomLinkButton = ({
   </motion.a>
 );
 
-export const ZoomPasswordMessage = () => {
+export const ZoomPasswordMessage = ({
+  customMessage,
+}: {
+  customMessage?: string;
+}) => {
   return (
     <p className={cx('zoomPasswordMessage')}>
-      <FiLock className={cx('lockIcon')} />
-      <span>Password only on Compass due to security reasons</span>
+      {customMessage ? (
+        customMessage
+      ) : (
+        <>
+          <FiLock className={cx('lockIcon')} />
+          <span>Password only on Compass due to security reasons</span>
+        </>
+      )}
     </p>
   );
 };

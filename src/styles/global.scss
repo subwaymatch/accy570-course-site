@@ -40,10 +40,43 @@ code {
   font-size: 0.8em;
 }
 
+pre {
+  font-family: $font-monospace;
+  padding: 0.5rem 1rem;
+  color: color.mix($color-secondary, black, 90%);
+  background-color: color.mix($color-secondary, white, 6%);
+  border: 1px solid color.mix($color-secondary, white, 20%);
+  border-radius: 5px;
+  font-size: 1.1rem;
+
+  code {
+    background: none;
+    padding: none;
+    border: none;
+    font-size: inherit;
+  }
+}
+
 input {
   font-family: $font-sans-serif;
 }
 
+ol,
+ul,
+dl {
+  list-style-position: inside;
+}
+
 ul {
+  list-style-type: disc;
+}
+
+li > ul,
+li > ol,
+li > dl {
+  padding-left: 2rem;
+}
+
+li > ul {
   list-style-type: circle;
 }

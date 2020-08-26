@@ -131,9 +131,19 @@ export default function Home() {
           </div>
 
           <div className="columns">
-            <div className="column is-full">
+            <div className="column is-half">
               <h3>Office Hours</h3>
-              Thursdays 4-5 PM via Zoom and by appointment
+              Thursdays 4-5 PM
+            </div>
+
+            <div className="column is-half">
+              <ZoomLinkButton
+                label="Park's Office Hours"
+                href="https://illinois.zoom.us/j/97049694596?pwd=dkhuVVFDMVl3NmJPbWczdkY5b3pldz09"
+              />
+              <span className={cx('zoomPasswordMessage')}>
+                <ZoomPasswordMessage customMessage="Password same as lecture" />
+              </span>
             </div>
           </div>
         </div>
