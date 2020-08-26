@@ -217,7 +217,11 @@ export default function PythonCodingQuestion({
 
           <pre>{codeResult.stdout ? codeResult.stdout : 'No Output'}</pre>
         </div>
-        <div className={cx('editorBox', 'errorOutputBox')}>
+        <div
+          className={cx('editorBox', 'errorOutputBox', {
+            hasError: codeResult.errorMessage,
+          })}
+        >
           <span className={styles.boxLabel}>Error</span>
 
           <pre>

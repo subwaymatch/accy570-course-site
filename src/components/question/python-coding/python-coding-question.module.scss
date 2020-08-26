@@ -36,21 +36,8 @@ $border-color: #e8e8e8;
     .editorBox {
       padding: 0.8rem 1.1rem;
 
-      pre {
-        background: transparent;
-        padding: 0;
-        border: none;
-      }
-
-      &.outputBox {
+      &.errorOutputBox.hasError {
         pre {
-          font-size: 1.2rem;
-        }
-      }
-
-      &.errorOutputBox {
-        pre {
-          font-size: 1rem;
           color: $color-incorrect;
         }
       }
@@ -181,6 +168,10 @@ $border-color: #e8e8e8;
 
       pre {
         margin: 0;
+        background: transparent;
+        padding: 0;
+        border: none;
+        font-size: 1.05rem;
       }
     }
 

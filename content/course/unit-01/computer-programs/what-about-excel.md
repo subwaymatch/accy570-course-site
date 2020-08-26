@@ -1,5 +1,7 @@
 ---
 title: What about Excel?
+questions:
+  - python-coding/excel-cells-as-variables
 ---
 
 You don't have to program Excel, right? Yes, but that's only because Excel just provides a graphical interface so you don't have to write code. Under the hood, Excel is a program that translates your actions into code.
