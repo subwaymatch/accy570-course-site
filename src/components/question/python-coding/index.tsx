@@ -143,7 +143,7 @@ export default function PythonCodingQuestion({
       </div>
 
       <div
-        className={cx('questionText')}
+        className={cx('questionContent')}
         dangerouslySetInnerHTML={{ __html: question.text }}
       />
 

@@ -12,6 +12,8 @@ $border-color: #e8e8e8;
     color: $color-primary;
     font-size: 1rem;
     letter-spacing: 0;
+    border-top: 1px solid $color-primary;
+    padding-top: 0.5rem;
 
     .reactIcon {
       display: inline-block;
@@ -21,8 +23,10 @@ $border-color: #e8e8e8;
     }
   }
 
-  .questionText {
-    margin-top: 0;
+  .questionContent {
+    & > * {
+      margin-top: 1rem;
+    }
   }
 
   .codeEditorWrapper {
@@ -31,6 +35,25 @@ $border-color: #e8e8e8;
 
     .editorBox {
       padding: 0.8rem 1.1rem;
+
+      pre {
+        background: transparent;
+        padding: 0;
+        border: none;
+      }
+
+      &.outputBox {
+        pre {
+          font-size: 1.2rem;
+        }
+      }
+
+      &.errorOutputBox {
+        pre {
+          font-size: 1rem;
+          color: $color-incorrect;
+        }
+      }
     }
 
     .commandBox {
