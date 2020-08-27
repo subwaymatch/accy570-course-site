@@ -225,7 +225,7 @@ export default function PythonCodingQuestion({
                   useSolution();
                 }}
               >
-                <FiCode className={styles.solutionCode} />
+                <FiCode className={styles.solutionIcon} />
                 <span>See Solution</span>
               </a>
             )}
