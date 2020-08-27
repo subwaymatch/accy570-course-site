@@ -1,11 +1,11 @@
-# Write if-statement below this line
 pwc_offer = 87000
 deloitte_offer = 84000
-ey_offer = 85000
+# Create ey_offer variable
+ey_offer = ...
 
 if ...:
-    print()
+    print(...)
 elif ...:
-    print()
+    print(...)
 else:
-    print()
+    print(...)

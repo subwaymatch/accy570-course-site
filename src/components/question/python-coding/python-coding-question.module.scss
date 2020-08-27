@@ -43,6 +43,11 @@ $border-color: #e8e8e8;
       }
     }
 
+    .solutionBox {
+      margin-top: 1px;
+      border-top: 1px solid $border-color;
+    }
+
     .commandBox {
       display: flex;
       margin-top: 1px;

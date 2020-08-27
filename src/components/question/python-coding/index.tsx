@@ -8,13 +8,14 @@ import {
   ControlledEditorOnChange,
 } from '@monaco-editor/react';
 import classNames from 'classnames/bind';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { materialLight } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import styles from './python-coding-question.module.scss';
 import { IPythonCodingQuestion } from 'typings/question';
 import { CodeResult } from 'typings/pyodide';
 import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
-import { FiArrowDownRight } from 'react-icons/fi';
+import { FiArrowDownRight, FiCode } from 'react-icons/fi';
 import { RiLightbulbLine } from 'react-icons/ri';
-import { FaUndo } from 'react-icons/fa';
 import {
   ResetButton,
   RunCodeButton,
@@ -52,6 +53,7 @@ export default function PythonCodingQuestion({
   const [submittedCode, setSubmittedCode] = useState('');
   const [isSubmitComplete, setIsSubmitComplete] = useState(false);
   const [showHint, setShowHint] = useState(false);
+  const [showSolution, setShowSolution] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
 
   useEffect(() => {
@@ -64,6 +66,12 @@ export default function PythonCodingQuestion({
     setShowHint(!showHint);
   };
 
+  const useSolution = () => {
+    // Hide hint
+    setShowHint(false);
+    setShowSolution(true);
+  };
+
   const reset = async () => {
     console.log('reset');
 
@@ -72,6 +80,8 @@ export default function PythonCodingQuestion({
         'Do you really want to reset your code? Your code will be lost.'
       )
     ) {
+      setShowHint(false);
+      setShowSolution(false);
       setEditorValue(question.templateCode ? question.templateCode : '');
     }
   };
@@ -166,28 +176,60 @@ export default function PythonCodingQuestion({
           }}
         />
 
-        <div className={cx('editorBox', 'commandBox')}>
-          {question.hint ? (
-            <a
-              className={cx('hintButton', {
-                isOpen: showHint,
-              })}
-              onClick={(e) => {
-                e.preventDefault();
-                toggleHint();
+        {showSolution && (
+          <div className={cx('solutionBox')}>
+            <SyntaxHighlighter
+              language="python"
+              style={materialLight}
+              customStyle={{
+                border: 'none',
+                borderRadius: 0,
+                margin: 0,
+                padding: '1rem 1.25rem',
               }}
             >
-              <RiLightbulbLine className={styles.hintIcon} />
-              <span>{showHint ? 'Hide Hint' : 'See Hint'}</span>
-              {showHint ? (
-                <IoMdArrowDropup className={styles.toggleIcon} />
-              ) : (
-                <IoMdArrowDropdown className={styles.toggleIcon} />
-              )}
-            </a>
-          ) : (
-            <div />
-          )}
+              {question.solutionCode}
+            </SyntaxHighlighter>
+          </div>
+        )}
+
+        <div className={cx('editorBox', 'commandBox')}>
+          <div className={styles.helpButtons}>
+            {question.hint ? (
+              <a
+                className={cx('hintButton', 'button', {
+                  isOpen: showHint,
+                })}
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleHint();
+                }}
+              >
+                <RiLightbulbLine className={styles.hintIcon} />
+                <span>{showHint ? 'Hide Hint' : 'See Hint'}</span>
+                {showHint ? (
+                  <IoMdArrowDropup className={styles.toggleIcon} />
+                ) : (
+                  <IoMdArrowDropdown className={styles.toggleIcon} />
+                )}
+              </a>
+            ) : (
+              <div />
+            )}
+
+            {!showSolution && (
+              <a
+                className={cx('solutionButton', 'button')}
+                onClick={(e) => {
+                  e.preventDefault();
+                  useSolution();
+                }}
+              >
+                <FiCode className={styles.solutionCode} />
+                <span>See Solution</span>
+              </a>
+            )}
+          </div>
 
           <div className={styles.commandButtons}>
             <ResetButton onClick={reset} />

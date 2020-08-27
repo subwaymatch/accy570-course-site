@@ -1,7 +1,7 @@
-# Write if-statement below this line
 pwc_offer = 87000
 deloitte_offer = 84000
-ey_offer = 85000
+# Create ey_offer variable
+ey_offer = ...
 
 if (pwc_offer > deloitte_offer) and (pwc_offer > ey_offer):
     print('Accept PwC offer')

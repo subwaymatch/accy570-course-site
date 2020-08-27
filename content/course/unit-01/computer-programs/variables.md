@@ -19,6 +19,6 @@ distance = distance + 50
 distance = distance + 10
 ```
 
-It first creates a _variable_ named `total_travel_distance`. As you travel, you can track the total distance traveled by updating the `total_travel_distance` variable.
+It first creates a _variable_ named `distance`. As you travel, you can track the total distance traveled by updating the `total_travel_distance` variable.
 
 <img src="https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/rabbit-travel-01.png" alt="Traveling rabbits" width="400" />

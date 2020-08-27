@@ -39,7 +39,7 @@ export const RunCodeButton = ({
       whileTap="tap"
     >
       <MdPlayArrow className={styles.buttonIcon} />
-      <span>{label ? label : 'Run Code'}</span>
+      <span>{label ? label : 'Run'}</span>
     </motion.button>
   );
 };
@@ -90,6 +90,41 @@ export const ResetButton = ({ label, disabled, onClick }: ResetButtonProps) => {
       whileTap="tap"
     >
       <FaUndo className={styles.buttonIcon} />
+      <span>{label ? label : 'Reset'}</span>
+    </motion.button>
+  );
+};
+
+type BasicButtonProps = {
+  iconChild?: React.ReactChild;
+  label?: string;
+  show?: boolean;
+  disabled?: boolean;
+  onClick(): void;
+};
+
+export const BasicButton = ({
+  iconChild,
+  label,
+  show,
+  disabled,
+  onClick,
+}: BasicButtonProps) => {
+  if (typeof show === 'undefined') {
+    show = true;
+  }
+
+  return (
+    <motion.button
+      className={styles.basicButton}
+      onClick={onClick}
+      disabled={disabled}
+      variants={buttonVariants}
+      whileHover="hover"
+      whileTap="tap"
+    >
+      {iconChild}
+
       <span>{label ? label : 'Reset'}</span>
     </motion.button>
   );
