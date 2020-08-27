@@ -24,7 +24,9 @@ export default function Layout({
     backgroundColor?: string;
   } = {};
 
-  if (backgroundColor) mainStyle.backgroundColor = backgroundColor;
+  if (backgroundColor) {
+    mainStyle.backgroundColor = backgroundColor;
+  }
 
   return (
     <>

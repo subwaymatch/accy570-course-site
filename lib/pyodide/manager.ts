@@ -1,5 +1,4 @@
 import { PyodideEnabledWindow } from 'typings/pyodide';
-import _ from 'lodash';
 
 declare let window: PyodideEnabledWindow;
 

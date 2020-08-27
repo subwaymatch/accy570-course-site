@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { push as Menu } from 'react-burger-menu';
-import { RiHome2Line, RiArrowDropRightLine } from 'react-icons/ri';
+import { RiArrowDropRightLine } from 'react-icons/ri';
 import { BsBook, BsCalendar } from 'react-icons/bs';
 import { IoIosFiling } from 'react-icons/io';
 

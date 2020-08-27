@@ -1,7 +1,6 @@
 import styles from './course-calendar.module.scss';
 import classNames from 'classnames/bind';
 import moment from 'moment';
-import _ from 'lodash';
 import { eventsByDate } from 'lib/schedule';
 import { ScheduleType } from 'typings/schedule';
 import { IoMdArrowDown } from 'react-icons/io';
@@ -43,7 +42,7 @@ export default function CourseCalendar() {
               <div key={dayKey} className={cx('calendarCell')}>
                 <div
                   className={cx('day', {
-                    empty: !Boolean(dayEvents),
+                    empty: dayEvents,
                     today: todayKey === dayKey,
                   })}
                 >
