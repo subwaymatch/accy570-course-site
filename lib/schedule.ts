@@ -13,7 +13,7 @@ const events = [
     text: ['Intro to programming', 'If statements'],
   },
   {
-    date: '0827',
+    date: '0828',
     type: ScheduleType.AfterClassAssignment,
     text: 'After Class Exercise #1 due by 11:59pm',
   },
