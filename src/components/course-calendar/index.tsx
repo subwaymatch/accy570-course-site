@@ -38,11 +38,13 @@ export default function CourseCalendar() {
             const dayKey = day.format('MMDD');
             const dayEvents = eventsByDate[dayKey];
 
+            console.log(dayEvents);
+
             return (
               <div key={dayKey} className={cx('calendarCell')}>
                 <div
                   className={cx('day', {
-                    empty: dayEvents,
+                    empty: typeof dayEvents === 'undefined',
                     today: todayKey === dayKey,
                   })}
                 >
