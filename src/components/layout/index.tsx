@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { ToastContainer } from 'react-toastify';
-import HeaderComponent from 'src/components/header';
+import Footer from '../footer';
+import Header from 'src/components/header';
 import SlideMenu from 'src/components/burger-menu';
 import styles from './layout.module.scss';
 import classNames from 'classnames/bind';
@@ -72,7 +73,7 @@ export default function Layout({
         <SlideMenu />
 
         <div id="page-wrap" className={styles.pageWrapper}>
-          <HeaderComponent />
+          <Header />
 
           <main className={cx('main', className)} style={mainStyle}>
             {fluid ? (
@@ -83,6 +84,8 @@ export default function Layout({
               </section>
             )}
           </main>
+
+          <Footer />
         </div>
       </div>
 

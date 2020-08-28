@@ -10,11 +10,11 @@ import LiveSessionBar from './live-session-bar';
 
 const cx = classNames.bind(styles);
 
-type HeaderComponentProps = {
+type HeaderProps = {
   headerTitle?: string;
 };
 
-export default function HeaderComponent({ headerTitle }: HeaderComponentProps) {
+export default function Header({ headerTitle }: HeaderProps) {
   const router = useRouter();
 
   return (
