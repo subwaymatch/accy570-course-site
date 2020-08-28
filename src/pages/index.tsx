@@ -278,7 +278,7 @@ export default function Home() {
         <div className="column is-three-quarters">
           <p>
             I will grade attendance. It's only to incentivize you to not fall
-            behind. Building a solid foundation in 570 will enable you to Excel
+            behind. Building a solid foundation in 570 will enable you to excel
             in other data analytics courses.
           </p>
           <p>
