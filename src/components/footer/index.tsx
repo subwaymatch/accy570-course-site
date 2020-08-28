@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="column is-full">
             <p>
               © University of Illinois at Urbana-Champaign 2020 | Course
-              materials developed Anand Vic and Kimberly Mendoza
+              materials developed by Anand Vic and Kimberly Mendoza
             </p>
           </div>
         </div>
