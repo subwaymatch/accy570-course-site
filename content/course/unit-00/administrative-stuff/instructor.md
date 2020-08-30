@@ -13,4 +13,4 @@ title: About the instructor
 - I ♥ Programming
 - I ♥ Teaching Programming to non-engineers
 - I love being back at Champaign.
-- I am aiming to make ACCY 570 the best course on campus (building on the works of other professors).
+- I am aiming to make ACCY 570 the best course on campus (building on the works of other professors - Anand Vic, Kimberly Mendoza, Joshua Herbold).
