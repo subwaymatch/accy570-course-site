@@ -13,7 +13,7 @@ Thanks to your amazing data analytics skills, you get two job offers.
 
 ![Deloitte vs PWC](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/deloitte-vs-pwc.jpg)
 
-i will first create two _variables_ (`deloitte_offer` and `pwc_offer`). We'll learn about those later.
+I will first create two _variables_ (`deloitte_offer` and `pwc_offer`). We'll learn about those later.
 
 ```
 deloitte_offer = 81000
