@@ -76,12 +76,26 @@ export default function Home() {
             <h1>ACCY 570: Data Analytics Foundations for Accountancy</h1>
 
             <div className={cx('meetingTimes')}>
-              <div>Section AD5 (MW 3:30-4:50 PM) - BIF 2063</div>
-              <div>Section OD5 (MW 3:30-4:50 PM) - Online</div>
+              <div>
+                <span className="color-primary">Section AD5</span> (MW 3:30-4:50
+                PM) - BIF 2063
+              </div>
+              <div>
+                <span className="color-primary">Section OD5</span> (MW 3:30-4:50
+                PM) - Online
+              </div>
               <div>
                 Lab Sessions for both AD5 & OD5 (MW 6:00-6:50 PM) - Online
               </div>
             </div>
+
+            <p>
+              * Information here only pertains to Park's sections (AD5 & OD5).
+            </p>
+            <p>
+              All course notes/assignments/grades are uploaded to Compass.
+              Please check Compass for full materials.
+            </p>
           </div>
         </div>
       </motion.div>

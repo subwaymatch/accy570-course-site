@@ -69,6 +69,23 @@
     .meetingTimes {
       color: #bbb;
       font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 0.2rem;
+      padding: 0.6rem 1rem;
+      font-size: 1.1rem;
+
+      color: $color-primary;
+
+      background: color.scale(
+        $color-primary,
+        $lightness: 98%,
+        $saturation: 50%
+      );
+
+      border: 1px solid color.scale($color-primary, $lightness: 87%);
     }
   }
 
