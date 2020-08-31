@@ -8,6 +8,7 @@ import {
   ZoomLinkButton,
   ZoomPasswordMessage,
 } from 'src/components/zoom-button';
+import DataCampLogoImage from 'src/images/datacamp-logo.png';
 
 const cx = classNames.bind(styles);
 
@@ -360,6 +361,32 @@ export default function Home() {
 
         <div className="column is-one-quarter">
           <img src={RunningAlarmClockImage} alt="Running Alarm Clock" />
+        </div>
+      </div>
+
+      <div className={cx('columns', 'section')}>
+        <div className="column is-one-quarter">
+          <a href="https://www.datacamp.com">
+            <img
+              src={DataCampLogoImage}
+              alt="DataCamp"
+              className={cx('datacampLogoImage')}
+            />
+          </a>
+        </div>
+
+        <div className="column is-two-quarters">
+          <p>
+            This class is accompanied by{' '}
+            <strong>
+              <a href="https://www.datacamp.com/">DataCamp</a>
+            </strong>
+            , the most intuitive learning platform for data science and
+            analytics. Learn any time, anywhere and become an expert in R,
+            Python, SQL, and more. DataCamp offers 325+ courses by expert
+            instructors on topics such as importing data, data visualization,
+            and machine learning.
+          </p>
         </div>
       </div>
     </Layout>

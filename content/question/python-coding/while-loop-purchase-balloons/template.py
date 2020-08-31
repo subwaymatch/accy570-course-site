@@ -3,7 +3,7 @@ balloon_price = 3
 num_balloons = 0
 
 # Your code begins
-# While your budget is greater than 0
+# While your budget is greater or equal (>=) to the price of the balloon
 while ...:
 	# Subtract the price of a balloon from your budget
 	budget = ...
