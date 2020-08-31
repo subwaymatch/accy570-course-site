@@ -88,7 +88,7 @@ export default function MultipleChoiceQuestion({
         {options.map((option, index) => (
           <ChoiceOption
             key={index}
-            labelHtml={option}
+            labelHtml={String(option)}
             isSelected={selectedOptions[index]}
             isCorrectOption={correctOptions[index]}
             onClick={() => handleOptionClick(index)}
@@ -96,21 +96,23 @@ export default function MultipleChoiceQuestion({
         ))}
       </div>
 
-      <div className={styles.hintBox}>
-        <span
-          className={styles.hintBoxLabel}
-          onClick={() => {
-            setShowHint(!showHint);
-          }}
-        >
-          Hint {showHint ? '▴' : '▾'}
-        </span>
-        {showHint && (
-          <div className={styles.hintContent}>
-            <div>{hint}</div>
-          </div>
-        )}
-      </div>
+      {question.hint && (
+        <div className={styles.hintBox}>
+          <span
+            className={styles.hintBoxLabel}
+            onClick={() => {
+              setShowHint(!showHint);
+            }}
+          >
+            Hint {showHint ? '▴' : '▾'}
+          </span>
+          {showHint && (
+            <div className={styles.hintContent}>
+              <div>{hint}</div>
+            </div>
+          )}
+        </div>
+      )}
 
       {didSubmit && (
         <div className={styles.explanationBox}>
