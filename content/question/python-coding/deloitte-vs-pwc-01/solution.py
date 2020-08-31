@@ -1,7 +1,8 @@
+# First, create two variables here
 deloitte_offer = 81000
 pwc_offer = 85000
 
-# Your code below this line
+# Then, replace ... with your own code to compare offers
 if deloitte_offer > pwc_offer:
     print('Accept Deloitte offer')
 else:

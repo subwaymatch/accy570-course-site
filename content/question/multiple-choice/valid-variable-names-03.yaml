@@ -1,0 +1,9 @@
+text: Which of the following are valid variable names?
+options:
+  - "`_____________`[o]"
+  - "`var*`"
+  - "`aCcY_570`[o]"
+  - "`aCcY-570`"
+  - "`570_aCcY`"
+explanation: |
+  The `*` character in `var*` is not allowed. `-` in `aCcY-570` is not allowed. `570_aCcY` begins with a digit, which is not allowed.

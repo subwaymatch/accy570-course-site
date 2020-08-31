@@ -1,0 +1,8 @@
+text: Which of the following is NOT a valid variable name?
+options:
+  - "`first_name`"
+  - "`lastName`"
+  - "`full name`[o]"
+  - "`username1`"
+explanation: |
+  A variable name cannot contain spaces.

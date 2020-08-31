@@ -1,0 +1,8 @@
+text: Which of the following are valid variable names?
+options:
+  - "`2020items`"
+  - "`intangible_assets`[o]"
+  - "`NOTES_PAYABLE`[o]"
+  - "`_equity`[o]"
+explanation: |
+  A variable name cannot begin with a digit.

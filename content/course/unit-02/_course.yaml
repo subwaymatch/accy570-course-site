@@ -1,0 +1,8 @@
+title: "Variables and Loops"
+description: Need to store a value into a container? Use variables. Need to perform a repetitive task? Use loops.
+modules:
+  - announcements
+  - variables
+  - while-loops
+  - for-loops
+  - summary
