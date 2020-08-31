@@ -88,7 +88,7 @@ export default function MultipleChoiceQuestion({
         {options.map((option, index) => (
           <ChoiceOption
             key={index}
-            label={String(option)}
+            labelHtml={option}
             isSelected={selectedOptions[index]}
             isCorrectOption={correctOptions[index]}
             onClick={() => handleOptionClick(index)}

@@ -4,14 +4,14 @@ import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
 type ChoiceOptionProps = {
-  label: string;
+  labelHtml: string;
   isSelected: boolean;
   isCorrectOption: boolean;
   onClick: () => void;
 };
 
 export default function ChoiceOption({
-  label,
+  labelHtml,
   isSelected,
   isCorrectOption,
   onClick,
@@ -30,7 +30,10 @@ export default function ChoiceOption({
       <div className={styles.checkIndicator}>
         <span className={styles.checkmark}>✓</span>
       </div>
-      <p className={styles.labelText}>{label}</p>
+      <div
+        className={styles.labelText}
+        dangerouslySetInnerHTML={{ __html: labelHtml }}
+      />
     </div>
   );
 }

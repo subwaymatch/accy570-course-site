@@ -1,6 +1,7 @@
 import fs, { promises as fsPromises } from 'fs';
 import path from 'path';
 import YAML from 'yaml';
+import marked from 'marked';
 import {
   IMultipleChoiceQuestion,
   QuestionType,
@@ -31,6 +32,12 @@ export async function getMultipleChoiceQuestion(
   // Extract correct answers
   questionData['correctOptions'] = questionData['options'].map((option) => {
     return option.toString().endsWith('[o]') ? true : false;
+  });
+
+  questionData['options'] = questionData['options'].map((option) => {
+    return option.toString().endsWith('[o]')
+      ? marked(option.toString().substring(0, option.toString().length - 3))
+      : marked(option.toString());
   });
 
   return questionData;

@@ -1,3 +1,4 @@
+@use 'sass:color';
 @import 'src/styles/variables';
 
 .optionItem {
@@ -47,27 +48,28 @@
   .correctMessage,
   .incorrectMessage {
     padding: 1rem 0;
-    color: $color-primary;
-    border-top: 2px solid $color-primary;
-    border-bottom: 2px solid $color-primary;
+    font-size: 2rem;
+  }
+
+  .correctMessage {
+    color: $color-correct;
   }
 
   .incorrectMessage {
-    color: #e74c3c;
-    border-color: #e74c3c;
+    color: $color-incorrect;
   }
 
   .optionItem.isSelected {
     color: white;
-    background-color: #e74c3c;
-    border-color: #cb4335;
+    background-color: $color-incorrect;
+    border-color: color.scale($color-incorrect, $lightness: -10%);
   }
 
   .optionItem.isCorrectOption,
   .optionItem.isCorrectOption.isSelected {
     color: white;
-    background-color: $color-primary;
-    border-color: #28b463;
+    background-color: $color-correct;
+    border-color: color.scale($color-correct, $lightness: -10%);
   }
 }
 
@@ -83,7 +85,9 @@
 
 .explanationBox {
   padding: 0.8rem 1.2rem;
-  background-color: white;
+  color: $color-secondary;
+  background-color: color.scale($color-secondary, $lightness: 96%);
+  border: 1px solid color.scale($color-secondary, $lightness: 92%);
   margin-top: 1rem;
 
   .explanationBoxLabel {
