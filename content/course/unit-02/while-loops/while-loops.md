@@ -6,7 +6,7 @@ questions:
 
 You love donuts. In fact, you love donuts so much that you start working at a donut shop. A customer asks you for half-dozen (6) donuts. To keep a track of how many donuts you put in a bag, you create a variable `num_donuts` and keep incrementing it until there are 6 donuts in the bag. Look at the sample below.
 
-```
+```python
 num_donuts = 0
 
 if num_donuts < 6:
@@ -37,7 +37,7 @@ A `while` loop is a way to tell Python to run an `if`-statement until the condit
 
 The syntax for a `while` loop is shown below:
 
-```
+```python
 # While some_condition is satisfied (True)
 while some_condition:
   # do something

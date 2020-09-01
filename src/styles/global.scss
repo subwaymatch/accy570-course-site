@@ -41,19 +41,15 @@ code {
 }
 
 pre {
-  font-family: $font-monospace;
-  padding: 0.5rem 1rem;
-  color: color.mix($color-secondary, black, 90%);
-  background-color: color.mix($color-secondary, white, 6%);
-  border: 1px solid color.mix($color-secondary, white, 20%);
-  border-radius: 5px;
-  font-size: 1.1rem;
-
   code {
     background: none;
     padding: 0;
     border: none;
     font-size: inherit;
+  }
+
+  code.hljs {
+    padding: 1em 1.5em;
   }
 }
 

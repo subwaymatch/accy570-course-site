@@ -4,7 +4,7 @@ questions:
   - python-coding/if-hot-or-cold-02
 ---
 
-```
+```python
 # 91 degrees farenheit is about 33 degrees celcius
 current_temp_in_farenheit = 91
 
@@ -18,7 +18,7 @@ The previous example worked, right? It does, but it's inelegant and inefficient.
 
 A better way to write this is with an `else` clause.
 
-```
+```python
 if condition is true:
   take action X
 else:

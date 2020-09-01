@@ -9,6 +9,7 @@ import { useRouter } from 'next/router';
 
 import store from 'src/store';
 import 'src/styles/global.scss';
+import 'highlight.js/styles/shades-of-purple.css';
 import 'react-toastify/dist/ReactToastify.css';
 
 const rrfConfig = {

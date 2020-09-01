@@ -11,7 +11,7 @@ Your Python program runs in an _environment_. An _environment_ is a _container_ 
 
 Creating a variable is super easy in Python. First, you name the variable on the left side. It is followed by an equal sign (`=`). Finally, place the value on the right side of the equal sign.
 
-```
+```python
 # name of the variable on left, than an equal sign, then the value
 cash = 100
 ```

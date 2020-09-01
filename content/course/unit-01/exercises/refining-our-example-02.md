@@ -6,7 +6,7 @@ questions:
 
 Our previous code used nested `if` statements.
 
-```
+```python
 pwc_offer = 102000
 deloitte_offer = 100000
 

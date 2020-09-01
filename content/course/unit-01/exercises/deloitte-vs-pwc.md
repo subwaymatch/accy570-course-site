@@ -15,14 +15,14 @@ Thanks to your amazing data analytics skills, you get two job offers.
 
 I will first create two _variables_ (`deloitte_offer` and `pwc_offer`). We'll learn about those later.
 
-```
+```python
 deloitte_offer = 81000
 pwc_offer = 85000
 ```
 
 Your code structure would look like below.
 
-```
+```python
 if Deloitte offer is higher than PwC offer:
     take Deloitte offer
 else:

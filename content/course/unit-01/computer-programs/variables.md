@@ -6,7 +6,7 @@ questions:
 
 In the previous page, we've stored values into _variables_. Once you create a variable, you can store a value. You can also update a variable as many times as you want. Take a look at the sample code below.
 
-```
+```python
 distance = 0
 
 # You've traveled 40 miles, what's the total distance?
