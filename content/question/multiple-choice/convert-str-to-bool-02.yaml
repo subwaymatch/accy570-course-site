@@ -1,0 +1,7 @@
+text: 'What does `print(bool(""))` print?'
+options:
+  - "`True`"
+  - "`False`[o]"
+  - "The code throws an error"
+explanation: |
+  Empty strings are converted to `False`.

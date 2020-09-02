@@ -1,0 +1,9 @@
+text: 'What does `print(float("-3.33"))` print?'
+options:
+  - "`-3.33`[o]"
+  - "`3.33`"
+  - "`-3`"
+  - "`-3.0`"
+  - "The code throws an error"
+explanation: |
+  Since Python can infer that the string "-3.33" looks like a `float` type, it will make the conversion.

@@ -1,0 +1,9 @@
+text: |
+  What does `print(bool('False'))` print? 
+  Watch out! This one is a bit tricky!
+options:
+  - "`True`[o]"
+  - "`False`"
+  - "The code throws an error"
+explanation: |
+  Any non-empty strings are converted to `True`.

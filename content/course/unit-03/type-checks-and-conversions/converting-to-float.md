@@ -1,5 +1,9 @@
 ---
 title: Converting to a float
+questions:
+  - multiple-choice/convert-bool-to-float-01
+  - multiple-choice/convert-str-to-float-01
+  - multiple-choice/convert-str-to-float-02
 ---
 
 Use `float` function.

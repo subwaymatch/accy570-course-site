@@ -1,7 +1,8 @@
 ---
 title: Converting to an integer
 questions:
-  - multiple-choice/converting-bool-to-int
+  - multiple-choice/convert-bool-to-int-01
+  - multiple-choice/convert-float-to-int-01
 ---
 
 Use `int()` function.

@@ -1,0 +1,9 @@
+text: "What does `print(int(-55.99))` print?"
+options:
+  - "`56`"
+  - "`55`"
+  - "`-55`[o]"
+  - "`-56`"
+  - The code throws an error
+explanation: |
+  Any fractional amount is discarded when a `float` is converted into an `int` type.

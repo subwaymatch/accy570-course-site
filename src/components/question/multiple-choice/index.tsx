@@ -78,7 +78,7 @@ export default function MultipleChoiceQuestion({
       <ChallengeHeader label="Multiple Choice Challenge" />
 
       <div className={styles.questionTextWrapper}>
-        <p
+        <div
           className={styles.questionText}
           dangerouslySetInnerHTML={{ __html: text }}
         />
@@ -141,7 +141,7 @@ export default function MultipleChoiceQuestion({
         <div className={styles.explanationBox}>
           <span className={styles.explanationBoxLabel}>Explanation</span>
 
-          <p dangerouslySetInnerHTML={{ __html: explanation }} />
+          <div dangerouslySetInnerHTML={{ __html: explanation }} />
         </div>
       )}
     </div>

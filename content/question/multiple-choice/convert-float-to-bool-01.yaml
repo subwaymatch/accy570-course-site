@@ -1,0 +1,7 @@
+text: "What does `print(bool(-55.99))` print?"
+options:
+  - "`True`[o]"
+  - "`False`"
+  - "The code throws an error"
+explanation: |
+  Any numerical value that is not `0` will be converted to `True`.

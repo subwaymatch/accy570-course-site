@@ -1,0 +1,7 @@
+text: "What does `print(float('Text'))` print?"
+options:
+  - "`0.0`"
+  - "`1.0`"
+  - "The code throws an error[o]"
+explanation: |
+  There is no way for Python to convert 'Text' into a `float` type. Python will only make the conversion if the string can be interpreted as a number (e.g., `"37.5"`)

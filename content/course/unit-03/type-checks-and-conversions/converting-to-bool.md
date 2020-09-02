@@ -1,5 +1,10 @@
 ---
 title: Converting to a boolean
+questions:
+  - multiple-choice/convert-float-to-bool-01
+  - multiple-choice/convert-float-to-bool-02
+  - multiple-choice/convert-str-to-bool-01
+  - multiple-choice/convert-str-to-bool-02
 ---
 
 Use `bool()` function.

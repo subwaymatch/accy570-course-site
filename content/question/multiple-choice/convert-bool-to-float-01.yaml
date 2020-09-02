@@ -1,0 +1,8 @@
+text: "What does `print(float(True))` print?"
+options:
+  - "`False`"
+  - "`0.0`"
+  - "`1.0`[o]"
+  - "`True`"
+explanation: |
+  A boolean is converted into either `0.0` or `1.0`. `Trie` is converted to `1.0`.
