@@ -29,6 +29,12 @@ export async function getMultipleChoiceQuestion(
     ...YAML.parse(questionFile),
   };
 
+  questionData['text'] = marked(questionData['text']);
+
+  if (questionData['hint']) {
+    questionData['hint'] = marked(questionData['hint']);
+  }
+
   // Extract correct answers
   questionData['correctOptions'] = questionData['options'].map((option) => {
     return option.toString().endsWith('[o]') ? true : false;

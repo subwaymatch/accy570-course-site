@@ -1,0 +1,7 @@
+text: "What does `print(type(30 + 50 > 60))` print?"
+options:
+  - "`<class 'int'>`"
+  - "`<class 'str'>`"
+  - "`<class 'bool'>`[o]"
+explanation: |
+  `30 + 50 > 60` is an expression that returns `True`, which is a boolean.

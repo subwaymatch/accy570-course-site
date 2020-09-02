@@ -1,5 +1,7 @@
 ---
 title: Checking the type of value, variable, or expression
+questions:
+  - multiple-choice/type-of-expression-01
 ---
 
 So far, we have used `type()` to check the data type of a variable. You can also use `type()` to check the data types of _values_ or _expressions_.

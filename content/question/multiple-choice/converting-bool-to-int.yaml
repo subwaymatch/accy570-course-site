@@ -1,0 +1,7 @@
+text: "What does `print(int(False))` print?"
+options:
+  - "`False`"
+  - "`0`[o]"
+  - "`1`"
+explanation: |
+  A boolean is converted into either `0` or `1`. `False` is converted to `0`.

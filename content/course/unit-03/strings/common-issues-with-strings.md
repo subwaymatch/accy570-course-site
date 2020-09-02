@@ -6,10 +6,9 @@ When you enter quotes into some programs like PowerPoint and Word, they auto-cor
 
 ![Powerpoint Messes Up Strings](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/strings_powerpoint.png)
 
-```
+```python
 ‘Single quoted string in PowerPoint’ # Incorrect
 'Single quoted string in PowerPoint' # Correct
-
 
 “Double quoted string in PowerPoint” # Incorrect
 "Double quoted string in PowerPoint" # Correct

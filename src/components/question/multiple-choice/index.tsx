@@ -80,9 +80,16 @@ export default function MultipleChoiceQuestion({
         <p className={styles.incorrectMessage}>Oops, nice try!</p>
       )}
 
-      <p>
-        {text} {numCorrectOptions > 1 && `Select ${numCorrectOptions}.`}
-      </p>
+      <div className={styles.questionTextWrapper}>
+        <p
+          className={styles.questionText}
+          dangerouslySetInnerHTML={{ __html: text }}
+        />
+
+        <p className={styles.selectNMessage}>
+          {numCorrectOptions > 1 && `Select ${numCorrectOptions}.`}
+        </p>
+      </div>
 
       <div className={styles.optionsWrapper}>
         {options.map((option, index) => (
