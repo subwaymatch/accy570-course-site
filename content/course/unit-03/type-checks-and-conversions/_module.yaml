@@ -1,0 +1,8 @@
+title: Type Checks and Conversions
+pages:
+  - checking-types
+  - converting-between-types
+  - converting-to-int
+  - converting-to-float
+  - converting-to-bool
+  - converting-to-str

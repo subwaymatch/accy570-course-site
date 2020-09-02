@@ -1,0 +1,10 @@
+title: "Data Types"
+description: Every value in Python has a data type. What are some of the basic (primitive) types?
+modules:
+  - announcements
+  - introduction
+  - number-types
+  - strings
+  - booleans
+  - type-checks-and-conversions
+  - summary
