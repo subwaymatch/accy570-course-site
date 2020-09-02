@@ -30,6 +30,7 @@ export async function getMultipleChoiceQuestion(
   };
 
   questionData['text'] = marked(questionData['text']);
+  questionData['explanation'] = marked(questionData['explanation']);
 
   if (questionData['hint']) {
     questionData['hint'] = marked(questionData['hint']);

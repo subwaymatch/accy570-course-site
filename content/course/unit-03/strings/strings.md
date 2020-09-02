@@ -18,3 +18,5 @@ favorite_dessert = "Gulab Jamun"
 # "3144" is a string - ANYTHING inside quotes are treated as text
 license_plate = "3144"
 ```
+
+![Cat in string](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/cute-cat-strings%402x.png)

@@ -3,6 +3,9 @@ import styles from './multiple-choice-question.module.scss';
 import classNames from 'classnames/bind';
 import { IMultipleChoiceQuestion } from 'typings/question';
 import ChoiceOption from 'src/components/question/multiple-choice/choice-option';
+import _ from 'lodash';
+import ChallengeHeader from '../challenge-header';
+import { CorrectResultBox, IncorrectResultBox } from '../message-boxes';
 
 const cx = classNames.bind(styles);
 
@@ -72,13 +75,7 @@ export default function MultipleChoiceQuestion({
         isCorrect,
       })}
     >
-      {didSubmit && isCorrect && (
-        <p className={styles.correctMessage}>Yay! You got this.</p>
-      )}
-
-      {didSubmit && !isCorrect && (
-        <p className={styles.incorrectMessage}>Oops, nice try!</p>
-      )}
+      <ChallengeHeader label="Multiple Choice Challenge" />
 
       <div className={styles.questionTextWrapper}>
         <p
@@ -86,9 +83,9 @@ export default function MultipleChoiceQuestion({
           dangerouslySetInnerHTML={{ __html: text }}
         />
 
-        <p className={styles.selectNMessage}>
-          {numCorrectOptions > 1 && `Select ${numCorrectOptions}.`}
-        </p>
+        {numCorrectOptions > 1 && (
+          <p className={styles.selectNMessage}>Select {numCorrectOptions}.</p>
+        )}
       </div>
 
       <div className={styles.optionsWrapper}>
@@ -98,6 +95,7 @@ export default function MultipleChoiceQuestion({
             labelHtml={String(option)}
             isSelected={selectedOptions[index]}
             isCorrectOption={correctOptions[index]}
+            displayResult={didSubmit}
             onClick={() => handleOptionClick(index)}
           />
         ))}
@@ -121,22 +119,30 @@ export default function MultipleChoiceQuestion({
         </div>
       )}
 
-      {didSubmit && (
-        <div className={styles.explanationBox}>
-          <span className={styles.explanationBoxLabel}>Explanation</span>
-
-          <p>{explanation}</p>
-        </div>
-      )}
-
       {!didSubmit && (
         <button
           className={styles.submitBtn}
           onClick={handleSubmit}
-          disabled={didSubmit}
+          disabled={didSubmit || _.sum(selectedOptions) !== numCorrectOptions}
         >
           Check Your Answer!
         </button>
+      )}
+
+      <div className={styles.resultBoxWrapper}>
+        <CorrectResultBox show={didSubmit && isCorrect} />
+        <IncorrectResultBox
+          show={didSubmit && !isCorrect}
+          message="Oops, nice try!"
+        />
+      </div>
+
+      {didSubmit && (
+        <div className={styles.explanationBox}>
+          <span className={styles.explanationBoxLabel}>Explanation</span>
+
+          <p dangerouslySetInnerHTML={{ __html: explanation }} />
+        </div>
       )}
     </div>
   );

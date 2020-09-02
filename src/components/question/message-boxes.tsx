@@ -28,14 +28,16 @@ const messageBoxVariant = {
 type HintBoxProps = {
   hintMarkdown?: string;
   show: boolean;
+  className?: string;
 };
 
-export const HintBox = ({ hintMarkdown, show }: HintBoxProps) => (
+export const HintBox = ({ hintMarkdown, show, className }: HintBoxProps) => (
   <>
     {show && (
       <motion.div
-        key="yaya"
-        className={cx('hintBox')}
+        className={cx('hintBox', {
+          [className]: !!className,
+        })}
         variants={messageBoxVariant}
         initial="hidden"
         animate="visible"
@@ -65,15 +67,19 @@ export const HintBox = ({ hintMarkdown, show }: HintBoxProps) => (
 type CorrectResultBoxProps = {
   explanation?: string;
   show: boolean;
+  className?: string;
 };
 
 export const CorrectResultBox = ({
   explanation,
   show,
+  className,
 }: CorrectResultBoxProps) =>
   show && (
     <motion.div
-      className={cx('correctResultBox')}
+      className={cx('correctResultBox', {
+        [className]: !!className,
+      })}
       variants={messageBoxVariant}
       initial="hidden"
       animate="visible"
@@ -101,10 +107,22 @@ export const CorrectResultBox = ({
     </motion.div>
   );
 
-export const IncorrectResultBox = ({ show }: { show: boolean }) =>
+type IncorrectResultBoxProps = {
+  show: boolean;
+  message?: string;
+  className?: string;
+};
+
+export const IncorrectResultBox = ({
+  show,
+  message,
+  className,
+}: IncorrectResultBoxProps) =>
   show && (
     <motion.div
-      className={cx('incorrectResultBox')}
+      className={cx('incorrectResultBox', {
+        [className]: !!className,
+      })}
       variants={messageBoxVariant}
       initial="hidden"
       animate="visible"
@@ -122,7 +140,7 @@ export const IncorrectResultBox = ({ show }: { show: boolean }) =>
         <div>
           <span className={styles.boxLabel}>Oink...</span>
 
-          <div>Let's give it another try!</div>
+          <div>{message ? message : "Let's give it another try!"}</div>
         </div>
       </div>
     </motion.div>

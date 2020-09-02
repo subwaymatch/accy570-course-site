@@ -2,14 +2,15 @@
 @import 'src/styles/variables';
 
 .questionTextWrapper {
+  font-size: 1.4rem;
+
   margin-bottom: 1rem;
   .questionText {
-    font-size: 1.4rem;
+    // Nothing
   }
 
   .selectNMessage {
-    color: $color-primary;
-    font-size: 0.9em;
+    color: $color-secondary;
   }
 }
 
@@ -31,11 +32,7 @@
     align-items: center;
     justify-content: center;
     margin-right: 1rem;
-
-    .checkmark {
-      color: white;
-      display: none;
-    }
+    color: white;
   }
 
   .labelText {
@@ -48,39 +45,37 @@
     .checkIndicator {
       background-color: black;
       border: none;
+    }
 
-      .checkmark {
-        display: block;
+    &.displayResult {
+      &.isUserCorrect {
+        .checkIndicator {
+          color: white;
+          background: $color-correct;
+        }
+      }
+
+      &.isUserIncorrect {
+        .checkIndicator {
+          color: white;
+          background: $color-incorrect;
+        }
       }
     }
   }
 }
 
+.resultBoxWrapper {
+  margin-top: 1rem;
+}
+
 .didSubmit {
-  .correctMessage,
-  .incorrectMessage {
-    padding: 1rem 0;
-    font-size: 2rem;
-  }
-
-  .correctMessage {
-    color: $color-correct;
-  }
-
-  .incorrectMessage {
-    color: $color-incorrect;
-  }
-
   .optionItem.isSelected {
-    color: white;
-    background-color: $color-incorrect;
     border-color: color.scale($color-incorrect, $lightness: -10%);
   }
 
   .optionItem.isCorrectOption,
   .optionItem.isCorrectOption.isSelected {
-    color: white;
-    background-color: $color-correct;
     border-color: color.scale($color-correct, $lightness: -10%);
   }
 }
@@ -128,6 +123,6 @@ button.submitBtn {
 
   &:disabled {
     cursor: not-allowed;
-    background-color: #eee;
+    background-color: #ccc;
   }
 }

@@ -1,5 +1,7 @@
 ---
 title: Common issues with strings
+questions:
+  - python-coding/fix-invalid-quotes-in-string
 ---
 
 When you enter quotes into some programs like PowerPoint and Word, they auto-correct the quotes into non-standard quotes. This is very common.

@@ -14,7 +14,7 @@ import styles from './python-coding-question.module.scss';
 import { IPythonCodingQuestion } from 'typings/question';
 import { CodeResult } from 'typings/pyodide';
 import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
-import { FiArrowDownRight, FiCode } from 'react-icons/fi';
+import { FiCode } from 'react-icons/fi';
 import { RiLightbulbLine } from 'react-icons/ri';
 import {
   ResetButton,
@@ -26,6 +26,7 @@ import {
   CorrectResultBox,
   IncorrectResultBox,
 } from 'src/components/question/message-boxes';
+import ChallengeHeader from '../challenge-header';
 
 const cx = classNames.bind(styles);
 
@@ -80,6 +81,7 @@ export default function PythonCodingQuestion({
         'Do you really want to reset your code? Your code will be lost.'
       )
     ) {
+      setIsSubmitComplete(false);
       setShowHint(false);
       setShowSolution(false);
       setEditorValue(question.templateCode ? question.templateCode : '');
@@ -147,10 +149,7 @@ export default function PythonCodingQuestion({
 
   return (
     <div className={cx('pythonCodingQuestionWrapper')}>
-      <div className={cx('questionHeader')}>
-        <span className={cx('questionTitle')}>Coding Challenge</span>
-        <FiArrowDownRight className={styles.reactIcon} />
-      </div>
+      <ChallengeHeader label="Coding Challenge" />
 
       <div
         className={cx('questionContent')}

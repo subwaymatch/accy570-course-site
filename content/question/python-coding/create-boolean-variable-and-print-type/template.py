@@ -1,5 +1,6 @@
 # Your code begins
-
+age = ...
+can_drive = ...
 # Your code ends
 
 # Do not change the lines below

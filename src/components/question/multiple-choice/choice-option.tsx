@@ -7,6 +7,7 @@ type ChoiceOptionProps = {
   labelHtml: string;
   isSelected: boolean;
   isCorrectOption: boolean;
+  displayResult: boolean;
   onClick: () => void;
 };
 
@@ -14,6 +15,7 @@ export default function ChoiceOption({
   labelHtml,
   isSelected,
   isCorrectOption,
+  displayResult,
   onClick,
 }: ChoiceOptionProps) {
   const isUserCorrect = isSelected === isCorrectOption;
@@ -21,14 +23,25 @@ export default function ChoiceOption({
   return (
     <div
       className={cx('optionItem', {
-        isCorrectOption,
         isSelected,
         isUserCorrect,
+        isUserIncorrect: !isUserCorrect,
+        isCorrectOption,
+        displayResult,
       })}
       onClick={onClick}
     >
       <div className={styles.checkIndicator}>
-        <span className={styles.checkmark}>✓</span>
+        {!displayResult && isSelected && (
+          <span className={styles.selectMark}>→</span>
+        )}
+
+        {displayResult && isSelected && isUserCorrect && (
+          <span className={styles.correctMark}>✓</span>
+        )}
+        {displayResult && isSelected && !isUserCorrect && (
+          <span className={styles.incorrectMark}>✗</span>
+        )}
       </div>
       <div
         className={styles.labelText}
