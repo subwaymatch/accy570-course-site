@@ -1,5 +1,5 @@
 # Your code begins
-city = "Seoul"
+city = "Mexico City"
 # Your code ends
 
 # Do not change this line

@@ -1,0 +1,8 @@
+text: Which of the following are empty strings in Python?
+options:
+  - "`' 41 '`"
+  - '`""`[o]'
+  - '`" "` (There is a space in between the double quotes)'
+  - "`''`[o]"
+explanation: |
+  A string with blank spaces is considered non-empty. Only strings without any character are considered to be empty strings.

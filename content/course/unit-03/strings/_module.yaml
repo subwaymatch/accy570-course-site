@@ -3,3 +3,4 @@ pages:
   - strings
   - double-vs-single-quotes
   - common-issues-with-strings
+  - empty-strings

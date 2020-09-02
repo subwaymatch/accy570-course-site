@@ -3,6 +3,7 @@ title: Strings
 questions:
   - python-coding/create-string-variable
   - python-coding/create-string-variable-and-print-type
+  - multiple-choice/pi-in-quotes-data-type
 ---
 
 Strings are used to store text data. As programmers, you should automatically think of text data when you hear the word "string".

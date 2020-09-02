@@ -1,6 +1,7 @@
 ---
 title: Integers
 questions:
+  - multiple-choice/do-integers-include-zero
   - python-coding/create-integer-variable
   - python-coding/create-integer-year-and-print-type
 ---

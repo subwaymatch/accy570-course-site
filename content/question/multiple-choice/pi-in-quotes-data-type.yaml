@@ -1,0 +1,8 @@
+text: Given, `pi = '3.14159'`, what is the data type of pi?
+
+options:
+  - Integer (`int`)
+  - Float (`float`)
+  - String (`str`)[o]
+explanation: |
+  Don't be fooled by the numbers inside the single quotes. Any values inside quotes are treated as text.

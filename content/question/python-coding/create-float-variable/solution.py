@@ -1,6 +1,5 @@
 # Your code begins
-course_number = 570
+donut_price = 0.75
 # Your code ends
 
-# Do not change this line
-print(type(course_number))
+print(type(donut_price))

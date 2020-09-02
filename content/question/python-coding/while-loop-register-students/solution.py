@@ -1,8 +1,9 @@
-num_students = 15
+num_students = 0
 
-# A course can have up to 30 students registered
+# A course can have up to 5 students registered
+# Check condition to see if the number of students is less than 5
 # Your code begins
-while num_students < 30:
+while num_students < 5:
 # Your code ends
 	print(f'Currently {num_students} in ACCY 570')
 	num_students = num_students + 1

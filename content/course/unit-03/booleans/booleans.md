@@ -1,5 +1,8 @@
 ---
 title: Booleans
+questions:
+  - python-coding/create-boolean-variable
+  - python-coding/create-boolean-variable-and-print-type
 ---
 
 Are you taking ACCY 501 this semester? The answer would be either yes or no (there's no in-between). A Boolean value is used to represent yes or no. In programming, yes equates to `True`, and no equates to `False`.
