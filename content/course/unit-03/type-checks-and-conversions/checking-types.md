@@ -13,7 +13,7 @@ print(type(7.2))     # Outputs <class 'float'>
 print(type('0.625')) # Outputs <class 'str'>
 
 # Expressions
-print(type(5 > 3)    # Outputs <class 'bool'>
+print(type(5 > 3))   # Outputs <class 'bool'>
 print(type(10 + 20)) # Outputs <class 'int'>
 
 # Variables

@@ -39,6 +39,9 @@ Python will perform the conversion if it makes sense. It will throw an error oth
 # Prints -42.0
 print(float("-42"))
 
+# Prints -42.5
+print(float("-42.5"))
+
 # Throws an error
 print(float("Text"))
 ```
