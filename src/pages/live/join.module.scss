@@ -4,29 +4,32 @@
 .joinPage {
   label {
     display: block;
-    color: #6c4613;
+    color: $color-primary;
   }
 
   input {
+    color: $color-secondary;
     font-size: 1.9rem;
     font-weight: 300;
     display: block;
     width: 100%;
     border-radius: 0.5rem;
-    padding: 2rem;
+    padding: 1.8rem 2rem;
     border: none;
-    box-shadow: 0 0 1rem rgba(175, 175, 32, 0.08);
+    box-shadow: 0 0 0.6rem rgba(black, 0.05);
     margin-top: 1rem;
     outline: none;
 
     &:focus {
-      box-shadow: 0 0 1.5rem rgba(175, 175, 32, 0.24);
+      box-shadow: 0 0 1rem rgba(black, 0.12);
     }
   }
 
   input[type='submit'] {
+    font-size: 1.6rem;
     color: white;
-    background-color: #6c4613;
+    margin-top: 2rem;
+    background-color: $color-secondary;
     font-weight: 300;
     cursor: pointer;
   }

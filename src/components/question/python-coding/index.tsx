@@ -77,7 +77,6 @@ export default function PythonCodingQuestion({
   const setSavedUserCode = useCallback(
     _.debounce((userCode) => {
       localStorage.setItem(question.id, userCode);
-      console.log('Saved user code to localStorage');
     }, 1000),
     []
   );
@@ -114,7 +113,6 @@ export default function PythonCodingQuestion({
     setIsPyodideReady(false);
 
     const codeResult = await pyodideManager.runCode(editorValue);
-
     setCodeResult(codeResult);
 
     setIsPyodideReady(true);
