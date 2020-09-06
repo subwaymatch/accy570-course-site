@@ -19,14 +19,13 @@ export default function LiveJoinPage({ socketIOEndpoint }) {
   const user = useSelector(selectUser);
 
   const [userName, setUserName] = useState(user.userName);
-  const [response, setResponse] = useState('');
 
   console.log(`socketIOEndpoint=${socketIOEndpoint}`);
 
   useEffect(() => {
     socket = socketIOClient(socketIOEndpoint);
     socket.on('FromAPI', (data) => {
-      setResponse(data);
+      console.log(data);
     });
 
     socket.on('joinAccept', (data) => {
@@ -51,7 +50,7 @@ export default function LiveJoinPage({ socketIOEndpoint }) {
   };
 
   return (
-    <Layout className={cx('joinPage')} backgroundColor="#fffff5">
+    <Layout className={cx('joinPage')} backgroundColor="#f7f7f7">
       <div className="columns">
         <div className="column is-full">
           <motion.div
@@ -80,11 +79,13 @@ export default function LiveJoinPage({ socketIOEndpoint }) {
                 }}
               />
 
+              <p>
+                During the live session, your submissions on multiple choice and
+                coding questions will be communicated with the instructor.
+              </p>
+
               <input type="submit" value="Join" />
             </form>
-            It's <time dateTime={response}>{response}</time>
-            <br />
-            UserName: {user.userName}
           </motion.div>
         </div>
       </div>
