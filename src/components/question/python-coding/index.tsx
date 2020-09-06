@@ -61,7 +61,21 @@ export default function PythonCodingQuestion({
     pyodideManager.loadPyodide().then(() => {
       setIsPyodideReady(true);
     });
+
+    const savedUserCode = getSavedUserCode();
+
+    if (savedUserCode) {
+      setEditorValue(savedUserCode);
+    }
   }, []);
+
+  const getSavedUserCode = () => {
+    return localStorage.getItem(question.id);
+  };
+
+  const setSavedUserCode = (userCode) => {
+    localStorage.setItem(question.id, userCode);
+  };
 
   const toggleHint = () => {
     setShowHint(!showHint);
@@ -85,6 +99,7 @@ export default function PythonCodingQuestion({
       setShowHint(false);
       setShowSolution(false);
       setEditorValue(question.templateCode ? question.templateCode : '');
+      setSavedUserCode('');
     }
   };
 
@@ -144,6 +159,8 @@ export default function PythonCodingQuestion({
   };
 
   const handleEditorChange: ControlledEditorOnChange = (ev, value) => {
+    setSavedUserCode(value);
+
     setEditorValue(value);
   };
 
