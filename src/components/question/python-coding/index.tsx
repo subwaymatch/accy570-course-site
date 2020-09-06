@@ -74,9 +74,13 @@ export default function PythonCodingQuestion({
     return localStorage.getItem(question.id);
   };
 
-  const setSavedUserCode = (userCode) => {
-    localStorage.setItem(question.id, userCode);
-  };
+  const setSavedUserCode = useCallback(
+    _.debounce((userCode) => {
+      localStorage.setItem(question.id, userCode);
+      console.log('Saved user code to localStorage');
+    }, 1000),
+    []
+  );
 
   const removeSavedUserCode = () => {
     localStorage.removeItem(question.id);
