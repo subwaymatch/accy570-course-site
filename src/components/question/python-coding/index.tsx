@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import pyodideManager from 'lib/pyodide/manager';
 import { editor } from 'monaco-editor/esm/vs/editor/editor.api';
 import {
@@ -8,6 +8,7 @@ import {
   ControlledEditorOnChange,
 } from '@monaco-editor/react';
 import classNames from 'classnames/bind';
+import _ from 'lodash';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialLight } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import styles from './python-coding-question.module.scss';
@@ -77,6 +78,10 @@ export default function PythonCodingQuestion({
     localStorage.setItem(question.id, userCode);
   };
 
+  const removeSavedUserCode = () => {
+    localStorage.removeItem(question.id);
+  };
+
   const toggleHint = () => {
     setShowHint(!showHint);
   };
@@ -88,8 +93,6 @@ export default function PythonCodingQuestion({
   };
 
   const reset = async () => {
-    console.log('reset');
-
     if (
       window.confirm(
         'Do you really want to reset your code? Your code will be lost.'
@@ -99,7 +102,7 @@ export default function PythonCodingQuestion({
       setShowHint(false);
       setShowSolution(false);
       setEditorValue(question.templateCode ? question.templateCode : '');
-      setSavedUserCode('');
+      removeSavedUserCode();
     }
   };
 
@@ -108,7 +111,6 @@ export default function PythonCodingQuestion({
 
     const codeResult = await pyodideManager.runCode(editorValue);
 
-    console.log(codeResult);
     setCodeResult(codeResult);
 
     setIsPyodideReady(true);
@@ -123,8 +125,6 @@ export default function PythonCodingQuestion({
       editorValue,
       question.checkCode
     );
-
-    console.log(codeResult);
 
     setCodeResult(codeResult);
 
