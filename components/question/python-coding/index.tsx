@@ -11,6 +11,7 @@ import classNames from 'classnames/bind';
 import _ from 'lodash';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialLight } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { toast } from 'react-toastify';
 import styles from './python-coding-question.module.scss';
 import { IPythonCodingQuestion } from 'typings/question';
 import { CodeResult } from 'typings/pyodide';
@@ -115,6 +116,8 @@ export default function PythonCodingQuestion({
     const codeResult = await pyodideManager.runCode(editorValue);
     setCodeResult(codeResult);
 
+    toast('Your code has finished running.');
+
     setIsPyodideReady(true);
   };
 
@@ -134,11 +137,15 @@ export default function PythonCodingQuestion({
 
     if (!codeResult.hasError) {
       setIsCorrect(true);
+      toast.success('Great work!');
+
       if (afterSubmit) {
         afterSubmit(true);
       }
     } else {
       setIsCorrect(false);
+      toast.error("Let's give that another try!");
+
       if (afterSubmit) {
         afterSubmit(false);
       }
