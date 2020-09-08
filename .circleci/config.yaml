@@ -1,0 +1,29 @@
+version: 2 # use CircleCI 2.0
+jobs:
+  build:
+    working_directory: ~/accy570-course-site/content/question/python-coding/
+    docker:
+      - image: circleci/python:3.7.4
+    steps:
+      - checkout
+      - run: sudo chown -R circleci:circleci /usr/local/bin
+      - run: sudo chown -R circleci:circleci /usr/local/lib/python3.7/site-packages
+      - run:
+          command: |
+            sudo pip install pipenv
+            pipenv install
+      - run:
+          command: pipenv install pandas
+      - run:
+          command: pipenv install numpy
+      - run:
+          name: running code checks on all directories
+          command: |
+            for dir in content/question/python-coding/* ; do
+                echo "starting testing in  $dir"
+                cat ./$dir/solution.py >  ./$dir/concatenated.py
+                echo $'' >> ./$dir/concatenated.py # adding blank line
+                cat ./$dir/check.py >>    ./$dir/concatenated.py
+                pipenv run python ./$dir/concatenated.py
+                echo "$dir passed"
+            done
