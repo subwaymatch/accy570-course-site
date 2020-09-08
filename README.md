@@ -10,7 +10,11 @@ Vercel Project - [https://vercel.com/subwaymatch/accy570](https://vercel.com/sub
 
 ## Overview
 
+A course site that supports interactive classroom sessions.
 
+## Live Server
+
+In order to use the live in-classroom features, a separate Node.js server needs to be running. See [https://github.com/subwaymatch/accy570-live-server](https://github.com/subwaymatch/accy570-live-server).
 
 ## Local Development
 
@@ -36,9 +40,16 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Branches
 
-`master` contains latest commits that may break. Commits to `production` are continuously deployed to [Vercel](https://vercel.com/).
+`master` contains latest commits that may break. `main` is used as a production branch. Commits to both branches are continuously deployed to [Vercel](https://vercel.com/).
 
-![accy570-course-branches](https://user-images.githubusercontent.com/1064036/91170497-98bd8580-e69e-11ea-9af7-f04700039d2c.png)
+![accy570-course-site-branches](https://user-images.githubusercontent.com/1064036/92464821-53678080-f193-11ea-97ae-7af14dbc56a2.png)
+
+## Checking `solution.py` and `check.py` files
+
+The correctness of each Python coding question's `solution.py` and `check.py` files is checked using CircleCI. A solution code that throws `AssertionError` implies either a wrong solution or an incorrect check logic. An example of an incorrect solution's CircleCI test fail is shown below:
+
+![image](https://user-images.githubusercontent.com/1064036/92464100-4eee9800-f192-11ea-935a-531bd4d5a956.png)
+
 
 ## Deployment
 
