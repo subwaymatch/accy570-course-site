@@ -21,8 +21,12 @@ jobs:
           command: |
             for dir in content/question/python-coding/* ; do
                 echo "$dir begin"
+                echo "import io, sys" > ./$dir/concatenated.py
+                echo "sys.stdout = io.StringIO()" >> ./$dir/concatenated.py
+                echo "sys.stderr = io.StringIO()" >> ./$dir/concatenated.py
+                echo >> ./$dir/concatenated.py
                 cat ./$dir/solution.py >  ./$dir/concatenated.py
-                echo $'' >> ./$dir/concatenated.py # adding blank line
+                echo >> ./$dir/concatenated.py
                 cat ./$dir/check.py >>    ./$dir/concatenated.py
                 pipenv run python ./$dir/concatenated.py
                 echo "$dir passed"
