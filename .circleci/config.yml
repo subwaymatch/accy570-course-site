@@ -20,7 +20,7 @@ jobs:
           name: running code checks on all directories
           command: |
             for dir in content/question/python-coding/* ; do
-                echo "starting testing in  $dir"
+                echo "$dir begin"
                 cat ./$dir/solution.py >  ./$dir/concatenated.py
                 echo $'' >> ./$dir/concatenated.py # adding blank line
                 cat ./$dir/check.py >>    ./$dir/concatenated.py

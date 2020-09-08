@@ -1,1 +1,0 @@
-some_global = 10
