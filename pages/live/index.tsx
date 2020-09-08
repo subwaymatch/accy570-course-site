@@ -1,17 +1,15 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import useLiveSessionStore from 'stores/liveSession';
 import Layout from 'components/layout';
 
 export default function LiveIndexPage() {
   const router = useRouter();
-
-  const user = {
-    userName: 'test',
-  };
+  const netId = useLiveSessionStore((state) => state.netId);
 
   useEffect(() => {
-    if (user.userName) {
+    if (netId) {
       router.push('/live/wait');
     } else {
       router.push('/live/join');
@@ -20,7 +18,7 @@ export default function LiveIndexPage() {
 
   return (
     <Layout>
-      <motion.div exit={{}}>Checking username</motion.div>
+      <motion.div exit={{}}>Checking NetID</motion.div>
     </Layout>
   );
 }
