@@ -12,6 +12,7 @@ import _ from 'lodash';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialLight } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { toast } from 'react-toastify';
+import useLocalStorage from 'hooks/useLocalStorage';
 import styles from './python-coding-question.module.scss';
 import { IPythonCodingQuestion } from 'typings/question';
 import { CodeResult } from 'typings/pyodide';
@@ -51,6 +52,10 @@ export default function PythonCodingQuestion({
 
   const editorRef = useRef<editor.IStandaloneCodeEditor>();
   const [editorValue, setEditorValue] = useState(question.templateCode);
+  const [savedUserCode, setSavedUserCode] = useLocalStorage<string>(
+    question.id,
+    question.templateCode
+  );
   const [isPyodideReady, setIsPyodideReady] = useState(false);
   const [codeResult, setCodeResult] = useState(defaultCodeResult);
   const [submittedCode, setSubmittedCode] = useState('');
@@ -64,20 +69,14 @@ export default function PythonCodingQuestion({
       setIsPyodideReady(true);
     });
 
-    const savedUserCode = getSavedUserCode();
-
     if (savedUserCode) {
       setEditorValue(savedUserCode);
     }
   }, []);
 
-  const getSavedUserCode = () => {
-    return localStorage.getItem(question.id);
-  };
-
-  const setSavedUserCode = useCallback(
+  const saveUserCode = useCallback(
     _.debounce((userCode) => {
-      localStorage.setItem(question.id, userCode);
+      setSavedUserCode(userCode);
     }, 1000),
     []
   );
