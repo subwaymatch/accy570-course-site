@@ -25,7 +25,7 @@ jobs:
                 echo "sys.stdout = io.StringIO()" >> ./$dir/concatenated.py
                 echo "sys.stderr = io.StringIO()" >> ./$dir/concatenated.py
                 echo >> ./$dir/concatenated.py
-                cat ./$dir/solution.py >  ./$dir/concatenated.py
+                cat ./$dir/solution.py >>  ./$dir/concatenated.py
                 echo >> ./$dir/concatenated.py
                 cat ./$dir/check.py >>    ./$dir/concatenated.py
                 pipenv run python ./$dir/concatenated.py
