@@ -11,6 +11,7 @@ import store from 'src/store';
 import 'src/styles/global.scss';
 import 'highlight.js/styles/shades-of-purple.css';
 import 'react-toastify/dist/ReactToastify.css';
+import 'src/styles/toastify.custom.scss';
 
 const rrfConfig = {
   userProfile: 'users',
