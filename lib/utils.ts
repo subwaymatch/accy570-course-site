@@ -1,6 +1,4 @@
 import matter, { GrayMatterFile } from 'gray-matter';
-import remark from 'remark';
-import html from 'remark-html';
 import marked from 'marked';
 import hljs from 'highlight.js/lib/core';
 import python from 'highlight.js/lib/languages/python';

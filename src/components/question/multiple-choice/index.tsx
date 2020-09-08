@@ -123,7 +123,7 @@ export default function MultipleChoiceQuestion({
         <button
           className={styles.submitBtn}
           onClick={handleSubmit}
-          disabled={didSubmit || _.sum(selectedOptions) !== numCorrectOptions}
+          disabled={_.sum(selectedOptions) !== numCorrectOptions}
         >
           Check Your Answer!
         </button>
