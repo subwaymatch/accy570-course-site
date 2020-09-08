@@ -1,0 +1,189 @@
+@use 'sass:color';
+@import 'styles/variables';
+
+$border-color: #e8e8e8;
+
+.pythonCodingQuestionWrapper {
+  .questionContent {
+    & > * {
+      margin-top: 1rem;
+    }
+  }
+
+  .codeEditorWrapper {
+    margin-top: 1.5rem;
+    border: 1px solid $border-color;
+
+    .editorBox {
+      padding: 0.8rem 1.1rem;
+
+      &.errorOutputBox.hasError {
+        pre {
+          color: $color-incorrect;
+        }
+      }
+    }
+
+    .solutionBox {
+      margin-top: 1px;
+      border-top: 1px solid $border-color;
+    }
+
+    .commandBox {
+      display: flex;
+      margin-top: 1px;
+      border-top: 1px solid $border-color;
+      align-items: center;
+      justify-content: space-between;
+
+      .hintButton {
+        color: #999;
+        font-size: 1.05rem;
+        letter-spacing: -0.01rem;
+        font-weight: 300;
+        margin-right: 1rem;
+
+        .hintIcon {
+          color: #aaa;
+          font-size: 0.95rem;
+          margin-right: 0.3rem;
+          position: relative;
+          top: -0.1rem;
+        }
+
+        .toggleIcon {
+          margin-left: 0.1rem;
+          position: relative;
+          top: -0.1rem;
+        }
+
+        &:hover {
+          color: #555;
+
+          .hintIcon {
+            color: #777;
+          }
+        }
+
+        &.isOpen {
+          color: $color-secondary;
+
+          .hintIcon {
+            color: $color-secondary;
+          }
+
+          &:hover {
+            color: color.scale($color-secondary, $lightness: -15%);
+
+            .hintIcon {
+              color: color.scale($color-secondary, $lightness: -15%);
+            }
+          }
+        }
+      }
+
+      .solutionButton {
+        color: #999;
+        font-size: 1.05rem;
+        letter-spacing: -0.01rem;
+        font-weight: 300;
+
+        .solutionIcon {
+          color: #aaa;
+          font-size: 0.95rem;
+          margin-right: 0.3rem;
+          position: relative;
+          top: -0.1rem;
+        }
+
+        &:hover {
+          color: #555;
+
+          .solutionBoxIcon {
+            color: #777;
+          }
+        }
+      }
+
+      .commandButtons {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .boxLabel {
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+
+    .hintBox {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 1rem 2rem;
+      margin: 0.3rem;
+      font-size: 1.1rem;
+
+      .boxLabel {
+        font-size: 0.9rem;
+      }
+
+      .imageWrapper {
+        width: 5rem;
+        margin-right: 1.5rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .hintBox {
+      color: color.scale($color-secondary, $lightness: -60%, $saturation: 20%);
+      background-color: color.scale(
+        $color-secondary,
+        $lightness: 92%,
+        $saturation: 10%
+      );
+
+      img.characterImage {
+        width: 5rem;
+      }
+
+      .boxLabel {
+        color: $color-secondary;
+      }
+    }
+
+    .outputBox,
+    .errorOutputBox {
+      letter-spacing: 0;
+
+      pre {
+        margin: 0;
+        background: transparent;
+        padding: 0;
+        border: none;
+        font-size: 1.05rem;
+      }
+    }
+
+    .outputBox {
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+
+      .boxLabel {
+        color: $color-secondary;
+      }
+    }
+
+    .errorOutputBox {
+      .boxLabel {
+        color: $color-tertiary;
+      }
+    }
+  }
+
+  button {
+    outline: none;
+  }
+}

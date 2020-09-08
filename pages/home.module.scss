@@ -1,0 +1,168 @@
+@use 'sass:color';
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.homePage {
+  font-size: 1.15rem;
+  line-height: 1.8;
+
+  .section {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
+
+  @include media-mobile {
+    font-size: 1rem;
+
+    .section {
+      padding-top: 1.2rem;
+      padding-bottom: 1.2rem;
+    }
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    @include media-touch {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+  }
+
+  h2 {
+    font-weight: 500;
+
+    @include media-mobile {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+  }
+
+  h3 {
+    color: color.scale($color-secondary, $lightness: 75%, $saturation: -70%);
+    font-size: 1rem;
+    letter-spacing: 0;
+  }
+
+  a {
+    color: $color-primary;
+  }
+
+  p {
+    color: #444;
+    margin-bottom: 1.6rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ol {
+    margin-bottom: 1.5rem;
+  }
+
+  .syllabusHeader {
+    text-align: center;
+
+    .meetingTimes {
+      color: #bbb;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 0.2rem;
+      padding: 0.6rem 1rem;
+      font-size: 1.1rem;
+
+      color: $color-primary;
+
+      background: color.scale(
+        $color-primary,
+        $lightness: 98%,
+        $saturation: 50%
+      );
+
+      border: 1px solid color.scale($color-primary, $lightness: 87%);
+    }
+  }
+
+  .zoomLinksSection {
+    margin-top: 1rem;
+  }
+
+  .labTA {
+    .item {
+      margin-bottom: 1rem;
+    }
+
+    .zoomLink {
+      margin-top: 1rem;
+    }
+  }
+
+  .gradeComponent {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+
+    @include media-mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 1rem;
+    }
+
+    .gradeComponentTitle {
+      color: #555;
+      flex: 4;
+    }
+
+    .gradeComponentPoints {
+      color: $color-primary;
+      flex: 1;
+    }
+
+    .gradeComponentPercentage {
+      color: $color-secondary;
+      flex: 1;
+    }
+
+    .gradeSubcomponents {
+      flex: 4;
+      font-size: 1rem;
+      color: color.scale($color-secondary, $lightness: 75%, $saturation: -70%);
+
+      .item {
+        display: block;
+      }
+    }
+
+    &.header {
+      font-weight: 600;
+      border-top-color: #222;
+    }
+
+    &.footer {
+      border-top: 2px solid #222;
+      font-weight: 600;
+    }
+
+    &.header,
+    &.footer {
+      .gradeComponentTitle,
+      .gradeComponentPoints,
+      .gradeComponentPercentage,
+      .gradeSubcomponents {
+        color: #222;
+      }
+    }
+  }
+
+  .datacampLogoImage {
+    max-width: 12rem;
+  }
+}

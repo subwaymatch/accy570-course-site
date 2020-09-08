@@ -1,0 +1,52 @@
+@use 'sass:color';
+@import 'styles/variables';
+
+.header {
+  width: 100%;
+
+  .headerMain {
+    display: flex;
+    align-items: center;
+    padding: 0.4rem;
+  }
+
+  .headerLeft,
+  .headerRight {
+    width: 8rem;
+  }
+
+  .siteTitle {
+    font-size: 1.15rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.04rem;
+    visibility: hidden;
+
+    color: black;
+    cursor: pointer;
+
+    &:hover {
+      color: #555;
+    }
+  }
+
+  .headerCenter {
+    flex-grow: 1;
+  }
+
+  .headerRight {
+    display: flex;
+    justify-content: flex-end;
+    visibility: hidden;
+  }
+
+  .headerMainMenu {
+    display: flex;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: -0.02rem;
+  }
+}

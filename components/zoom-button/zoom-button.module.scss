@@ -1,0 +1,55 @@
+@import 'styles/mixins';
+
+a.zoomLinkButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 1rem rgba(#000, 0.08);
+  border-radius: 0.5rem;
+
+  .zoomIcon {
+    color: #2d8cff;
+    font-size: 4rem;
+    margin-right: 1rem;
+  }
+
+  .label {
+    color: #555;
+    font-size: 1.1rem;
+  }
+
+  @include media-mobile {
+    .zoomIcon {
+      font-size: 3rem;
+    }
+
+    .label {
+      font-size: 1.1rem;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 1rem rgba(#2d8cff, 0.4);
+
+    .label {
+      color: #2d8cff;
+    }
+  }
+}
+
+p.zoomPasswordMessage {
+  color: #999;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: -0.01rem;
+  display: flex;
+  align-items: center;
+
+  .lockIcon {
+    color: #ddd;
+    font-size: 1.6rem;
+    margin-right: 1rem;
+  }
+}

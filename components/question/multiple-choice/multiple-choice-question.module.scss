@@ -1,0 +1,128 @@
+@use 'sass:color';
+@import 'styles/variables';
+
+.questionTextWrapper {
+  font-size: 1.4rem;
+
+  margin-bottom: 1rem;
+  .questionText {
+    // Nothing
+  }
+
+  .selectNMessage {
+    color: $color-secondary;
+  }
+}
+
+.optionItem {
+  border: 3px solid #e9e9e9;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  .checkIndicator {
+    border: 3px solid #e9e9e9;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: white;
+  }
+
+  .labelText {
+    margin: 0;
+  }
+
+  &.isSelected {
+    border-color: black;
+
+    .checkIndicator {
+      background-color: black;
+      border: none;
+    }
+
+    &.displayResult {
+      &.isUserCorrect {
+        .checkIndicator {
+          color: white;
+          background: $color-correct;
+        }
+      }
+
+      &.isUserIncorrect {
+        .checkIndicator {
+          color: white;
+          background: $color-incorrect;
+        }
+      }
+    }
+  }
+}
+
+.resultBoxWrapper {
+  margin-top: 1rem;
+}
+
+.didSubmit {
+  .optionItem.isSelected {
+    border-color: color.scale($color-incorrect, $lightness: -10%);
+  }
+
+  .optionItem.isCorrectOption,
+  .optionItem.isCorrectOption.isSelected {
+    border-color: color.scale($color-correct, $lightness: -10%);
+  }
+}
+
+.hintBox {
+  margin-top: 1rem;
+
+  .hintBoxLabel {
+    display: block;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+}
+
+.explanationBox {
+  padding: 0.8rem 1.2rem;
+  color: $color-secondary;
+  background-color: color.scale($color-secondary, $lightness: 96%);
+  border: 1px solid color.scale($color-secondary, $lightness: 92%);
+  margin-top: 1rem;
+
+  .explanationBoxLabel {
+    display: block;
+    font-size: 1rem;
+  }
+}
+
+button.submitBtn {
+  width: 100%;
+  display: block;
+  color: white;
+  background-color: black;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  margin-top: 1.5rem;
+  padding: 1.5rem 1rem;
+  font-size: 1.3rem;
+  font-weight: 300;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #222;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #ccc;
+  }
+}
