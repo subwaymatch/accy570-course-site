@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
+import useLiveSessionStore from 'stores/liveSession';
 import socketIOClient from 'socket.io-client';
 import Layout from 'components/layout';
 import styles from './join.module.scss';
@@ -13,11 +14,10 @@ let socket;
 
 export default function LiveJoinPage({ socketIOEndpoint }) {
   const router = useRouter();
-  const user = {
-    userName: 'test',
-  };
+  const netId = useLiveSessionStore((state) => state.netId);
+  const setNetId = useLiveSessionStore((state) => state.setNetId);
 
-  const [userName, setUserName] = useState(user.userName);
+  const [userName, setUserName] = useState<string>(netId as string);
 
   console.log(`socketIOEndpoint=${socketIOEndpoint}`);
 
@@ -35,16 +35,15 @@ export default function LiveJoinPage({ socketIOEndpoint }) {
   }, []);
 
   const joinLiveSession = () => {
-    // socket.emit('joinRequest', {
-    //   userName,
-    //   sessionName: 'AD5',
-    // });
+    socket.emit('joinRequest', {
+      userName,
+      sessionName: 'AD5',
+    });
+
+    setNetId(userName);
     console.log(`joinLiveSession(${userName})`);
 
-    setTimeout(() => {
-      // Once user is added to the list
-      router.push('/live/wait');
-    }, 2000);
+    router.push('/live/wait');
   };
 
   return (
