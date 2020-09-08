@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectUser, updateUserName } from 'lib/slices/liveUserSlice';
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
@@ -15,8 +13,9 @@ let socket;
 
 export default function LiveJoinPage({ socketIOEndpoint }) {
   const router = useRouter();
-  const dispatch = useDispatch();
-  const user = useSelector(selectUser);
+  const user = {
+    userName: 'test',
+  };
 
   const [userName, setUserName] = useState(user.userName);
 
@@ -41,7 +40,6 @@ export default function LiveJoinPage({ socketIOEndpoint }) {
     //   sessionName: 'AD5',
     // });
     console.log(`joinLiveSession(${userName})`);
-    dispatch(updateUserName(userName));
 
     setTimeout(() => {
       // Once user is added to the list

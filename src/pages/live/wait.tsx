@@ -1,6 +1,4 @@
 import { useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { selectUser } from 'lib/slices/liveUserSlice';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import styles from './wait.module.scss';
@@ -10,7 +8,10 @@ import LiveSessionWaitImage from 'src/images/live-session-wait.png';
 
 export default function LiveSessionWaitPage() {
   const router = useRouter();
-  const user = useSelector(selectUser);
+
+  const user = {
+    userName: 'test',
+  };
 
   useEffect(() => {
     // If username is not set, redirect the user to join page
