@@ -1,0 +1,7 @@
+text: "What is the result of `1.0 + 1`?"
+options:
+  - "`2`"
+  - "`2.0`[o]"
+  - "`True`"
+explanation: |
+  Python will always keep the "more precise" type.

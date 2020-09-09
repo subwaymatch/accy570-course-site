@@ -1,0 +1,10 @@
+title: "Operators and the print function"
+description: What are the different types of operators in Python? How do we use the print function (we already know, but will discuss advanced techniques)?
+modules:
+  - announcements
+  - arithmetic-and-comparison-operaters
+  - logical-operators
+  - membership-operators
+  - operator-precedence
+  - print-function
+  - summary

@@ -1,0 +1,6 @@
+text: "What is the result of `-5 < -6`?"
+options:
+  - "`True`"
+  - "`False`[o]"
+explanation: |
+  -5 is bigger than -6.

@@ -1,0 +1,7 @@
+text: "You have two variables - ten with a value of 10, and four with a value of 4. Both variables are of int (integer) types. What do you think the output of print(ten / four) be? We haven't discussed this yet. Make your best guess."
+options:
+  - "`2.5` since Python is smart enough to conver the result to a more precise type[o]"
+  - "`2` since both variables are integers"
+  - "Throws an error since Python doesn't know what to do"
+explanation: |
+  Division of two numeric values will always yield a float type.

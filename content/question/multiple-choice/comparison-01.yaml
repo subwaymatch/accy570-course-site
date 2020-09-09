@@ -1,0 +1,6 @@
+text: "What is the result of `570 >= 570`?"
+options:
+  - "`True`[o]"
+  - "`False`"
+explanation: |
+  570 is equal to 570.

@@ -1,0 +1,7 @@
+text: "What is the type of `10 / 5`?"
+options:
+  - "`bool`"
+  - "`int`"
+  - "`float`[o]"
+explanation: |
+  Division of two numeric values will always yield a float type.
