@@ -17,7 +17,7 @@ There are three more arithmetic operators.
 # Floor division
 7 // 2     # 3
 13 // 5.0  # 2.0
-100 // 25  # 57
+100 // 25  # 4
 3.72 // 1  # 3.0
 5 // 6     # 0
 ```
