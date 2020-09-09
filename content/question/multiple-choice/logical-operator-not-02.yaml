@@ -1,0 +1,6 @@
+text: "What is the output of `print(not(not (7 == 6)))`?"
+options:
+  - "`True`"
+  - "`False`[o]"
+explanation: |
+  `7 == 6` returns `False`. It is then reversed by the first `not` (`True`). Then, it is once again reversed to `False` by the outermost `not`.

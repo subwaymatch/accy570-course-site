@@ -1,5 +1,7 @@
 ---
 title: Printing with "f-strings"
+questions:
+  - python-coding/print-using-f-string-01
 ---
 
 Often, we want to print more complicated expressions. The easiest way to do this is with "f-strings". To create an "f-string", prepend "f" in front of a string. Any expressions inside the curly braces (`{}`) are evaluated before being printed out.

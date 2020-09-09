@@ -1,0 +1,6 @@
+text: "What is the output of `print(not 7 > 5)`?"
+options:
+  - "`True`"
+  - "`False`[o]"
+explanation: |
+  7 is greater than 5. Since the `not` operator reverses the result from `7 > 5` (`True`), our final result is `False`.
