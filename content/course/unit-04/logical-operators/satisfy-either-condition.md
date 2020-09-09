@@ -1,5 +1,9 @@
 ---
 title: Satisfy either (at least one) condition
+questions:
+  - python-coding/logical-operator-or-01
+  - multiple-choice/logical-operator-or-01
+  - multiple-choice/logical-operator-or-02
 ---
 
 **first_condition `or` second_condition**

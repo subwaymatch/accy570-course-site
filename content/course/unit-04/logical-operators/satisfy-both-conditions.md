@@ -1,5 +1,9 @@
 ---
 title: Satisfy both conditions
+questions:
+  - python-coding/logical-operator-and-01
+  - multiple-choice/logical-operator-and-01
+  - multiple-choice/logical-operator-and-02
 ---
 
 **first_condition `and` second_condition**

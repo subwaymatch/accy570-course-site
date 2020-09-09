@@ -3,7 +3,6 @@ title: More arithmetic operators
 questions:
   - python-coding/arithmetic-operator-floor-division-01
   - python-coding/arithmetic-operator-mod-01
-  - python-coding/arithmetic-operator-mod-01
 ---
 
 There are three more arithmetic operators.

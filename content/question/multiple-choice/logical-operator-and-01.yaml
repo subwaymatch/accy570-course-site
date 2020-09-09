@@ -1,0 +1,6 @@
+text: "What is the output of `print(7 > 5 and 5 > 7)`?"
+options:
+  - "`True`"
+  - "`False`[o]"
+explanation: |
+  Since the second condition is not satisfied, logical "and" returns False
