@@ -2,26 +2,30 @@
 
 .navigationWrapper {
   display: flex;
-  margin-bottom: 1rem;
 
   nav.navigation {
-    display: flex;
+    .pageLinkItemWrapper {
+      display: inline-block;
+      margin-right: 0.4rem;
+    }
 
     .pageLinkItem {
       width: 2.2rem;
       height: 2.2rem;
       font-size: 1rem;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
+      color: #ccc;
       background-color: transparent;
+      border: 1px solid #eee;
       border-radius: 10rem;
-      margin-right: 0.5rem;
       cursor: pointer;
 
       &:hover {
-        background-color: white;
-        border: 1px solid #e9e9e9;
+        color: #777;
+        background-color: #f9f9f9;
+        border: 1px solid #bbb;
       }
 
       &.active {
@@ -31,6 +35,7 @@
 
         &:hover {
           background-color: #333;
+          border: none;
         }
       }
     }

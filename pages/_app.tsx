@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 
 import 'styles/global.scss';
 import 'highlight.js/styles/shades-of-purple.css';
+import 'react-tippy/dist/tippy.css';
 import 'react-toastify/dist/ReactToastify.css';
 import 'styles/toastify.custom.scss';
 

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { Tooltip } from 'react-tippy';
 import classNames from 'classnames/bind';
 import styles from './course-module-pages-navigation.module.scss';
 import { ICourseModulePageMeta } from 'typings/course';
@@ -29,16 +30,28 @@ export default function CourseModulePagesNavigation({
             href="/course/[courseId]/[moduleId]/[pageId]"
             as={`/course/${courseId}/${moduleId}/${pageMeta.id}`}
           >
-            <motion.div
-              className={cx('pageLinkItem', {
-                active: pageMeta.id === currentPageId,
-              })}
-              variants={clickableVariants}
-              whileHover="hover"
-              whileTap="tap"
-            >
-              <span>{pageIndex + 1}</span>
-            </motion.div>
+            <div className={cx('pageLinkItemWrapper')}>
+              <Tooltip
+                // options
+                title={pageMeta.title}
+                position="top"
+                trigger="mouseenter"
+                duration={200}
+                animation="shift"
+                arrow={true}
+              >
+                <motion.div
+                  className={cx('pageLinkItem', {
+                    active: pageMeta.id === currentPageId,
+                  })}
+                  variants={clickableVariants}
+                  whileHover="hover"
+                  whileTap="tap"
+                >
+                  <span>{pageIndex + 1}</span>
+                </motion.div>
+              </Tooltip>
+            </div>
           </Link>
         ))}
       </nav>

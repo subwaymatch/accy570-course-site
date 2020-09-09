@@ -6,6 +6,7 @@ import CourseModulePageQuestions from 'components/course/course-module-page-ques
 import CourseModulePagesNavigation from 'components/course/course-module-pages-navigation';
 import CourseModulePageBottomNavigation from 'components/course/course-module-page-bottom-navigation';
 import { motion } from 'framer-motion';
+import styles from './course-module-page.module.scss';
 
 type PropTypes = {
   course: ICourse;
@@ -83,6 +84,7 @@ export default function CoursePageComponent({ course, pageData }: PropTypes) {
 
           <motion.div
             key="course-module-page-content-wrapper"
+            className={styles.pageContentWrapper}
             variants={{
               hidden: {
                 x: 50,
