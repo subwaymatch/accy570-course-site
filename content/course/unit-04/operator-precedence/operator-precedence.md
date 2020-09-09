@@ -1,5 +1,7 @@
 ---
 title: Operater Precedence
+questions:
+  - multiple-choice/operator-precedence-01
 ---
 
 Python has "operator precedence". Some operators have higher priority than others. Evaluation occurs in the order of precedence. If two operators have same level of precedence, Python will evaluate expressions left-to-right.

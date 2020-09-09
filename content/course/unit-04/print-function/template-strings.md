@@ -2,19 +2,33 @@
 title: Printing with "f-strings"
 ---
 
-Use `str()` function.
-
-This one is straightforward and is the easiest conversion. Basically, everything converts to a string as you would expect.
+Often, we want to print more complicated expressions. The easiest way to do this is with "f-strings". To create an "f-string", prepend "f" in front of a string. Any expressions inside the curly braces (`{}`) are evaluated before being printed out.
 
 ```python
-# Prints -55
-# Be aware that str(-55) returns a string type
-print(str(-55))
+name = "Xuya"
 
-# Prints 3.1415
-# Be aware that str(3.1415) returns a string type
-print(str(3.1415))
+print(f'Hi, my name is {name}.')  # Hi, my name is Xuya.
+```
 
-# Prints True
-print(str(True))
+Another example:
+
+```python
+FiscalYear = 2020
+NetIncome = 700.00
+CompanyName = 'XYZ Corp.'
+
+print(f"In {FiscalYear}, {CompanyName}'s net income was ${NetIncome}.")
+# In 2020, XYZ Corp.'s net income was $700.0.
+```
+
+You can also do calculations inside the curly braces:
+
+```python
+FiscalYear = 2020
+NetIncome = 700.00
+CompanyName = 'XYZ Corp.'
+
+s = f"In {FiscalYear+1}, we expect {CompanyName}'s net income to be ${NetIncome * 2}."
+print(s)
+# In 2021, we expect XYZ Corp.'s net income to be $1400.0.
 ```

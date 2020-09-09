@@ -1,5 +1,9 @@
 ---
 title: Membership Operators
+questions:
+  - python-coding/membership-operator-01
+  - multiple-choice/membership-operator-01
+  - multiple-choice/membership-operator-02
 ---
 
 Membership operators are used to whether a collection (such as a list) contains a value. As an example, you want to check whether garlic is included in a recipe for a pasta.
@@ -8,7 +12,7 @@ Membership operators are used to whether a collection (such as a list) contains 
 ingredients = ['tomato', 'mushroom', 'garlic', 'salt', 'pepper']
 
 if 'garlic' in ingredients:
-	print('Yes, garlic is used!')
+  print('Yes, garlic is used!')
 ```
 
 Note that you can also combine it with the `not` operator we've just learned.
@@ -17,5 +21,5 @@ Note that you can also combine it with the `not` operator we've just learned.
 fridge_items = ['milk', 'cheesecake']
 
 if 'eggs' not in fridge_items:
-	print('Need to purchase eggs!')
+  print('Need to purchase eggs!')
 ```

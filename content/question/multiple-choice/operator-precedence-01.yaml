@@ -1,0 +1,7 @@
+text: "What is the output of `print(3 + 5 * 5)`?"
+options:
+  - "`40`"
+  - "`28`[o]"
+  - "No idea, maybe I should stop pursuing a degree in accounting..."
+explanation: |
+  Python's operator precedence is similar to that of mathematics.

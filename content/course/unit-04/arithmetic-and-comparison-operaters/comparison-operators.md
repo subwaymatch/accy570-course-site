@@ -20,6 +20,8 @@ The result of a comparison operation is always a Boolean (`True` or `False`).
 ```python
 3 < 5     # True
 3 > 5     # False
+4 <= 4    # True
+5 >= 6    # False
 10 != 11  # True
 10 == 11  # False
 10 == 10  # True

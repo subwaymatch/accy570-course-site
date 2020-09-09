@@ -2,19 +2,21 @@
 title: Print single or multiple values
 ---
 
-So far, we have used `type()` to check the data type of a variable. You can also use `type()` to check the data types of _values_ or _expressions_.
+`print()` function is frequently used to print out some text and values. It's a super-useful tool.
+
+So far, we've mostly used it to print out a single value or a variable.
 
 ```python
-# Values
-print(type(7))       # Outputs <class 'int'>
-print(type(7.2))     # Outputs <class 'float'>
-print(type('0.625')) # Outputs <class 'str'>
+# Printing out a single value
+print(-17.4)    # -17.4
 
-# Expressions
-print(type(5 > 3))   # Outputs <class 'bool'>
-print(type(10 + 20)) # Outputs <class 'int'>
+x = 19
+print(x)        # 19
+```
 
-# Variables
-weekday = 'Wednesday'
-print(type(weekday)) # Outputs <class 'str'>
+We can use it to print out multiple values or variables.
+
+```python
+x = 19
+print(x, True, 'hello')   # 19 True Hello
 ```

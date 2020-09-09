@@ -1,0 +1,6 @@
+text: "What is the output of `print(570 in [512, 515, 570])`?"
+options:
+  - "`True`[o]"
+  - "`False`"
+explanation: |
+  Since 570 exists in the list, the expression will return True.

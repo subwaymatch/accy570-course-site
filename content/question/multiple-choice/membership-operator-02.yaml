@@ -1,0 +1,6 @@
+text: "What is the output of `print(not (570 not in [512, 515, 570]))`?"
+options:
+  - "`True`[o]"
+  - "`False`"
+explanation: |
+  This is a tricky one. Begin with the innermost expression and work your way up.

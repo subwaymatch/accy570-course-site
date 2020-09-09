@@ -4,7 +4,7 @@ questions:
   - python-coding/arithmetic-operator-division-01
 ---
 
-What is an operator? Operators are symbols in Python that performs some sort of an operation.
+What is an operator? Operators are symbols in Python that perform some sort of an operation.
 
 - Arithmetic operators (plus, minus, multiply, divide)
 - Comparison (`==`, `!=`, `>`, `>=`, `<`, `<=`)
