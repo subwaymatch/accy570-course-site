@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
-import useLiveSessionStore from 'stores/liveSession';
+import useLiveSessionStore from 'stores/useLiveSessionStore';
 import styles from './wait.module.scss';
 import Layout from 'components/layout';
 import { fadeUpDownVariants } from 'animations/variants';

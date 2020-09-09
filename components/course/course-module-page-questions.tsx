@@ -15,7 +15,10 @@ export default function CourseModulePageQuestions({
   return (
     <>
       {questions.map((question) => (
-        <div key={question.id} className={cx('challengeWrapper')}>
+        <div
+          key={question.type + '/' + question.id}
+          className={cx('challengeWrapper')}
+        >
           <QuestionComponent question={question} />
         </div>
       ))}

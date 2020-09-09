@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
-import useLiveSessionStore from 'stores/liveSession';
+import useLiveSessionStore from 'stores/useLiveSessionStore';
 import socketIOClient from 'socket.io-client';
 import Layout from 'components/layout';
 import styles from './join.module.scss';
@@ -17,7 +17,7 @@ export default function LiveJoinPage({ socketIOEndpoint }) {
   const netId = useLiveSessionStore((state) => state.netId);
   const setNetId = useLiveSessionStore((state) => state.setNetId);
 
-  const [userName, setUserName] = useState<string>(netId as string);
+  const [netIdVal, setNetIdVal] = useState<string>(netId as string);
 
   console.log(`socketIOEndpoint=${socketIOEndpoint}`);
 
@@ -35,13 +35,14 @@ export default function LiveJoinPage({ socketIOEndpoint }) {
   }, []);
 
   const joinLiveSession = () => {
+    console.log('joinLiveSession');
+
     socket.emit('joinRequest', {
-      userName,
-      sessionName: 'AD5',
+      netId: netIdVal,
     });
 
-    setNetId(userName);
-    console.log(`joinLiveSession(${userName})`);
+    setNetId(netIdVal);
+    console.log(`joinLiveSession(${netIdVal})`);
 
     router.push('/live/wait');
   };
@@ -69,10 +70,10 @@ export default function LiveJoinPage({ socketIOEndpoint }) {
               <label>NetID</label>
               <input
                 type="text"
-                value={userName}
+                value={netIdVal}
                 onChange={(e) => {
                   e.preventDefault();
-                  setUserName(e.target.value);
+                  setNetIdVal(e.target.value);
                 }}
               />
 

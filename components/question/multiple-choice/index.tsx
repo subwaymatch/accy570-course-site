@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './multiple-choice-question.module.scss';
 import classNames from 'classnames/bind';
 import { IMultipleChoiceQuestion } from 'typings/question';

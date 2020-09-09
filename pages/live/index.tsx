@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import useLiveSessionStore from 'stores/liveSession';
+import useLiveSessionStore from 'stores/useLiveSessionStore';
 import Layout from 'components/layout';
 
 export default function LiveIndexPage() {
