@@ -12,3 +12,5 @@ What is an operator? Operators are symbols in Python that perform some sort of a
 - Comparison (`==`, `!=`, `>`, `>=`, `<`, `<=`)
 - Logical (`and`, `or`)
 - Membership operators (`in`, `not in`)
+
+https://accy570.org/course/unit-04/arithmetic-and-comparison-operaters/more-operators

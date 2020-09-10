@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { ICourse } from 'typings/course';
 import styles from './course-sidebar.module.scss';
 import { GoCheck } from 'react-icons/go';
+import { BsFillPlayFill } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 import { clickableVariants } from 'animations/variants';
 
@@ -52,13 +53,15 @@ export default function CourseSidebar({
                 <div className={cx('verticalLine')} />
                 <div className={cx('indicator')}>
                   {isComplete ? (
-                    <div className={cx('checkIconWrapper')}>
-                      <GoCheck className={cx('checkIcon')} />
+                    <div className={cx('iconWrapper', 'isComplete')}>
+                      <GoCheck className={cx('icon')} />
                     </div>
                   ) : isInProgress ? (
-                    <div className={cx('currentCircle')} />
+                    <div className={cx('iconWrapper', 'inProgress')}>
+                      <BsFillPlayFill className={cx('icon')} />
+                    </div>
                   ) : (
-                    <div className={cx('nan')} />
+                    <div className={cx('incompleteCircle')} />
                   )}
                 </div>
                 <span className={cx('label')}>{module.title}</span>
