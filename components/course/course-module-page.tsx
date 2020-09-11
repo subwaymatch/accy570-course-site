@@ -99,7 +99,10 @@ export default function CoursePageComponent({ course, pageData }: PropTypes) {
             animate="visible"
             exit="hidden"
           >
-            <CourseModulePageContent pageData={pageData} />
+            <CourseModulePageContent
+              moduleName={currentModule.title}
+              pageData={pageData}
+            />
 
             <CourseModulePageQuestions questions={pageData.questions} />
 

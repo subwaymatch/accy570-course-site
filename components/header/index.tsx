@@ -19,7 +19,7 @@ export default function Header({ headerTitle }: HeaderProps) {
 
   return (
     <header className={styles.header}>
-      <LiveSessionBar show={false} />
+      <LiveSessionBar show={true} />
 
       <div className={styles.headerMain}>
         <div className={styles.headerLeft}>

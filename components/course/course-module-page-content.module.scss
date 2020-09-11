@@ -1,5 +1,9 @@
 .courseModulePageWrapper {
-  h1.courseModulePageTitle {
+  .moduleName {
+    color: #aaa;
+  }
+
+  h1.pageTitle {
     font-size: 2.2rem;
     line-height: 1.4;
     font-weight: 600;
@@ -7,10 +11,16 @@
   }
 
   .courseModulePageContent {
+    color: #222;
+    font-size: 1.3rem;
     margin-top: 1.5rem;
 
     > * {
       margin-top: 2rem;
+    }
+
+    pre {
+      font-size: 1.2rem;
     }
   }
 }

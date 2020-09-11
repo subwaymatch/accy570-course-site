@@ -4,7 +4,8 @@ import { AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 
 import 'styles/global.scss';
-import 'highlight.js/styles/shades-of-purple.css';
+// import 'highlight.js/styles/a11y-light.css';
+import 'styles/hljs.custom.scss';
 import 'react-tippy/dist/tippy.css';
 import 'react-toastify/dist/ReactToastify.css';
 import 'styles/toastify.custom.scss';

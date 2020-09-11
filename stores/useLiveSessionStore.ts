@@ -6,7 +6,7 @@ type State = {
 };
 
 const useLiveSessionStore = create<State>((set) => ({
-  netId: null,
+  netId: '',
   setNetId: (netId) => set({ netId }),
 }));
 

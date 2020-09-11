@@ -24,7 +24,6 @@ $inactive-color: #f1f3f5;
 
   nav.sideNav {
     margin-top: 0.4rem;
-
     .moduleLinkItem {
       display: flex;
       align-items: center;
@@ -32,7 +31,7 @@ $inactive-color: #f1f3f5;
       font-size: 0.95rem;
       letter-spacing: 0rem;
       line-height: 1.6;
-      padding: 0.6rem 0;
+      padding: 0.5rem 0;
       position: relative;
 
       .verticalLine {
@@ -59,6 +58,7 @@ $inactive-color: #f1f3f5;
 
         .verticalLine {
           background-color: $color-secondary;
+          background-color: transparent;
         }
       }
 
@@ -112,6 +112,10 @@ $inactive-color: #f1f3f5;
         position: relative;
         z-index: 2;
       }
+    }
+
+    @include media-touch {
+      display: none;
     }
   }
 }

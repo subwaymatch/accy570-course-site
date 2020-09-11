@@ -9,11 +9,7 @@ export default function LiveIndexPage() {
   const netId = useLiveSessionStore((state) => state.netId);
 
   useEffect(() => {
-    if (netId) {
-      router.push('/live/wait');
-    } else {
-      router.push('/live/join');
-    }
+    router.push('/live/join');
   }, []);
 
   return (

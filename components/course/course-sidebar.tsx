@@ -7,6 +7,7 @@ import { GoCheck } from 'react-icons/go';
 import { BsFillPlayFill } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 import { clickableVariants } from 'animations/variants';
+import Sticky from 'react-stickynode';
 
 const cx = classNames.bind(styles);
 
@@ -28,48 +29,50 @@ export default function CourseSidebar({
     <div className={cx('sidebarWrapper')}>
       <span className={cx('sidebarTitle')}>{course.title}</span>
 
-      <nav className={cx('sideNav')}>
-        {course.modules.map((module, index) => {
-          const isComplete = index < currentModuleIndex;
-          const isInProgress = module.id === currentModuleId;
-          const isIncomplete = index > currentModuleIndex;
+      <Sticky enabled={true} top={20}>
+        <nav className={cx('sideNav')}>
+          {course.modules.map((module, index) => {
+            const isComplete = index < currentModuleIndex;
+            const isInProgress = module.id === currentModuleId;
+            const isIncomplete = index > currentModuleIndex;
 
-          return (
-            <Link
-              key={module.id}
-              href="/course/[courseId]/[moduleId]/[pageId]"
-              as={`/course/${course.id}/${module.id}/${module.pages[0].id}`}
-            >
-              <motion.div
-                className={cx('moduleLinkItem', {
-                  isComplete,
-                  isInProgress,
-                  isIncomplete,
-                })}
-                variants={clickableVariants}
-                whileHover="hover"
-                whileTap="tap"
+            return (
+              <Link
+                key={module.id}
+                href="/course/[courseId]/[moduleId]/[pageId]"
+                as={`/course/${course.id}/${module.id}/${module.pages[0].id}`}
               >
-                <div className={cx('verticalLine')} />
-                <div className={cx('indicator')}>
-                  {isComplete ? (
-                    <div className={cx('iconWrapper', 'isComplete')}>
-                      <GoCheck className={cx('icon')} />
-                    </div>
-                  ) : isInProgress ? (
-                    <div className={cx('iconWrapper', 'inProgress')}>
-                      <BsFillPlayFill className={cx('icon')} />
-                    </div>
-                  ) : (
-                    <div className={cx('incompleteCircle')} />
-                  )}
-                </div>
-                <span className={cx('label')}>{module.title}</span>
-              </motion.div>
-            </Link>
-          );
-        })}
-      </nav>
+                <motion.div
+                  className={cx('moduleLinkItem', {
+                    isComplete,
+                    isInProgress,
+                    isIncomplete,
+                  })}
+                  variants={clickableVariants}
+                  whileHover="hover"
+                  whileTap="tap"
+                >
+                  <div className={cx('verticalLine')} />
+                  <div className={cx('indicator')}>
+                    {isComplete ? (
+                      <div className={cx('iconWrapper', 'isComplete')}>
+                        <GoCheck className={cx('icon')} />
+                      </div>
+                    ) : isInProgress ? (
+                      <div className={cx('iconWrapper', 'inProgress')}>
+                        <BsFillPlayFill className={cx('icon')} />
+                      </div>
+                    ) : (
+                      <div className={cx('incompleteCircle')} />
+                    )}
+                  </div>
+                  <span className={cx('label')}>{module.title}</span>
+                </motion.div>
+              </Link>
+            );
+          })}
+        </nav>
+      </Sticky>
     </div>
   );
 }

@@ -1,16 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import useLiveSessionStore from 'stores/useLiveSessionStore';
-import socketIOClient from 'socket.io-client';
 import Layout from 'components/layout';
 import styles from './join.module.scss';
 import classNames from 'classnames/bind';
+import HamsterImage from 'images/cute-hamster-on-wheel.svg';
 
 const cx = classNames.bind(styles);
-
-let socket;
 
 export default function LiveJoinPage({ socketIOEndpoint }) {
   const router = useRouter();
@@ -19,27 +17,8 @@ export default function LiveJoinPage({ socketIOEndpoint }) {
 
   const [netIdVal, setNetIdVal] = useState<string>(netId as string);
 
-  console.log(`socketIOEndpoint=${socketIOEndpoint}`);
-
-  useEffect(() => {
-    socket = socketIOClient(socketIOEndpoint);
-    socket.on('FromAPI', (data) => {
-      console.log(data);
-    });
-
-    socket.on('joinAccept', (data) => {
-      console.log('join accepted');
-
-      console.log(data);
-    });
-  }, []);
-
   const joinLiveSession = () => {
     console.log('joinLiveSession');
-
-    socket.emit('joinRequest', {
-      netId: netIdVal,
-    });
 
     setNetId(netIdVal);
     console.log(`joinLiveSession(${netIdVal})`);
@@ -77,10 +56,18 @@ export default function LiveJoinPage({ socketIOEndpoint }) {
                 }}
               />
 
-              <p>
-                During the live session, your submissions on multiple choice and
-                coding questions will be communicated with the instructor.
-              </p>
+              <div className={cx('explanation', 'columns')}>
+                <div className="column is-2">
+                  <img src={HamsterImage} alt="Cute Hamster" />
+                </div>
+
+                <div className="column is-three-quarters">
+                  <p className={cx('message')}>
+                    During the live session, your submissions on multiple choice
+                    and coding questions will be notified.
+                  </p>
+                </div>
+              </div>
 
               <input type="submit" value="Join" />
             </form>
