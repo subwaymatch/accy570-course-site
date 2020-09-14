@@ -98,6 +98,23 @@ export default function Home() {
         </div>
       </motion.div>
 
+      <div className={cx('columns', 'section')}>
+        <div className="column is-one-quarter">
+          <h2>Group Signup</h2>
+        </div>
+
+        <div className="column is-three-quarters">
+          If you plan to work in a group, please use{' '}
+          <a
+            href="https://docs.google.com/spreadsheets/d/1DEWe4AwOhTwK1D7bTE29EgQ4nvkNumxxV7a8bhRWZ-c/edit?usp=sharing"
+            title="Group Signup Link"
+          >
+            this link
+          </a>{' '}
+          to enter your group information.
+        </div>
+      </div>
+
       <div className={cx('columns', 'section', 'zoomLinksSection')}>
         <div className="column is-one-quarter">
           <h2>Zoom Links</h2>

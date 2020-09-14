@@ -1,10 +1,5 @@
 ---
-title: Useful List Functionalities
-questions:
-  - multiple-choice/length-of-a-list-01
-  - multiple-choice/using-in-operator-01
-  - multiple-choice/length-of-a-list-02
-  - multiple-choice/multiply-list-01
+title: Useful List Functionality
 ---
 
 To find the number of items of a list, use the `len()` function.

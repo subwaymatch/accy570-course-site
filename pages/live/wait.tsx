@@ -24,12 +24,12 @@ export default function LiveSessionWaitPage() {
         <div className="columns">
           <div className="column is-full">
             <p className={styles.message}>
-              Hello <span className={styles.userName}>{netId}</span>! Please
-              wait here until class begins.
+              Hello <span className={styles.userName}>{netId}</span>! You have
+              successfully joined the live session.
             </p>
             <motion.img
               src={LiveSessionWaitImage}
-              alt="Waiting for Live Session to Begin..."
+              alt="Live Session Illustration"
               variants={fadeUpDownVariants}
               initial="hidden"
               animate="visible"

@@ -1,0 +1,14 @@
+text: |
+  What is the output of the following code?
+
+  ```python
+  breeds = ['Golden Retriever', 'Corgi', 'Bulldog']
+
+  print(len(breeds))
+  ```
+options:
+  - '`2`'
+  - '`3`[o]'
+  - '`4`'
+explanation: |
+  There are 3 elements in `breeds`.

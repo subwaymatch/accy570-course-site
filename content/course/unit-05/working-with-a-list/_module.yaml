@@ -2,7 +2,6 @@ title: Working with a list
 pages:
   - changing-a-single-element
   - iterating-over-a-list
-  - retrieving-multiple-list-elements
-  - logic-behind-slicing
-  - slicing-in-steps
   - useful-list-functionalities
+  - shallow-or-deep
+  - add-and-remove-elements

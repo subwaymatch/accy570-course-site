@@ -1,6 +1,7 @@
-title: "Collections of Data - List"
+title: 'Collections of Data - List'
 description: List is a commonly used data type to contain multiple values. List can do all sort of things.
 modules:
   - announcements
   - introduction-to-lists
+  - retrieving-multiple-elements
   - working-with-a-list

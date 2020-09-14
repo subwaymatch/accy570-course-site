@@ -1,0 +1,16 @@
+text: |
+  What is the output of the following code?
+
+  ```python
+  t1 = [80, 120, 200, 100]
+
+  t2 = t1
+  t2[2] = 400
+
+  print(t1[2])
+  ```
+options:
+  - '`200`'
+  - '`400`[o]'
+explanation: |
+  Since `t2` is a shallow copy of `t1`, both `t1` and `t2` refer to the same list.

@@ -1,0 +1,16 @@
+text: |
+  What is the output of the following code?
+
+  ```python
+  t1 = [80, 120, 200, 100]
+
+  t2 = t1.copy()
+  t2[2] = 400
+
+  print(t1[2])
+  ```
+options:
+  - '`200`[o]'
+  - '`400`'
+explanation: |
+  Since `t2` is a deep copy of `t1`, `t1` and `t2` are separate lists. Updating `t1` has no effect on `t2`.
