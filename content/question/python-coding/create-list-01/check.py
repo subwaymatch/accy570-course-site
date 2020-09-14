@@ -1,7 +1,7 @@
 import unittest
 
 tc = unittest.TestCase()
-tc.assertGreaterEqual(accy_courses, 1)
+tc.assertGreaterEqual(len(accy_courses), 1)
 
 # Check if the printed string looks like a list
 tc.assertEqual(sys.stdout.getvalue()[0], "[")
