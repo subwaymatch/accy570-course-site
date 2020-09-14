@@ -5,8 +5,7 @@ questions:
   - python-coding/create-list-01
 ---
 
-- Like other variables, (1) variable name on the left, (2) followed by an assignment operator `=`, (3) list values on the right.
-- Spaces are optional, but are often added for readability
+To create a list, place the variable name on the left, followed by an assignment operator `=` and the list values on the right. Spaces are optional, but are often added for readability
 
 ```python
 # nums1, nums2, nums3 are all valid,

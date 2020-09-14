@@ -17,7 +17,7 @@ cash = [21120, 20484, 20289, 25913, 48844]
 
 Is there a way to retrieve an item from the list? Of course! Each element in a Python list has an _index_. You can think of the indices as incrementing numbers that indicate the order of elements. The `cash` balances list with indices is depicted below. **Note that the indices start from 0, not 1.**
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/450513e3-038a-40c3-8e10-a3d22ce7aee6/list_indices.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/450513e3-038a-40c3-8e10-a3d22ce7aee6/list_indices.png)
+![Indices](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/list_indices.png)
 
 To retrieve an item in a list by index, use square brackets `[]` with the index number inside. As an example, `cash[0]` retrieves the first item of `cash`.
 

@@ -16,4 +16,4 @@ print(l)
 # Prints [10, 20, 'cat', 6]
 ```
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c04e5f0e-1675-465d-9ebf-b80e7ebf437f/list_update_by_indices.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c04e5f0e-1675-465d-9ebf-b80e7ebf437f/list_update_by_indices.png)
+![Update a list by indices](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/list_update_by_indices.png)

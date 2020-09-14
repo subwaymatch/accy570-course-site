@@ -53,4 +53,4 @@ print(cash[-3])
 # Prints 20289
 ```
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3f267bc0-07e4-43a2-a8cc-84e461b69001/negative_indices.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3f267bc0-07e4-43a2-a8cc-84e461b69001/negative_indices.png)
+![Negative Indices](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/negative_indices.png)
