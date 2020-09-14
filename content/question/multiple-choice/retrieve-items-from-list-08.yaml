@@ -1,0 +1,12 @@
+text: |
+  Given the list below, what does `tickers[2]` return?
+
+  ```python
+  tickers = ['AAPL', 'MSFT']
+  ```
+options:
+  - "`'MSFT'`"
+  - "`'AAPL'`"
+  - "Python throws an error[o]"
+explanation: |
+  Since index 2 refers to the third item in the list which doesn't exist, Python will throw an error.

@@ -90,3 +90,11 @@ li > ul {
 .color-primary {
   color: $color-primary;
 }
+
+table {
+  td,
+  th {
+    border-top: 1px solid #eee;
+    padding: 0.5rem;
+  }
+}

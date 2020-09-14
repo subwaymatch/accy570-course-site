@@ -1,0 +1,12 @@
+text: |
+  Given the list below, what does `tickers[-2]` return?
+
+  ```python
+  tickers = ['AAPL', 'MSFT']
+  ```
+options:
+  - "`'MSFT'`"
+  - "`'AAPL'`[o]"
+  - "Python throws an error"
+explanation: |
+  Python won't throw an error since -2 is within the range of possible indices.

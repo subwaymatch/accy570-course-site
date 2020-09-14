@@ -1,0 +1,15 @@
+text: |
+  What is the output of the following code?
+
+  ```python
+  breeds = ['Golden Retriever', 'Corgi', 'Bulldog']
+
+  print(breeds[2:2])
+  ```
+options:
+  - "`[]`[o]"
+  - "`['Corgi']`"
+  - "`['Bulldog']`"
+  - "Python throws an error"
+explanation: |
+  Since start index is same as the end index, Python will return an empty list.
