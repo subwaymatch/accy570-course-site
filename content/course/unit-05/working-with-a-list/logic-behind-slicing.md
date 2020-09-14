@@ -1,8 +1,8 @@
 ---
 title: Logic behind slicing
 questions:
-  - multiple-choice/slice-list-01
-  - multiple-choice/slice-list-02
+  - multiple-choice/slice-list-03
+  - multiple-choice/slice-list-04
 ---
 
 When you slice a list (e.g. `my_list[start:end]`), Python implements the logic below. I will never ask you about the logic below in a quiz. It's only here to help you understand how slicing works behind the scenes.

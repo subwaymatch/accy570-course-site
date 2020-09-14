@@ -3,4 +3,6 @@ pages:
   - changing-a-single-element
   - iterating-over-a-list
   - retrieving-multiple-list-elements
+  - logic-behind-slicing
+  - slicing-in-steps
   - useful-list-functionalities
