@@ -7,6 +7,6 @@ text: |
 options:
   - "`'MSFT'`"
   - "`'AAPL'`[o]"
-  - "Python throws an error"
+  - 'Python throws an error'
 explanation: |
   Python won't throw an error since -2 is within the range of possible indices.

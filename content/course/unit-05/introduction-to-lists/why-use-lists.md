@@ -2,7 +2,7 @@
 title: Why use lists?
 ---
 
-You want to track Apple's cash balance for last past five fiscal years.
+You want to track Apple's cash balance 💵 for last past five fiscal years.
 
 <img src="https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/apple-cash-balance.png" alt="Apple's Cash Balance" style="border: 1px solid #ccc; " />
 
@@ -27,7 +27,7 @@ cash_2016 = 20484
 cash_2015 = 21120
 ```
 
-This may work for simple tasks but gets quickly complicated. What if we need the cash balance for the past 20 years? We would need to create 20 separate variables. Instead of creating multiple variables, we can use lists to represent our data.
+This may work for simple tasks but gets quickly complicated. What if we need the cash balance for the past 20 years? We would need to create 20 separate variables. Instead of creating multiple variables, we can use two lists to represent our data.
 
 ```python
 # In millions

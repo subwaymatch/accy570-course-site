@@ -5,7 +5,7 @@ questions:
   - python-coding/slice-list-02
 ---
 
-Sometimes, you want to retrieve more than one element from a list. Python implements this through a super-cool feature called _slicing_. The syntax to use slicing is similar to retrieving a single value - `list_name[start:end]`.
+Sometimes, you want to retrieve more than one element from a list. Python implements this through a super-cool feature 🌟✨⚡️☄️ called _slicing_. The syntax to use slicing is similar to retrieving a single value - `list_name[start:end]`.
 
 - `start` is the index of the first element you want.
 - The last element you get is the index `end` - 1.

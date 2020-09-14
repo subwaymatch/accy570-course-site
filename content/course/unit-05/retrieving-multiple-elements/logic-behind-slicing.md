@@ -1,5 +1,5 @@
 ---
-title: Logic behind slicing
+title: Logic behind slicing 👩🏽‍💻
 questions:
   - multiple-choice/slice-list-03
   - multiple-choice/slice-list-04

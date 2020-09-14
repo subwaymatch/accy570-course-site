@@ -1,5 +1,5 @@
 text: |
-  What is the output of the following code?
+  What is the output of the following code? 🧪
 
   ```python
   covid_testing_weekdays = ['Tuesday', 'Friday']
@@ -12,6 +12,6 @@ options:
   - "`['Monday', 'Friday']`"
   - "`['Tuesday', 'Monday']`[o]"
   - "`['Tuesday', 'Friday']`"
-  - "Python throws an error."
+  - 'Python throws an error.'
 explanation: |
   Since index 1 refers to the second item in the list, Friday will be replaced with Monday.

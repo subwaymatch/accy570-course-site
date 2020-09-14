@@ -1,5 +1,5 @@
 text: |
-  What is the output of the following code?
+  What is the output of the following code? 🐕‍🦺
 
   ```python
   breeds = ['Golden Retriever', 'Corgi', 'Bulldog']
@@ -7,9 +7,9 @@ text: |
   print(breeds[2:2])
   ```
 options:
-  - "`[]`[o]"
+  - '`[]`[o]'
   - "`['Corgi']`"
   - "`['Bulldog']`"
-  - "Python throws an error"
+  - 'Python throws an error'
 explanation: |
   Since start index is same as the end index, Python will return an empty list.

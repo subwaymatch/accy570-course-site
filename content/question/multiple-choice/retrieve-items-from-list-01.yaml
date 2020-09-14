@@ -1,14 +1,15 @@
 text: |
-  Given the list below, which one of the options prints out `burger`?
+  ![Food Menu](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/list-menu-options.jpg)
+  Given the list below, which one of the options prints out `burger` 🍔?
 
   ```python
   menu = ['fries', 'ice cream', 'burger', 'pizza', 'taco']
   ```
 options:
-  - "`menu[2]`[o]"
-  - "`menu(2)`"
-  - "`menu[3]`"
-  - "`menu(3)`"
-  - "`menu(4)`"
+  - '`menu[2]`[o]'
+  - '`menu(2)`'
+  - '`menu[3]`'
+  - '`menu(3)`'
+  - '`menu(4)`'
 explanation: |
   Remember that Python list indices are zero-based (starts at zero) and uses square brackets.
