@@ -1,5 +1,5 @@
 ---
-title: Reverse a condition
+title: Retrieving multiple list elements
 questions:
   - python-coding/slice-list-01
   - python-coding/slice-list-02
