@@ -1,3 +1,4 @@
 import unittest
 
-tc.assertEqual(courses, 'ACCY 515', 'ACCY 570')
+tc = unittest.TestCase()
+tc.assertEqual(courses, ['ACCY 515', 'ACCY 570'])
