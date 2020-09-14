@@ -2,11 +2,12 @@
 @import 'styles/variables';
 
 .questionTextWrapper {
-  font-size: 1.4rem;
-
   margin-bottom: 1rem;
+
   .questionText {
-    // Nothing
+    > * {
+      margin-bottom: 2rem;
+    }
   }
 
   .selectNMessage {

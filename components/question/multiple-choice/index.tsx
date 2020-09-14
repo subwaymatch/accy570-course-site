@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from './multiple-choice-question.module.scss';
 import classNames from 'classnames/bind';
 import { IMultipleChoiceQuestion } from 'typings/question';
+import { getQuestionFullId } from 'lib/utils-browser';
 import ChoiceOption from 'components/question/multiple-choice/choice-option';
 import _ from 'lodash';
 import ChallengeHeader from '../challenge-header';
@@ -75,7 +76,10 @@ export default function MultipleChoiceQuestion({
         isCorrect,
       })}
     >
-      <ChallengeHeader label="Multiple Choice Challenge" />
+      <ChallengeHeader
+        label="Multiple Choice Challenge"
+        questionFullId={getQuestionFullId(question.type, question.id)}
+      />
 
       <div className={styles.questionTextWrapper}>
         <div

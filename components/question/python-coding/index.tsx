@@ -7,6 +7,7 @@ import {
   ControlledEditor,
   ControlledEditorOnChange,
 } from '@monaco-editor/react';
+import { getQuestionFullId } from 'lib/utils-browser';
 import classNames from 'classnames/bind';
 import _ from 'lodash';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -184,7 +185,10 @@ export default function PythonCodingQuestion({
 
   return (
     <div className={cx('pythonCodingQuestionWrapper')}>
-      <ChallengeHeader label="Coding Challenge" />
+      <ChallengeHeader
+        label="Coding Challenge"
+        questionFullId={getQuestionFullId(question.type, question.id)}
+      />
 
       <div
         className={cx('questionContent')}

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Tooltip } from 'react-tippy';
+import Tippy from '@tippyjs/react';
 import classNames from 'classnames/bind';
 import styles from './course-module-pages-navigation.module.scss';
 import { ICourseModulePageMeta } from 'typings/course';
@@ -31,15 +31,7 @@ export default function CourseModulePagesNavigation({
             as={`/course/${courseId}/${moduleId}/${pageMeta.id}`}
           >
             <div className={cx('pageLinkItemWrapper')}>
-              <Tooltip
-                // options
-                title={pageMeta.title}
-                position="top"
-                trigger="mouseenter"
-                duration={200}
-                animation="shift"
-                arrow={true}
-              >
+              <Tippy content={pageMeta.title} className="tippy" theme="light">
                 <motion.div
                   className={cx('pageLinkItem', {
                     active: pageMeta.id === currentPageId,
@@ -50,7 +42,7 @@ export default function CourseModulePagesNavigation({
                 >
                   <span>{pageIndex + 1}</span>
                 </motion.div>
-              </Tooltip>
+              </Tippy>
             </div>
           </Link>
         ))}
