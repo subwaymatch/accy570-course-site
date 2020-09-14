@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
@@ -61,10 +61,19 @@ export default function LiveJoinPage({ socketIOEndpoint }) {
                   <img src={HamsterImage} alt="Cute Hamster" />
                 </div>
 
-                <div className="column is-three-quarters">
+                <div className="column is-9 is-offset-1">
                   <p className={cx('message')}>
                     During the live session, your submissions on multiple choice
-                    and coding questions will be notified.
+                    and coding questions will be shared with the instructor.{' '}
+                    <strong>
+                      will ONLY use that information to ensure that you're
+                      following the lectures.
+                    </strong>
+                    I Submitting incorrect answers will not have any negative
+                    impact on your participation score. In fact, it's a good
+                    signal that you're trying. You can also choose to opt out -
+                    if this is the case, please use the Zoom chat to update me
+                    on your progress.
                   </p>
                 </div>
               </div>
