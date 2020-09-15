@@ -43,7 +43,7 @@ export default function LiveSessionBar({ show }) {
         </p>
       ) : (
         <p>
-          Live session in Progress 🔥
+          Live Session in Progress 🔥{' '}
           <Link href="/live/join">
             <a className={cx('joinLink')}>Join Now →</a>
           </Link>

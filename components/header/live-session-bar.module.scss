@@ -19,9 +19,7 @@
     top: -0.1rem;
   }
 
-  .joinLink {
-    margin-left: 0.3rem;
-
+  a {
     &:hover {
       color: color.scale($color-primary, $lightness: 20%);
     }
