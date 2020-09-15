@@ -12,10 +12,6 @@ Vercel Project - [https://vercel.com/subwaymatch/accy570](https://vercel.com/sub
 
 A course site that supports interactive classroom sessions.
 
-## Live Server
-
-In order to use the live in-classroom features, a separate Node.js server needs to be running. See [https://github.com/subwaymatch/accy570-live-server](https://github.com/subwaymatch/accy570-live-server).
-
 ## Local Development
 
 Run the development server:
