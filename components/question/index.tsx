@@ -21,7 +21,9 @@ export default function QuestionComponent({
   const saveResponse = useLiveSessionStore((state) => state.saveResponse);
 
   const afterSubmit = (isSuccess) =>
-    saveResponse(getQuestionFullId(question.type, question.id), isSuccess);
+    netId
+      ? saveResponse(getQuestionFullId(question.type, question.id), isSuccess)
+      : () => {};
 
   switch (question.type) {
     case QuestionType.MultipleChoice:

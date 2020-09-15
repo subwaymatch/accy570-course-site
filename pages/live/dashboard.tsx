@@ -30,6 +30,10 @@ export default function DashboardPage() {
             <button onClick={resetCurrentPage}>Reset</button>
           </div>
         </div>
+
+        {Object.keys(data).map((netId) => (
+          <div>{netId}</div>
+        ))}
       </motion.div>
     </Layout>
   );

@@ -16,7 +16,7 @@ $inactive-color: #f1f3f5;
 
   .sidebarTitle {
     display: block;
-    color: $color-secondary;
+    color: black;
     font-size: 1rem;
     letter-spacing: -0.01rem;
     font-weight: 500;
@@ -45,19 +45,19 @@ $inactive-color: #f1f3f5;
       }
 
       &.isComplete {
-        color: color.scale($color-secondary, $lightness: 50%);
+        color: color.scale(black, $lightness: 50%);
 
         .verticalLine {
-          background-color: color.scale($color-secondary, $lightness: 95%);
+          background-color: color.scale(black, $lightness: 95%);
         }
       }
 
       &.isInProgress {
-        color: $color-secondary;
+        color: black;
         font-weight: 500;
 
         .verticalLine {
-          background-color: $color-secondary;
+          background-color: black;
           background-color: transparent;
         }
       }
@@ -86,15 +86,15 @@ $inactive-color: #f1f3f5;
           }
 
           &.isComplete {
-            background-color: color.scale($color-secondary, $lightness: 92%);
+            background-color: color.scale(black, $lightness: 92%);
 
             .icon {
-              color: color.scale($color-secondary, $lightness: 40%);
+              color: color.scale(black, $lightness: 40%);
             }
           }
 
           &.inProgress {
-            background-color: $color-secondary;
+            background-color: black;
           }
         }
 

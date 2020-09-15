@@ -4,7 +4,7 @@ import _ from 'lodash';
 import { ICourse } from 'typings/course';
 import styles from './course-sidebar.module.scss';
 import { GoCheck } from 'react-icons/go';
-import { BsFillPlayFill } from 'react-icons/bs';
+import { MdPlayArrow } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import { clickableVariants } from 'animations/variants';
 import Sticky from 'react-stickynode';
@@ -60,7 +60,7 @@ export default function CourseSidebar({
                       </div>
                     ) : isInProgress ? (
                       <div className={cx('iconWrapper', 'inProgress')}>
-                        <BsFillPlayFill className={cx('icon')} />
+                        <MdPlayArrow className={cx('icon')} />
                       </div>
                     ) : (
                       <div className={cx('incompleteCircle')} />
