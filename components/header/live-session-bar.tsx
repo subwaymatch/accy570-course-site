@@ -9,6 +9,7 @@ const cx = classNames.bind(styles);
 
 export default function LiveSessionBar({ show }) {
   const netId = useLiveSessionStore((state) => state.netId);
+  const setNetId = useLiveSessionStore((state) => state.setNetId);
 
   return show ? (
     <div className={cx('liveSessionBar')}>
@@ -24,14 +25,30 @@ export default function LiveSessionBar({ show }) {
         <BiBroadcast className={cx('liveIcon')} />
       </motion.span>
 
-      <p>
-        {netId ? `In Live Session as ${netId}` : 'Live Session in Progress'}
-      </p>
-      <Link href="/live/join">
-        <a className={cx('joinLink')}>
-          {netId ? 'Change NetID →' : 'Join Now →'}
-        </a>
-      </Link>
+      {netId ? (
+        <p>
+          In Live Session as {netId} 🚀
+          <Link href="/live/join">
+            <a className={cx('changeNetIdLink')}>Change NetId</a>
+          </Link>{' '}
+          or{' '}
+          <a
+            onClick={(e) => {
+              e.preventDefault();
+              setNetId('');
+            }}
+          >
+            Leave
+          </a>
+        </p>
+      ) : (
+        <p>
+          Live session in Progress 🔥
+          <Link href="/live/join">
+            <a className={cx('joinLink')}>Join Now →</a>
+          </Link>
+        </p>
+      )}
     </div>
   ) : null;
 }

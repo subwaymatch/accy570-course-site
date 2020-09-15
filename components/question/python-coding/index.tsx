@@ -32,7 +32,6 @@ import {
 } from 'components/question/message-boxes';
 import ChallengeHeader from '../challenge-header';
 import useLiveSessionStore from 'stores/useLiveSessionStore';
-import useFirebaseStore from 'stores/useFirebaseStore';
 
 const cx = classNames.bind(styles);
 
@@ -68,8 +67,6 @@ export default function PythonCodingQuestion({
   const [showHint, setShowHint] = useState(false);
   const [showSolution, setShowSolution] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
-
-  const markSuccess = useFirebaseStore((state) => state.markSuccess);
 
   useEffect(() => {
     pyodideManager.loadPyodide().then(() => {
@@ -144,10 +141,6 @@ export default function PythonCodingQuestion({
     if (!codeResult.hasError) {
       setIsCorrect(true);
       toast.success('Great work!');
-
-      if (netId) {
-        markSuccess(netId, question.id);
-      }
 
       if (afterSubmit) {
         afterSubmit(true);

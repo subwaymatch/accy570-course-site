@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
@@ -18,10 +18,7 @@ export default function LiveJoinPage({ socketIOEndpoint }) {
   const [netIdVal, setNetIdVal] = useState<string>(netId as string);
 
   const joinLiveSession = () => {
-    console.log('joinLiveSession');
-
     setNetId(netIdVal);
-    console.log(`joinLiveSession(${netIdVal})`);
 
     router.push('/live/wait');
   };
@@ -66,7 +63,7 @@ export default function LiveJoinPage({ socketIOEndpoint }) {
                     During the live session, your submissions on multiple choice
                     and coding questions will be shared with the instructor.{' '}
                     <strong>
-                      will ONLY use that information to ensure that you're
+                      I will ONLY use that information to ensure that you're
                       following the lectures.
                     </strong>
                     I Submitting incorrect answers will not have any negative

@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
 import { IconContext } from 'react-icons';
 import { AnimatePresence } from 'framer-motion';
-import { useRouter } from 'next/router';
 
 import 'styles/global.scss';
 import 'highlight.js/styles/vs2015.css';
