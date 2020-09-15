@@ -31,9 +31,7 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {Object.keys(data).map((netId) => (
-          <div>{netId}</div>
-        ))}
+        {data && Object.keys(data).map((netId) => <div>{netId}</div>)}
       </motion.div>
     </Layout>
   );
