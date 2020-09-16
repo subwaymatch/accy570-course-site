@@ -1,5 +1,9 @@
 ---
 title: Syntax for writing functions 👨🏻‍💻
+questions:
+  - python-coding/create-function-01
+  - python-coding/create-function-02
+  - python-coding/create-function-03
 ---
 
 - A function definition begins with the keyword `def`.
