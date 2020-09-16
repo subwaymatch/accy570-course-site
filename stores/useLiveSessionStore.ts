@@ -27,15 +27,12 @@ const useLiveSessionStore = create<State>((set, get) => ({
   saveResponse: (questionFullId, isSuccess) => {
     const netId = get().netId;
 
-    console.log(
-      `afterSubmit, questionFullId=${questionFullId}, netId=${netId}`
-    );
-
     challengesRef.doc(questionFullId).set(
       {
         attempts: {
           [netId]: {
             success: isSuccess,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
           },
         },
       },
@@ -44,9 +41,12 @@ const useLiveSessionStore = create<State>((set, get) => ({
 
     liveSessionsRef.doc('current').set(
       {
-        [netId]: {
-          [questionFullId]: {
-            success: isSuccess,
+        challengeAttempts: {
+          [netId]: {
+            [questionFullId]: {
+              success: isSuccess,
+              timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            },
           },
         },
       },
