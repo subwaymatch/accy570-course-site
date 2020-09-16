@@ -31,7 +31,6 @@ import {
   IncorrectResultBox,
 } from 'components/question/message-boxes';
 import ChallengeHeader from '../challenge-header';
-import useLiveSessionStore from 'stores/useLiveSessionStore';
 
 const cx = classNames.bind(styles);
 
@@ -51,8 +50,6 @@ export default function PythonCodingQuestion({
     stderr: null,
     stdout: null,
   };
-
-  const netId = useLiveSessionStore((state) => state.netId);
 
   const editorRef = useRef<editor.IStandaloneCodeEditor>();
   const [editorValue, setEditorValue] = useState(question.templateCode);
@@ -127,7 +124,7 @@ export default function PythonCodingQuestion({
   const runAndCheckCode = async () => {
     setIsPyodideReady(false);
 
-    // setSubmittedCode(editorValue);
+    setSubmittedCode(editorValue);
 
     const codeResult = await pyodideManager.runAndCheckCode(
       editorValue,

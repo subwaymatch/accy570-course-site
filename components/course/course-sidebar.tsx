@@ -8,6 +8,7 @@ import { MdPlayArrow } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import { clickableVariants } from 'animations/variants';
 import Sticky from 'react-stickynode';
+import { useMedia } from 'react-media';
 
 const cx = classNames.bind(styles);
 
@@ -25,11 +26,13 @@ export default function CourseSidebar({
     (module) => module.id === currentModuleId
   );
 
+  const isColumnFullWidth = useMedia({ query: '(max-width: 991.98px)' });
+
   return (
     <div className={cx('sidebarWrapper')}>
       <span className={cx('sidebarTitle')}>{course.title}</span>
 
-      <Sticky enabled={true} top={20}>
+      <Sticky enabled={!isColumnFullWidth} top={20}>
         <nav className={cx('sideNav')}>
           {course.modules.map((module, index) => {
             const isComplete = index < currentModuleIndex;

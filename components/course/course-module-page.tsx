@@ -74,14 +74,14 @@ export default function CoursePageComponent({ course, pageData }: PropTypes) {
     <div className={cx('pageWrapper')}>
       <div className={cx('container')}>
         <div className="row">
-          <div className="col-md-3">
+          <div className="col-lg-3 col-md-12">
             <CourseSidebar
               course={course}
               currentModuleId={pageData.moduleId}
             />
           </div>
 
-          <div className="col-md-9">
+          <div className="col-lg-9 col-md-12">
             <CourseModulePagesNavigation
               courseId={course.id}
               moduleId={currentModule.id}
