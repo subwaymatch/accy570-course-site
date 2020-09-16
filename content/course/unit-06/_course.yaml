@@ -1,0 +1,8 @@
+title: "Dictionaries and Functions"
+description: Python dictionary is another commonly used data type. We start talking about functions.
+modules:
+  - announcements
+  - dictionaries
+  - working-with-a-dictionary
+  - tuples
+  - introduction-to-functions

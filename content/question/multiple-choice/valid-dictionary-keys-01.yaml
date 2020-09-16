@@ -1,0 +1,10 @@
+text: |
+  Which of the following are valid dictionary keys in Python?
+options:
+  - "`1.23`[o]"
+  - "`10`[o]"
+  - "`['Loyola', 'Trio']`"
+  - "`'Loyola Trio'`[o]"
+  - "`False`[o]"
+explanation: |
+  All primitive types (int, float, string, boolean) are valid dictionary keys. A list is not a primitive type and cannot be used as a dictionary key.

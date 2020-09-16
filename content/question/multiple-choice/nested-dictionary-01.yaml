@@ -1,0 +1,7 @@
+text: |
+  A Python dictionary can have another Python dictionary as one of its values (i.e., nested dictionary)?
+options:
+  - "`True`[o]"
+  - "`False`"
+explanation: |
+  A Python dictionary can contain another dictionary as a value in a key-value pair.
