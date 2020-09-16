@@ -1,10 +1,10 @@
 ---
-title: Why use functions?
+title: Why use functions? 👜
 ---
 
 TL;DR (too long, didn't read) - A function makes a block of code **_reusable_** ♻️!
 
-Assume you are working at Chanel as a US sales manager. Your job is to price each luxury handbag in the US based on the original prices in France. You come up with a formula `price_in_usd = price_in_euro * 1.3 + 100` (i.e., a bag that sells at €3,000 in France will be priced at \$4,000 (€3,000 \* 1.3 + 100).
+Assume you are working at Chanel as a US sales manager. Your job is to price each luxury handbag 👜 in the US based on the original prices in France. You come up with a formula `price_in_usd = price_in_euro * 1.3 + 100` (i.e., a bag that sells at €3,000 in France will be priced at \$4,000 (€3,000 \* 1.3 + 100).
 
 - Classic Handbag sells at €3,500. You write `classic_handbag = 3500 * 1.3 + 100`.
 - Boy Bag sells at €3,200. You write `boy_bag = 3200 * 1.3 + 100`.

@@ -1,5 +1,5 @@
 ---
-title: What is a function?
+title: What is a function? 👩🏽‍🌾
 ---
 
 Let's forget about Python for a moment and go back a few years all the way back to Algebra. Do you remember any expressions that resemble the form of `f(x) = x + 3`? `f(x) = x + 3` is a _function_. For any given `x`, the function will add `3` to `x` and return that value.

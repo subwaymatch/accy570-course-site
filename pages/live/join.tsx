@@ -60,17 +60,17 @@ export default function LiveJoinPage({ socketIOEndpoint }) {
 
                 <div className="column col-md-9">
                   <p className={cx('message')}>
-                    During the live session, your submissions on multiple choice
-                    and coding questions will be shared with the instructor.{' '}
+                    During the live session, your in-class exercise submissions
+                    will be shared with Park and Michael. We will only use that
+                    information to (1) provide help and (2) calculate
+                    participation scores.{' '}
                     <strong>
-                      I will ONLY use that information to ensure that you're
-                      following the lectures.
+                      Submitting incorrect answers WILL NOT damage your
+                      participation points.
                     </strong>{' '}
-                    Submitting incorrect answers will not have any negative
-                    impact on your participation score. In fact, it's a good
-                    signal that you're trying. You can also choose to opt out -
-                    if this is the case, please use the Zoom chat to update me
-                    on your progress.
+                    You can also choose to opt out - if this is the case, please
+                    use the Zoom chat to let us know when you're done with the
+                    exercises in each page.
                   </p>
                 </div>
               </div>

@@ -1,5 +1,5 @@
 ---
-title: Syntax for writing functions
+title: Syntax for writing functions 👨🏻‍💻
 ---
 
 - A function definition begins with the keyword `def`.
@@ -13,14 +13,14 @@ title: Syntax for writing functions
 
 ```python
 def print_hello():
-	print('Hello World')
+  print('Hello World')
 
 print_hello() # 'Hello World'
 ```
 
 ```python
 def my_average(x, y):
-	return (x + y) / 2
+  return (x + y) / 2
 ```
 
-Now, we will use Jupyter Lab together to practice how to write functions.
+After the exercises, we will use Jupyter Lab together to practice how to write functions.

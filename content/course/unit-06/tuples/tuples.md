@@ -4,7 +4,7 @@ title: Tuples
 
 A tuple is nearly identical to a list. The differences are:
 
-- A tuple cannot be changed after it is created (it is _immutable_).
+- A tuple cannot be changed after it is created (it is _immutable_ 👈🏼).
 - Tuples use parentheses `()`, whereas lists use square brackets `[]`.
 
 ```python
