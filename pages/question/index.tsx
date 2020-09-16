@@ -44,14 +44,14 @@ export default function QuestionHome({
         exit="hidden"
         variants={thumbnailVariants}
       >
-        <div className="columns">
-          <div className="column is-full">
+        <div className="row">
+          <div className="col-12">
             <h1>List of Questions</h1>
           </div>
         </div>
 
-        <div className="columns">
-          <div className="column is-half">
+        <div className="row">
+          <div className="col-md-6">
             <h2>Multiple Choice</h2>
             {multipleChoiceIds.map((questionId) => (
               <Link
@@ -64,7 +64,7 @@ export default function QuestionHome({
             ))}
           </div>
 
-          <div className="column is-half">
+          <div className="col-md-6">
             <h2>Python Coding</h2>
             {pythonCodingIds.map((questionId) => (
               <Link

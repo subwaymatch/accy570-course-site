@@ -7,6 +7,9 @@ import CourseModulePagesNavigation from 'components/course/course-module-pages-n
 import CourseModulePageBottomNavigation from 'components/course/course-module-page-bottom-navigation';
 import { motion } from 'framer-motion';
 import styles from './course-module-page.module.scss';
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(styles);
 
 type PropTypes = {
   course: ICourse;
@@ -68,55 +71,60 @@ export default function CoursePageComponent({ course, pageData }: PropTypes) {
     : null;
 
   return (
-    <>
-      <div className="columns">
-        <div className="column is-one-quarter">
-          <CourseSidebar course={course} currentModuleId={pageData.moduleId} />
-        </div>
+    <div className={cx('pageWrapper')}>
+      <div className={cx('container')}>
+        <div className="row">
+          <div className="col-3">
+            <CourseSidebar
+              course={course}
+              currentModuleId={pageData.moduleId}
+            />
+          </div>
 
-        <div className="column is-three-quarters">
-          <CourseModulePagesNavigation
-            courseId={course.id}
-            moduleId={currentModule.id}
-            currentPageId={pageData.id}
-            pagesMeta={currentModule.pages}
-          />
-
-          <motion.div
-            key="course-module-page-content-wrapper"
-            className={styles.pageContentWrapper}
-            variants={{
-              hidden: {
-                x: 50,
-                opacity: 0,
-              },
-              visible: {
-                x: 0,
-                opacity: 1,
-              },
-            }}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-          >
-            <CourseModulePageContent
-              moduleName={currentModule.title}
-              pageData={pageData}
+          <div className="col-9">
+            <CourseModulePagesNavigation
+              courseId={course.id}
+              moduleId={currentModule.id}
+              currentPageId={pageData.id}
+              pagesMeta={currentModule.pages}
             />
 
-            <CourseModulePageQuestions questions={pageData.questions} />
+            <motion.div
+              key="course-module-page-content-wrapper"
+              className={styles.pageContentWrapper}
+              variants={{
+                hidden: {
+                  x: 50,
+                  opacity: 0,
+                },
+                visible: {
+                  x: 0,
+                  opacity: 1,
+                },
+              }}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+            >
+              <CourseModulePageContent
+                moduleName={currentModule.title}
+                pageData={pageData}
+              />
 
-            <CourseModulePageBottomNavigation
-              prevHref={prevHref}
-              prevModuleLabel={prevModuleLabel}
-              prevPageLabel={prevPageLabel}
-              nextHref={nextHref}
-              nextModuleLabel={nextModuleLabel}
-              nextPageLabel={nextPageLabel}
-            />
-          </motion.div>
+              <CourseModulePageQuestions questions={pageData.questions} />
+
+              <CourseModulePageBottomNavigation
+                prevHref={prevHref}
+                prevModuleLabel={prevModuleLabel}
+                prevPageLabel={prevPageLabel}
+                nextHref={nextHref}
+                nextModuleLabel={nextModuleLabel}
+                nextPageLabel={nextPageLabel}
+              />
+            </motion.div>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

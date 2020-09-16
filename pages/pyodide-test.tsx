@@ -17,7 +17,7 @@ export default function PyodideTest(props: any) {
           visible: { opacity: 1 },
         }}
       >
-        <div className="columns">
+        <div className="row">
           <div className="column">
             <PythonCodingQuestion question={props.question} />
           </div>

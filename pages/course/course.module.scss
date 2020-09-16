@@ -4,6 +4,11 @@
 
 .courseIndexWrapper {
   color: white;
+  padding: 2rem 0;
+
+  .customContainer {
+    max-width: 720px;
+  }
 
   h1.pageTitle {
     font-weight: 300;
@@ -27,7 +32,7 @@
         left: -2rem;
         top: 0.5rem;
 
-        @include media-touch {
+        @include media-breakpoint-down(lg) {
           position: relative;
           left: 0;
           top: 0;

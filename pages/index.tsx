@@ -3,6 +3,7 @@ import styles from './home.module.scss';
 import { motion } from 'framer-motion';
 import classNames from 'classnames/bind';
 import _ from 'lodash';
+import GradeComponent from 'components/course-info/grade-component';
 import RunningAlarmClockImage from 'images/running-alarm-clock-02.svg';
 import { ZoomLinkButton, ZoomPasswordMessage } from 'components/zoom-button';
 import DataCampLogoImage from 'images/datacamp-logo.png';
@@ -25,51 +26,17 @@ const courseTitleVariants = {
   },
 };
 
-const GradeComponent = ({
-  className,
-  title,
-  points,
-  percentage,
-  subcomponents,
-}: {
-  className?: string;
-  title: string;
-  points: string | number;
-  percentage: string | number;
-  subcomponents?: React.ReactNode[];
-}) => (
-  <div className={cx('gradeComponent', className)}>
-    <div className={cx('gradeComponentTitle')}>{title}</div>
-
-    <div className={cx('gradeComponentPoints')}>{points}</div>
-
-    <div className={cx('gradeComponentPercentage')}>
-      {percentage}
-      {_.isNumber(percentage) && '%'}
-    </div>
-
-    <div className={cx('gradeSubcomponents')}>
-      {subcomponents &&
-        subcomponents.map((sc, idx) => (
-          <span key={idx} className={cx('item')}>
-            {sc}
-          </span>
-        ))}
-    </div>
-  </div>
-);
-
 export default function Home() {
   return (
     <Layout className={cx('homePage')}>
       <motion.div
-        className="columns"
+        className="row"
         initial="hidden"
         animate="visible"
         exit="hidden"
         variants={courseTitleVariants}
       >
-        <div className="column is-full">
+        <div className="col-12">
           <div className={cx('syllabusHeader')}>
             <h1>ACCY 570: Data Analytics Foundations for Accountancy</h1>
 
@@ -98,12 +65,12 @@ export default function Home() {
         </div>
       </motion.div>
 
-      <div className={cx('columns', 'section')}>
-        <div className="column is-one-quarter">
+      <div className={cx('row', 'section')}>
+        <div className="col-md-3">
           <h2>Group Signup</h2>
         </div>
 
-        <div className="column is-three-quarters">
+        <div className="col-md-9">
           If you plan to work in a group, please use{' '}
           <a
             href="https://docs.google.com/spreadsheets/d/1DEWe4AwOhTwK1D7bTE29EgQ4nvkNumxxV7a8bhRWZ-c/edit?usp=sharing"
@@ -115,20 +82,20 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={cx('columns', 'section', 'zoomLinksSection')}>
-        <div className="column is-one-quarter">
+      <div className={cx('row', 'section', 'zoomLinksSection')}>
+        <div className="col-md-3">
           <h2>Zoom Links</h2>
         </div>
-        <div className="column is-three-quarters">
-          <div className="columns">
-            <div className="column is-half">
+        <div className="col-md-9">
+          <div className="row">
+            <div className="col-md-6">
               <ZoomLinkButton
                 label="Lecture"
                 href="https://illinois.zoom.us/j/92043278937?pwd=TDUzdXB0ZGp4T2tiZlhWWW1Td2Z4dz09"
               />
               <ZoomPasswordMessage />
             </div>
-            <div className="column is-half">
+            <div className="col-md-6">
               <ZoomLinkButton
                 label="Lab Session"
                 href="https://illinois.zoom.us/j/98711107937?pwd=WVVOMzhyNEFjM1ZrUGNCQWhCQitEZz09"
@@ -141,31 +108,31 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={cx('columns', 'section')}>
-        <div className="column is-one-quarter">
+      <div className={cx('row', 'section')}>
+        <div className="col-md-3">
           <h2>Instructor Information</h2>
         </div>
 
-        <div className="column is-three-quarters">
-          <div className="columns is-full">
-            <div className="column is-half">
+        <div className="col-md-9">
+          <div className="row">
+            <div className="col-md-6">
               <h3>Name</h3>
               Ye Joo Park
             </div>
 
-            <div className="column is-half">
+            <div className="col-md-6">
               <h3>Email</h3>
               <a href="mailto:ypark32@illinois.edu">ypark32@illinois.edu</a>
             </div>
           </div>
 
-          <div className="columns">
-            <div className="column is-half">
+          <div className={cx('row', 'topSpacing')}>
+            <div className="col-md-6">
               <h3>Office Hours</h3>
               Thursdays 4-5 PM
             </div>
 
-            <div className="column is-half">
+            <div className="col-md-6">
               <ZoomLinkButton
                 label="Park's Office Hours"
                 href="https://illinois.zoom.us/j/97049694596?pwd=dkhuVVFDMVl3NmJPbWczdkY5b3pldz09"
@@ -178,19 +145,19 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={cx('columns', 'section')}>
-        <div className="column is-one-quarter">
+      <div className={cx('row', 'section')}>
+        <div className="col-md-3">
           <h2>Lab Instructor</h2>
         </div>
 
-        <div className="column is-three-quarters">
-          <div className="columns is-full">
-            <div className="column is-half">
+        <div className="col-md-9">
+          <div className="row">
+            <div className="col-md-6">
               <h3>Name</h3>
               Linden Lu
             </div>
 
-            <div className="column is-half">
+            <div className="col-md-6">
               <h3>Email</h3>
               <a href="mailto:zllu2@illinois.edu">zllu2@illinois.edu</a>
             </div>
@@ -198,31 +165,31 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={cx('columns', 'section')}>
-        <div className="column is-one-quarter">
+      <div className={cx('row', 'section')}>
+        <div className="col-md-3">
           <h2>Teaching Assistant</h2>
         </div>
 
-        <div className="column is-three-quarters">
-          <div className="columns is-full">
-            <div className="column is-half">
+        <div className="col-md-9">
+          <div className="row">
+            <div className="col-md-6">
               <h3>Name</h3>
               Michael Yip
             </div>
 
-            <div className="column is-half">
+            <div className="col-md-6">
               <h3>Email</h3>
               <a href="mailto:myip5@illinois.edu">myip5@illinois.edu</a>
             </div>
           </div>
 
-          <div className="columns is-full">
-            <div className="column is-half">
+          <div className={cx('row', 'topSpacing')}>
+            <div className="col-md-6">
               <h3>Office Hours</h3>
               Mondays 11 AM – 12 PM
             </div>
 
-            <div className="column is-half">
+            <div className="col-md-6">
               <ZoomLinkButton
                 label="Micheal's Office Hours"
                 href="https://illinois.zoom.us/j/93933077792?pwd=VlBPTVZKQzZTdW5WUEZIbHFZak1ZZz09"
@@ -233,12 +200,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={cx('columns', 'section')}>
-        <div className="column is-one-quarter">
+      <div className={cx('row', 'section')}>
+        <div className="col-md-3">
           <h2>Grades Breakdown</h2>
         </div>
 
-        <div className="column is-three-quarters">
+        <div className="col-md-9">
           <GradeComponent
             className={cx('header')}
             title="Component"
@@ -299,12 +266,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={cx('columns', 'section')}>
-        <div className="column is-one-quarter">
+      <div className={cx('row', 'section')}>
+        <div className="col-md-3">
           <h2>Attendance</h2>
         </div>
 
-        <div className="column is-three-quarters">
+        <div className="col-md-9">
           <p>
             I will grade attendance. It's only to incentivize you to not fall
             behind. Building a solid foundation in 570 will enable you to excel
@@ -321,12 +288,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={cx('columns', 'section')}>
-        <div className="column is-one-quarter">
+      <div className={cx('row', 'section')}>
+        <div className="col-md-3">
           <h2>Participation</h2>
         </div>
 
-        <div className="column is-three-quarters">
+        <div className="col-md-9">
           <p>
             Normally, your participation grades would be based on two criteria.
           </p>
@@ -342,12 +309,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={cx('columns', 'section')}>
-        <div className="column is-one-quarter">
+      <div className={cx('row', 'section')}>
+        <div className="col-md-3">
           <h2>Grading Disputes</h2>
         </div>
 
-        <div className="column is-three-quarters">
+        <div className="col-md-9">
           <p>
             While the TAs and I will make every effort to grade your work
             accurately, grading errors can occur. If you believe a grading error
@@ -358,12 +325,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={cx('columns', 'section')}>
-        <div className="column is-one-quarter">
+      <div className={cx('row', 'section')}>
+        <div className="col-md-3">
           <h2>Late Submissions</h2>
         </div>
 
-        <div className="column is-two-quarters">
+        <div className="col-md-6">
           <p>
             Points are deducted from all late submissions. The amount of
             deduction will be <strong>10%</strong> of the total available points
@@ -373,13 +340,13 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="column is-one-quarter">
+        <div className="col-md-3">
           <img src={RunningAlarmClockImage} alt="Running Alarm Clock" />
         </div>
       </div>
 
-      <div className={cx('columns', 'section')}>
-        <div className="column is-one-quarter">
+      <div className={cx('row', 'section')}>
+        <div className="col-md-3">
           <a href="https://www.datacamp.com">
             <img
               src={DataCampLogoImage}
@@ -389,7 +356,7 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="column is-two-quarters">
+        <div className="col-md-6">
           <p>
             This class is accompanied by{' '}
             <strong>

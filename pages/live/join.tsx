@@ -25,8 +25,8 @@ export default function LiveJoinPage({ socketIOEndpoint }) {
 
   return (
     <Layout className={cx('joinPage')} backgroundColor="#f7f7f7">
-      <div className="columns">
-        <div className="column is-full">
+      <div className="row">
+        <div className="col-12">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -53,20 +53,20 @@ export default function LiveJoinPage({ socketIOEndpoint }) {
                 }}
               />
 
-              <div className={cx('explanation', 'columns')}>
-                <div className="column is-2">
+              <div className={cx('explanation', 'row')}>
+                <div className="column col-md-3">
                   <img src={HamsterImage} alt="Cute Hamster" />
                 </div>
 
-                <div className="column is-9 is-offset-1">
+                <div className="column col-md-9">
                   <p className={cx('message')}>
                     During the live session, your submissions on multiple choice
                     and coding questions will be shared with the instructor.{' '}
                     <strong>
                       I will ONLY use that information to ensure that you're
                       following the lectures.
-                    </strong>
-                    I Submitting incorrect answers will not have any negative
+                    </strong>{' '}
+                    Submitting incorrect answers will not have any negative
                     impact on your participation score. In fact, it's a good
                     signal that you're trying. You can also choose to opt out -
                     if this is the case, please use the Zoom chat to update me

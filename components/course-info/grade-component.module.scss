@@ -1,0 +1,44 @@
+@use 'sass:color';
+@import 'styles/variables';
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
+
+.gradeComponent {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1rem;
+  }
+
+  .gradeComponentTitle {
+    color: #555;
+    flex: 4;
+  }
+
+  .gradeComponentPoints {
+    color: $color-primary;
+    flex: 1;
+  }
+
+  .gradeComponentPercentage {
+    color: $color-secondary;
+    flex: 1;
+  }
+
+  .gradeSubcomponents {
+    flex: 4;
+    font-size: 1rem;
+    color: color.scale($color-secondary, $lightness: 75%, $saturation: -70%);
+
+    .item {
+      display: block;
+    }
+  }
+}

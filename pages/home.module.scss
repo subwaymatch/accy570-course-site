@@ -5,13 +5,18 @@
 .homePage {
   font-size: 1.15rem;
   line-height: 1.8;
+  padding: 2rem 0;
 
   .section {
-    padding-top: 1.6rem;
-    padding-bottom: 1.6rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
-  @include media-mobile {
+  .topSpacing {
+    padding-top: 1rem;
+  }
+
+  @include media-breakpoint-down(md) {
     font-size: 1rem;
 
     .section {
@@ -24,7 +29,7 @@
     font-size: 1.8rem;
     font-weight: 600;
 
-    @include media-touch {
+    @include media-breakpoint-down(lg) {
       font-size: 1.3rem;
       line-height: 1.8;
       margin-bottom: 1rem;
@@ -34,7 +39,7 @@
   h2 {
     font-weight: 500;
 
-    @include media-mobile {
+    @include media-breakpoint-down(md) {
       font-size: 1.2rem;
       font-weight: 700;
     }
@@ -110,7 +115,7 @@
     padding: 0.5rem 0;
     font-size: 1.1rem;
 
-    @include media-mobile {
+    @include media-breakpoint-down(md) {
       flex-direction: column;
       align-items: flex-start;
       font-size: 1rem;
@@ -149,16 +154,6 @@
     &.footer {
       border-top: 2px solid #222;
       font-weight: 600;
-    }
-
-    &.header,
-    &.footer {
-      .gradeComponentTitle,
-      .gradeComponentPoints,
-      .gradeComponentPercentage,
-      .gradeSubcomponents {
-        color: #222;
-      }
     }
   }
 

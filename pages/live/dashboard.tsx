@@ -20,13 +20,13 @@ export default function DashboardPage() {
   return (
     <Layout>
       <motion.div exit={{}}>
-        <div className="columns">
-          <div className="column is-full">
+        <div className="row">
+          <div className="col-12">
             <h1>Dashboard</h1>
           </div>
         </div>
-        <div className="columns">
-          <div className="column is-full">
+        <div className="row">
+          <div className="col-12">
             <button onClick={resetCurrentPage}>Reset</button>
           </div>
         </div>

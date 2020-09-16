@@ -10,62 +10,44 @@ import LiveSessionBar from './live-session-bar';
 
 const cx = classNames.bind(styles);
 
-type HeaderProps = {
-  headerTitle?: string;
-};
-
-export default function Header({ headerTitle }: HeaderProps) {
+export default function Header() {
   const router = useRouter();
 
   return (
     <header className={styles.header}>
       <LiveSessionBar show={true} />
 
-      <div className={styles.headerMain}>
-        <div className={styles.headerLeft}>
-          <Link href="/">
-            <a className={styles.siteTitle}>Accy 570</a>
-          </Link>
-        </div>
-
-        <div className={styles.headerCenter}>
-          {headerTitle ? (
-            <h1>{headerTitle}</h1>
-          ) : (
-            <nav className={cx('is-hidden-touch', 'headerMainMenu')}>
-              <MenuItem
-                href="/"
-                active={router.pathname === '/'}
-                iconChild={<IoIosFiling />}
-                label="Syllabus"
-              />
-              <MenuItem
-                href="/schedule"
-                active={router.pathname === '/schedule'}
-                iconChild={<BsCalendar />}
-                label="Schedule"
-              />
-              <MenuItem
-                href="/course"
-                active={
-                  router.pathname === '/course' ||
-                  router.pathname.startsWith('/course/')
-                }
-                iconChild={<BsBook />}
-                label="Learn"
-              />
-              <MenuItem
-                href="/live"
-                active={router.pathname.startsWith('/live')}
-                iconChild={<BiBroadcast />}
-                label="Live"
-                show={false}
-              />
-            </nav>
-          )}
-        </div>
-
-        <div className={styles.headerRight}>&nbsp;</div>
+      <div className={styles.headerMenuWrapper}>
+        <nav className={cx('headerMenu')}>
+          <MenuItem
+            href="/"
+            active={router.pathname === '/'}
+            iconChild={<IoIosFiling />}
+            label="Syllabus"
+          />
+          <MenuItem
+            href="/schedule"
+            active={router.pathname === '/schedule'}
+            iconChild={<BsCalendar />}
+            label="Schedule"
+          />
+          <MenuItem
+            href="/course"
+            active={
+              router.pathname === '/course' ||
+              router.pathname.startsWith('/course/')
+            }
+            iconChild={<BsBook />}
+            label="Learn"
+          />
+          <MenuItem
+            href="/live"
+            active={router.pathname.startsWith('/live')}
+            iconChild={<BiBroadcast />}
+            label="Live"
+            show={false}
+          />
+        </nav>
       </div>
     </header>
   );

@@ -21,8 +21,8 @@ export default function LiveSessionWaitPage() {
   return (
     <Layout>
       <div className="container">
-        <div className="columns">
-          <div className="column is-full">
+        <div className="row">
+          <div className="col-12">
             <p className={styles.message}>
               Hello <span className={styles.userName}>{netId}</span>! You have
               successfully joined the live session.

@@ -4,14 +4,17 @@
 /* Position and sizing of burger button */
 .burgerButton {
   position: fixed;
-  width: 40px;
-  height: 40px;
-  top: 11px;
+  width: 44px;
+  height: 44px;
+  top: 14px;
   right: 16px;
-  padding: 5px;
+  padding: 10px;
   visibility: hidden;
+  background-color: white;
+  border-radius: 40px;
+  box-shadow: 0 0 8px rgba(black, 0.08);
 
-  @include media-touch {
+  @include media-breakpoint-down(sm) {
     visibility: visible;
   }
 

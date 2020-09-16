@@ -9,7 +9,7 @@ import Layout from 'components/layout';
 
 export default function CourseModulePage({ course, pageData }) {
   return (
-    <Layout>
+    <Layout fluid>
       <CourseModulePageComponent course={course} pageData={pageData} />
     </Layout>
   );

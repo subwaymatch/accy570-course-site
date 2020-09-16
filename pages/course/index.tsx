@@ -16,7 +16,7 @@ type CourseIndexPageProps = {
 
 export default function CourseIndexPage({ courses }: CourseIndexPageProps) {
   return (
-    <Layout backgroundColor="#111">
+    <Layout backgroundColor="#111" fluid>
       <motion.div
         initial="hidden"
         animate="visible"
@@ -36,56 +36,58 @@ export default function CourseIndexPage({ courses }: CourseIndexPageProps) {
         }}
         className={cx('courseIndexWrapper')}
       >
-        {courses.map((course, idx) => (
-          <div key={course.id} className={cx('columns', 'courseItem')}>
-            <div className="column is-8 is-offset-2 is-full-tablet">
-              <Link
-                href="/course/[courseId]/[moduleId]/[pageId]"
-                as={`/course/${course.id}/${course.modules[0].id}/${course.modules[0].pages[0].id}`}
-              >
-                <motion.a
-                  variants={clickableVariants}
-                  whileHover="hover"
-                  whileTap="tap"
-                  className={cx('courseLink')}
+        <div className={cx('container', 'customContainer')}>
+          {courses.map((course, idx) => (
+            <div key={course.id} className={cx('row', 'courseItem')}>
+              <div className="col-12">
+                <Link
+                  href="/course/[courseId]/[moduleId]/[pageId]"
+                  as={`/course/${course.id}/${course.modules[0].id}/${course.modules[0].pages[0].id}`}
                 >
-                  <span className={cx('unitNumber')}>
-                    {String(idx + 1).padStart(2, '0')}
-                  </span>
+                  <motion.a
+                    variants={clickableVariants}
+                    whileHover="hover"
+                    whileTap="tap"
+                    className={cx('courseLink')}
+                  >
+                    <span className={cx('unitNumber')}>
+                      {String(idx + 1).padStart(2, '0')}
+                    </span>
 
-                  <h2 className={cx('courseTitle')}>{course.title}</h2>
+                    <h2 className={cx('courseTitle')}>{course.title}</h2>
 
-                  <p className={cx('courseDescription')}>
-                    {course.description}
-                  </p>
-                </motion.a>
-              </Link>
+                    <p className={cx('courseDescription')}>
+                      {course.description}
+                    </p>
+                  </motion.a>
+                </Link>
 
-              <div className={cx('courseModules')}>
-                {course.modules &&
-                  course.modules.map((cm) => {
-                    return (
-                      <Link
-                        key={cm.id}
-                        href="/course/[courseId]/[moduleId]/[pageId]"
-                        as={`/course/${course.id}/${cm.id}/${cm.pages[0].id}`}
-                      >
-                        <motion.a
-                          variants={clickableVariants}
-                          whileHover="hover"
-                          whileTap="tap"
-                          className={styles.moduleLink}
+                <div className={cx('courseModules')}>
+                  {course.modules &&
+                    course.modules.map((cm) => {
+                      return (
+                        <Link
+                          key={cm.id}
+                          href="/course/[courseId]/[moduleId]/[pageId]"
+                          as={`/course/${course.id}/${cm.id}/${cm.pages[0].id}`}
                         >
-                          <span>{cm.title}</span>
-                          <span>🡒</span>
-                        </motion.a>
-                      </Link>
-                    );
-                  })}
+                          <motion.a
+                            variants={clickableVariants}
+                            whileHover="hover"
+                            whileTap="tap"
+                            className={styles.moduleLink}
+                          >
+                            <span>{cm.title}</span>
+                            <span>🡒</span>
+                          </motion.a>
+                        </Link>
+                      );
+                    })}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </motion.div>
     </Layout>
   );

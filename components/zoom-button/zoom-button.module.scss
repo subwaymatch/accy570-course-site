@@ -20,7 +20,7 @@ a.zoomLinkButton {
     font-size: 1.1rem;
   }
 
-  @include media-mobile {
+  @include media-breakpoint-down(md) {
     .zoomIcon {
       font-size: 3rem;
     }

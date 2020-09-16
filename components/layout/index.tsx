@@ -76,13 +76,7 @@ export default function Layout({
           <Header />
 
           <main className={cx('main', className)} style={mainStyle}>
-            {fluid ? (
-              children
-            ) : (
-              <section className={cx('section')}>
-                <div className="container">{children}</div>
-              </section>
-            )}
+            {fluid ? children : <div className="container">{children}</div>}
           </main>
 
           <Footer />

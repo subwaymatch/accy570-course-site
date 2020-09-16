@@ -1,11 +1,8 @@
 @use 'sass:color';
-@import 'bulma/sass/base/minireset';
-@import 'bulma/sass/utilities/_all';
-@import 'bulma/sass/layout/section';
-@import 'bulma/sass/grid/columns';
-@import 'bulma/sass/helpers/visibility';
+@import url('https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css');
 @import './variables';
-@import './container';
+@import './bootstrap.custom';
+@import '~bootstrap/scss/bootstrap-grid';
 @import url('https://rsms.me/inter/inter.css');
 
 html {
