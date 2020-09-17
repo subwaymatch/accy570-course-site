@@ -35,7 +35,10 @@ export default function CourseModulePageBottomNavigation({
               whileHover="hover"
               whileTap="tap"
             >
-              <BsChevronLeft className={cx('navArrowIcon')} />
+              <div className={cx('navArrowIconWrapper')}>
+                <BsChevronLeft className={cx('navArrowIcon')} />
+              </div>
+
               <div className={cx('label')}>
                 <span className={cx('moduleLabel')}>{prevModuleLabel}</span>
                 <span className={cx('pageLabel')}>{prevPageLabel}</span>
@@ -58,7 +61,10 @@ export default function CourseModulePageBottomNavigation({
                 <span className={cx('moduleLabel')}>{nextModuleLabel}</span>
                 <span className={cx('pageLabel')}>{nextPageLabel}</span>
               </div>
-              <BsChevronRight className={cx('navArrowIcon')} />
+
+              <div className={cx('navArrowIconWrapper')}>
+                <BsChevronRight className={cx('navArrowIcon')} />
+              </div>
             </motion.div>
           </Link>
         )}

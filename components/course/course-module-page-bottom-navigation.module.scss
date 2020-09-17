@@ -1,5 +1,6 @@
 @use 'sass:color';
 @import 'styles/variables';
+@import 'styles/mixins';
 
 .navigationWrapper {
   margin-top: 5rem;
@@ -28,20 +29,20 @@
       }
 
       .moduleLabel {
-        font-size: 1rem;
+        font-size: 0.95rem;
         letter-spacing: 0;
         color: #999;
       }
 
       .pageLabel {
         font-size: 1.2rem;
-        margin-top: 0.2rem;
+        margin-top: 0.4rem;
       }
 
       &.navPrev {
         margin-right: 1rem;
 
-        .navArrowIcon {
+        .navArrowIconWrapper {
           margin-right: 1rem;
         }
       }
@@ -51,7 +52,7 @@
         justify-content: flex-end;
         margin-left: 1rem;
 
-        .navArrowIcon {
+        .navArrowIconWrapper {
           margin-left: 1rem;
         }
       }
@@ -71,6 +72,53 @@
 
     .spacer {
       flex-grow: 1;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+
+      .navItem {
+        width: 100%;
+        border: 1px solid $color-primary;
+        padding: 0.8rem 0.5rem;
+
+        .moduleLabel {
+          font-size: 0.95rem;
+          color: $color-primary;
+        }
+
+        .pageLabel {
+          font-size: 1.1rem;
+          color: $color-secondary;
+        }
+
+        .navArrowIcon {
+          color: $color-primary;
+        }
+
+        &:hover {
+          box-shadow: 0 0 0.5rem rgba($color-primary, 0.04);
+        }
+
+        &.navPrev {
+          margin-right: 0;
+
+          border-top-left-radius: 0.5rem;
+          border-top-right-radius: 0.5rem;
+          border-bottom: none;
+        }
+
+        &.navNext {
+          margin-left: 0;
+
+          border-bottom-left-radius: 0.5rem;
+          border-bottom-right-radius: 0.5rem;
+        }
+      }
+
+      .spacer {
+        display: none;
+      }
     }
   }
 }
