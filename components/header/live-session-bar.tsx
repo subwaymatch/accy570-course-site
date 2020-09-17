@@ -27,7 +27,7 @@ export default function LiveSessionBar({ show }) {
 
       {netId ? (
         <p>
-          In Live Session as {netId} 🚀
+          In Live Session as {netId} 🚀{' '}
           <Link href="/live/join">
             <a className={cx('changeNetIdLink')}>Change NetId</a>
           </Link>{' '}
