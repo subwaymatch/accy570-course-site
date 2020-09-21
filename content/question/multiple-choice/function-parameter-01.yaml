@@ -1,0 +1,12 @@
+text: |
+  What is the parameter (argument) of the following function?
+
+  ```python
+  def print_course_number(course_number):
+    print(course_number)
+  ```
+options:
+  - "No parameter"
+  - "`course_number`[o]"
+explanation: |
+  Parameters are defined inside the parentheses following the function name. `course_number` is the parameter of `print_course_number()` function.

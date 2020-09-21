@@ -1,0 +1,17 @@
+text: |
+  What does the following code print?
+
+  ```python
+  def greet(name):
+    message = f'Hello, {name}!'
+
+  greet('Nick')
+
+  print(message)
+  ```
+options:
+  - "`Hello, Nick!`"
+  - "The code runs without an error, but does not print anything."
+  - "The code throws an error.[o]"
+explanation: |
+  When `greet('Nick')` is first called, `message` is created in the function scope with an initial value of `'Hello, Nick!'`. After `greet('Nick')` has finished running, `message` is destroyed. Python will therefore throw an error since it cannot retrieve the value of a destroyed variable.

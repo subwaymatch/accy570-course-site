@@ -1,0 +1,15 @@
+text: |
+  What is the value of `result` in the code below?
+
+  ```python
+  def divide_em_up(x, y):
+    print(x / y)
+
+  result = divide_em_up(10, 2)
+  ```
+options:
+  - "`5` (int)"
+  - "`5.0` (float)"
+  - "`None` (no return value)[o]"
+explanation: |
+  Note that the function doesn't have a return statement. The `result` will be `None`.

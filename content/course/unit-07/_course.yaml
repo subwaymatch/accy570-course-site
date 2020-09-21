@@ -1,0 +1,8 @@
+title: "More Functions"
+description: We aren't over with functions yet. It's just that important.
+modules:
+  - announcements
+  - inputs-and-outputs
+  - scopes
+  - using-modules
+  - summary

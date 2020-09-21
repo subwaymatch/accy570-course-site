@@ -1,0 +1,12 @@
+text: |
+  What is the parameter (argument) of the following function?
+
+  ```python
+  def get_course_number():
+    return 570
+  ```
+options:
+  - "No parameter[o]"
+  - "`570`"
+explanation: |
+  Although `get_course_number()` does return a value, the function has no parameters (nothing inside the parentheses).

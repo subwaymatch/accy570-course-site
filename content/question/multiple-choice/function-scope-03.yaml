@@ -1,0 +1,18 @@
+text: |
+  What does the following code print?
+
+  ```python
+  park = 'Jay'
+
+  def func():
+    park = 'Mijeong'
+    print(park)
+
+  func()
+  ```
+options:
+  - "`Jay`"
+  - "`Mijeong`[o]"
+  - "The code throws an error."
+explanation: |
+  In the first line of `func()`, a local `park` variable (that is separate from the global `park` variable) is initialized with `'Mijeong'`.

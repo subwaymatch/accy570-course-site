@@ -1,0 +1,15 @@
+text: |
+  What does the following code print?
+
+  ```python
+  def greet(name):
+    message = f'Hello, {name}!'
+
+  greet('Trent')
+  ```
+options:
+  - "`Hello, Trent!`"
+  - "The code runs without an error, but does not print anything.[o]"
+  - "The code throws an error."
+explanation: |
+  The code has no call to the `print()` function. Nothing is printed.

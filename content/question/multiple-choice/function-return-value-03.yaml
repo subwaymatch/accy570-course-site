@@ -1,0 +1,12 @@
+text: |
+  What is the return value of the following function?
+
+  ```python
+  def get_course_number():
+    return 570
+  ```
+options:
+  - "No return value"
+  - "`570`[o]"
+explanation: |
+  Return value is specified using the `return` keyword. In `get_course_number()`, `570` is returned regardless of inputs.
