@@ -1,0 +1,12 @@
+text: |
+  What is the output of the following code? **Hint**: Is this function called anywhere in the code?
+
+  ```python
+  def print_three():
+    print(3)
+  ```
+options:
+  - "`3`"
+  - "No output[o]"
+explanation: |
+  The given code doesn't have a call to the function (i.e., `print_three()`). Therefore, `print(3)` is never executed.

@@ -1,5 +1,5 @@
 text: |
-  What is the value of `result` in the code below?
+  What is the value of `result` in the code below? **Hint**: Does the `divide_em_up()` function have a `return` statement?
 
   ```python
   def divide_em_up(x, y):

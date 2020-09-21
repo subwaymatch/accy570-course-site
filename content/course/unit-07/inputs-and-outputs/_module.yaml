@@ -1,4 +1,5 @@
 title: Inputs and Outputs
 pages:
-  - return-values
-  - optional-arguments-and-returns
+  - when-does-a-function-run
+  - functions-without-an-input
+  - functions-without-a-return-value

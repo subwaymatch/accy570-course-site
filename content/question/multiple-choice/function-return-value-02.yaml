@@ -1,5 +1,5 @@
 text: |
-  What is the return value of the following function?
+  What is the return value of the following function? **Hint**: Does the `print_course_number()` function have a `return` statement?
 
   ```python
   def print_course_number(course_number):
@@ -9,4 +9,4 @@ options:
   - "No return value[o]"
   - "`course_number`"
 explanation: |
-  Note that the function doesn't have a return statement.
+  Note that the function doesn't have a return statement. It prints out the `course_number` instead of returning it.

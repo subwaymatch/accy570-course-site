@@ -1,4 +1,5 @@
 title: Function and global scope
 pages:
-  - arguments
-  - variables
+  - variable-scope
+  - another-example-and-exercises
+  - function-scope-and-global-variables

@@ -1,5 +1,5 @@
 text: |
-  What does the following code print?
+  What does the following code print? **Hint**: Do you see a `print()` statement?
 
   ```python
   def greet(name):

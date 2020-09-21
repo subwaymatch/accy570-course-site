@@ -1,9 +1,11 @@
 ---
-title: Function scope - arguments 👈
+title: Function scope - another example and exercises 👈
 questions:
   - multiple-choice/function-scope-01
   - multiple-choice/function-scope-02
 ---
+
+In the sample code below, `add_five()` function has one "local" variable - `x`. The code below will print `x inside function: 1`. When `add_five(1)` is run, `x` is created and initialized to `1`. Once the function finishes running, `x` is destroyed.
 
 ```python
 def add_five(x):

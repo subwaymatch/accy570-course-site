@@ -1,0 +1,15 @@
+text: |
+  Since Python doesn't run the code inside a function until it is called, what is the output of the code below? **Hint**: At what point does the code inside the `hi()` function run?
+
+  ```python
+  def hi():
+    print('Hello')
+
+  print('Bye')
+  hi()
+  ```
+options:
+  - "`Hello`<br />`Bye`"
+  - "`Bye`<br />`Hello`[o]"
+explanation: |
+  Although `hi()` is defined before the `print('Bye')` line, the function is executed afterwards (in the last line).
