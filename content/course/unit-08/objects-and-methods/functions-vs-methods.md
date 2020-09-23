@@ -23,9 +23,6 @@ You need to define the dog's _states_ and _behaviors_.
 The programmer can put the code that implements a dog into a dog object. Object behaviors are implemented as functions. **A function that belongs to an object is called a method.** To call a method, use `object_name.method_name()` format.
 
 ```python
-# function
-max(5, 4, 3)
-
-# method
+# Calling a method example
 some_list.append(17)
 ```

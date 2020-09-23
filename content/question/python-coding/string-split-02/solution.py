@@ -1,7 +1,7 @@
-s = 'I drive a Honda.'
+brands_str = "Nike+Reebok+FILA+Vans"
 
 # Your code begins
-
+brands_list = brands_str.split('+')
 # Your code ends
 
-print(s)
+print(brands_list)

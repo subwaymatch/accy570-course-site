@@ -40,6 +40,10 @@
     margin: 0;
   }
 
+  code {
+    white-space: pre;
+  }
+
   &.isSelected {
     border-color: black;
 

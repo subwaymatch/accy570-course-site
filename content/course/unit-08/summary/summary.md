@@ -2,5 +2,5 @@
 title: Summary
 ---
 
-- After-class Exercise 8 due tomorrow night (Thursday 09/24 11:59PM CST)
-- Problem Set 1 due next Thursday (10/01 11:59PM CST)
+- 📈 Request Tableau for Students license at [https://www.tableau.com/academic/students](https://www.tableau.com/academic/students)
+- 🐢 Problem Set 1 Due Date Extended to Thursday 10/01 11:59 PM CST

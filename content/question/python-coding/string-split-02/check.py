@@ -1,7 +1,4 @@
-brands_str = "Nike+Reebok+FILA+Vans"
+import unittest
 
-# Your code begins
-brands_list = brands_str.split('+')
-# Your code ends
-
-print(brands_list)
+tc = unittest.TestCase()
+tc.assertEqual(brands_list, ['Nike', 'Reebok', 'FILA', 'Vans'])

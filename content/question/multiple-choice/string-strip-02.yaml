@@ -2,15 +2,15 @@ text: |
   What does the following code output? **Hint**: This may (or may not) be a trick question 🤡.
 
   ```python
-  who = '  Mitch  '
+  who = '   Mitch   '
   who2 = who.rstrip()
 
   print(who)
   ```
 options:
-  - "`  Mitch  `[o]"
-  - "`Mitch  `"
-  - "`  Mitch`"
+  - "`   Mitch   `[o]"
+  - "`Mitch   `"
+  - "`   Mitch`"
   - "`Mitch`"
 explanation: |
   While `rstrip()` removes all whitespaces from the end of a string, it does not modify the original string. In this case `who2` has the stripped result while `who` remains unchanged.

@@ -10,12 +10,12 @@ Last week, we've discussed the `len()` function. The `len()` function returns th
 
 ```python
 # With a list
-l1 = ['BIF', 'Wohlers', 'Union']
+l1 = [515, 550, 570]
 print(len(l1))
 # Prints 3
 ```
 
-But `len()` function also works with a string. Use the `len` function to get the length (number of characters) of a string.
+`len()` function also works with a string. Use the `len` function to get the length (number of characters) of a string.
 
 ```python
 # With a string

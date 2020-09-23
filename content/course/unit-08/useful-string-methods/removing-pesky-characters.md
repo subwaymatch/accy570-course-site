@@ -11,7 +11,22 @@ For example, say you want to remove all punctuation from the end of a string.
 
 ```python
 s = ';Balance Sheet,,,;.'
+
 print(s.rstrip(',.;'))
+# Prints ';Balance Sheet'
+
+s_rstripped = s.rstrip(',.;')
+print(s_rstripped)
+# Prints ';Balance Sheet'
+
+# BE AWARE!
+print(s)
+# Prints ';Balance Sheet,,,;.'
+# The original string remains unaltered
+
+# To alter the original string,
+s = s.rstrip(',.;')
+print(s)
 # Prints ';Balance Sheet'
 ```
 

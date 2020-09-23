@@ -98,7 +98,7 @@ const events = [
     text: 'Working with strings',
   },
   {
-    date: '0927',
+    date: '1001',
     type: ScheduleType.ProblemSet,
     text: 'Problem Set #1 due by 11:59pm',
   },

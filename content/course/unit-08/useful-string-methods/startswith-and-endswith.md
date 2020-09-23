@@ -5,7 +5,7 @@ questions:
   - multiple-choice/string-endswith-01
 ---
 
-There are some cases where you want to check whether a string starts or ends with a certain substring. There are two methods - `startswith()` and `endswith()` that precisely handle these cases. Both of these methods _always_ return boolean values (`True` or `False`)
+There are some cases where you want to check whether a string starts or ends with a certain substring. There are two methods - `startswith()` and `endswith()` that precisely handle these cases. Both of these methods **always** return boolean values (`True` or `False`).
 
 `startswith()` tells you whether your string starts with a given substring.
 

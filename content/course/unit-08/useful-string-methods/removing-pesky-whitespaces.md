@@ -11,32 +11,47 @@ We often need to get rid of pesky spaces. In Python, a "whitespace" is defined a
 To remove all whitespaces from the beginning _and_ end of a string, use the `strip()` method.
 
 ```python
-s = '  Income Statement  '
+s = '    Income Statement    '
+
 print(s.strip())
+# Prints 'Income Statement'
+
+s_stripped = s.strip()
+print(s_stripped)
+# Prints 'Income Statement'
+
+# BE AWARE!
+print(s)
+# Prints '    Income Statement    '
+# The original string remains unaltered
+
+# To alter the original string,
+s = s.strip()
+print(s)
 # Prints 'Income Statement'
 ```
 
 To remove all whitespaces from just the beginning _or_ just the end of a string, use the `lstrip()` (left strip) or `rstrip()` (right strip) methods.
 
 ```python
-s = '  Income Statement  '
+s = '    Income Statement    '
 
 print(s.lstrip())
-# Prints 'Income Statement  '
+# Prints 'Income Statement    '
 
 print(s.rstrip())
-# Prints '  Income Statement'
+# Prints '    Income Statement'
 ```
 
 Note that `strip()`, `lstrip()`, and `rstrip()` methods all return new strings without modifying the original string.
 
 ```python
-name = '  Mitch  '
+name = '    Mitch    '
 
 print(name.strip())
 # Prints 'Mitch'
 
 print(name)
-# Prints '  Mitch  '
+# Prints '    Mitch    '
 # Although you've called the strip() method on name, the variable remains unchanged
 ```
