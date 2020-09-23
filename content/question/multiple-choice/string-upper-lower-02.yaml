@@ -1,0 +1,15 @@
+text: |
+  What does the following code output? **Hint**: This may (or may not) be a trick question 🤡.
+
+  ```python
+  who = 'Geoff'
+  who.lower()
+
+  print(who)
+  ```
+options:
+  - "`geoff`"
+  - "`Geoff`[o]"
+  - "`GEOFF`"
+explanation: |
+  Remember, `lower()` and `upper()` methods return a new string and does not modify the original string. In this case, the code is printing the original `who` string.

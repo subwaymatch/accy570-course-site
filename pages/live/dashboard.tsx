@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Layout from 'components/layout';
 import useLiveSessionStore from 'stores/useLiveSessionStore';
-import { useDocument } from '@nandorojo/swr-firestore';
+import { useDocument, useCollection } from '@nandorojo/swr-firestore';
 import styles from './dashboard.module.scss';
 import classNames from 'classnames/bind';
 import { BiReset } from 'react-icons/bi';
@@ -40,14 +40,21 @@ const ChallengeAttemptItem = ({
 export default function DashboardPage() {
   const clearAttempts = useLiveSessionStore((state) => state.resetCurrentPage);
 
-  const { data, update, error } = useDocument(`liveSessions/current`, {
+  const {
+    data: sessionDoc,
+    update: updateSessionDoc,
+    error: sessionDocError,
+  } = useDocument(`liveSessions/current`, {
     listen: true,
   });
 
   const challengeAttempts =
-    data && data.hasOwnProperty('challengeAttempts')
-      ? data['challengeAttempts']
+    sessionDoc && sessionDoc.hasOwnProperty('challengeAttempts')
+      ? sessionDoc['challengeAttempts']
       : {};
+
+  const netIds = Object.keys(challengeAttempts);
+  console.log(netIds.sort());
 
   return (
     <Layout>
@@ -74,36 +81,42 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {Object.keys(challengeAttempts).map((netId) => {
-          const userChallengeAttempts = challengeAttempts[netId];
+        {Object.keys(challengeAttempts)
+          .sort()
+          .map((netId) => {
+            const userChallengeAttempts = challengeAttempts[netId];
 
-          return (
-            <div key={netId} className="row">
-              <div className="col-12">
-                <div className={styles.userAttemptsBox}>
-                  <div className="row">
-                    <div className="col-md-3">
-                      <span className={styles.netIdLabel}>NetID</span>
-                      <span className={styles.netId}>{netId}</span>
-                    </div>
-                    <div className="col-md-9">
-                      {Object.keys(userChallengeAttempts).map((questionId) => (
-                        <ChallengeAttemptItem
-                          key={`${netId}-${questionId}`}
-                          questionId={questionId}
-                          success={userChallengeAttempts[questionId]['success']}
-                          timestamp={
-                            userChallengeAttempts[questionId]['timestamp']
-                          }
-                        />
-                      ))}
+            return (
+              <div key={netId} className="row">
+                <div className="col-12">
+                  <div className={styles.userAttemptsBox}>
+                    <div className="row">
+                      <div className="col-md-3">
+                        <span className={styles.netIdLabel}>NetID</span>
+                        <span className={styles.netId}>{netId}</span>
+                      </div>
+                      <div className="col-md-9">
+                        {Object.keys(userChallengeAttempts)
+                          .sort()
+                          .map((questionId) => (
+                            <ChallengeAttemptItem
+                              key={`${netId}-${questionId}`}
+                              questionId={questionId}
+                              success={
+                                userChallengeAttempts[questionId]['success']
+                              }
+                              timestamp={
+                                userChallengeAttempts[questionId]['timestamp']
+                              }
+                            />
+                          ))}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
       </motion.div>
     </Layout>
   );

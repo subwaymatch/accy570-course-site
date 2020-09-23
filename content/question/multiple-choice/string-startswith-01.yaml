@@ -1,0 +1,12 @@
+text: |
+  What does the following code output?
+
+  ```python
+  email_title = 'FW: IMPORTANT ACTION REQUIRED'
+  print(email_title.startswith('RE:'))
+  ```
+options:
+  - "`True`"
+  - "`False`[o]"
+explanation: |
+  `email_title` starts with 'FW:', not 'RE:'.

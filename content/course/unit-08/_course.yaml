@@ -1,0 +1,8 @@
+title: "Strings"
+description: We discuss many built-in string methods.
+modules:
+  - announcements
+  - intro-to-strings
+  - objects-and-methods
+  - useful-string-methods
+  - summary

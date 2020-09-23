@@ -1,0 +1,8 @@
+text: |
+  What is the printed output of `print(len('Notes'))`?
+options:
+  - "`3`"
+  - "`4`"
+  - "`5`[o]"
+explanation: |
+  'Notes' contain 5 characters.

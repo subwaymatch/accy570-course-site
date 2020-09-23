@@ -1,0 +1,13 @@
+text: |
+  What does the following code output?
+
+  ```python
+  participants = 'PARTICIPANTS-LEONARD JAY MICHAEL'
+  print(participants.split())
+  ```
+options:
+  - "`['PARTICIPANTS', 'LEONARD', 'JAY', 'MICHAEL']`"
+  - "`['PARTICIPANTS-LEONARD', 'JAY', 'MICHAEL']`[o]"
+  - "`['LEONARD', 'JAY', 'MICHAEL']`"
+explanation: |
+  If no argument is passed to `split()`, whitespaces are used as word boundaries by default.

@@ -1,0 +1,9 @@
+text: |
+  What is the printed output of `print(len('Yi Pan'))`?
+options:
+  - "`4`"
+  - "`5`"
+  - "`6`[o]"
+  - "`7`"
+explanation: |
+  'Yi Pan' contain 6 characters. Don't be fooled by the blank space. A blank space is counted as a character.

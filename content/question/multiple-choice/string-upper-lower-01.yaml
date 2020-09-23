@@ -1,0 +1,14 @@
+text: |
+  What does the following code output?
+
+  ```python
+  who = 'Geoff'
+
+  print(who.upper())
+  ```
+options:
+  - "`geoff`"
+  - "`Geoff`"
+  - "`GEOFF`[o]"
+explanation: |
+  `upper()` converts all characters to their corresponding uppercase characters.

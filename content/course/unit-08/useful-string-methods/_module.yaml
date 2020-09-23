@@ -1,0 +1,9 @@
+title: Useful string methods
+pages:
+  - lower-and-upper
+  - removing-pesky-whitespaces
+  - removing-pesky-characters
+  - startswith-and-endswith
+  - replace-method
+  - splitting-a-string
+  - finding-a-substring

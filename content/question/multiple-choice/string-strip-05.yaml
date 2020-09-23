@@ -1,0 +1,15 @@
+text: |
+  What does the following code output?
+
+  ```python
+  s = '!?WHAT!?'
+
+  print(s.rstrip('?'))
+  ```
+options:
+  - "`!WHAT!`"
+  - "`!?WHAT`"
+  - "`!?WHAT!`[o]"
+  - "`!?WHAT!?`"
+explanation: |
+  Only the right-most question mark will be removed since `rstrip()` removes all matching characters from the end of a string.

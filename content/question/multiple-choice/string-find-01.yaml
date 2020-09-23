@@ -1,0 +1,13 @@
+text: |
+  What does the following code output?
+
+  ```python
+  cities = 'CHICAGO NEW YORK BOSTON'
+  print(cities.find('HICAGO'))
+  ```
+options:
+  - "`0`"
+  - "`1`[o]"
+  - "`-1`"
+explanation: |
+  'HICAGO' is part of 'CHICAGO'. It starts at index 1.

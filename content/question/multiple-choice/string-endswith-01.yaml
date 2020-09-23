@@ -1,0 +1,12 @@
+text: |
+  What does the following code output?
+
+  ```python
+  email_title = 'FW: IMPORTANT ACTION REQUIRED'
+  print(email_title.endswith('REQUIRED'))
+  ```
+options:
+  - "`True`[o]"
+  - "`False`"
+explanation: |
+  `email_title` ends with 'REQUIRED'.

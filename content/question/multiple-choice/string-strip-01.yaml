@@ -1,0 +1,15 @@
+text: |
+  What does the following code output?
+
+  ```python
+  who = '  Mitch  '
+
+  print(who.strip())
+  ```
+options:
+  - "`  Mitch  `"
+  - "`Mitch  `"
+  - "`  Mitch`"
+  - "`Mitch`[o]"
+explanation: |
+  `strip()` removes all whitespaces from both the start and end of a string.

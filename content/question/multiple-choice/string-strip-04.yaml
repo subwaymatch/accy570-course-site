@@ -1,0 +1,15 @@
+text: |
+  What does the following code output?
+
+  ```python
+  s = '!?!He said what!?!??'
+
+  print(s.strip('!?'))
+  ```
+options:
+  - "`!?!He said what!?!??`"
+  - "`He said what`[o]"
+  - "`!!He said what!!`"
+  - "`!?!He said what`"
+explanation: |
+  All exclamation points and question marks on the edges of the string are removed.
