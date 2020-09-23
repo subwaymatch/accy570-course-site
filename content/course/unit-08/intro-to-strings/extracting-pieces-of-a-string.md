@@ -1,5 +1,5 @@
 ---
-title: Extracting pieces of a string🧶
+title: Extracting pieces of a string 🧶
 questions:
   - python-coding/retrieve-characters-from-a-string-01
   - python-coding/retrieve-characters-from-a-string-02
