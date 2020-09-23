@@ -6,16 +6,37 @@ questions:
   - python-coding/string-strip-03
 ---
 
-### Removing pesky characters 🪓
+We often need to get rid of pesky spaces. In Python, a "whitespace" is defined as a space, a tab, or a newline character.
 
-By default, the three methods - `strip()`, `lstrip()`, `rstrip()` - remove whitespace. However, you can use them to remove any characters! To do so, tell Python which characters you want removed by passing a string argument. The string argument should contain the characters to be removed.
-
-For example, say you want to remove all punctuation from the end of a string.
+To remove all whitespaces from the beginning _and_ end of a string, use the `strip()` method.
 
 ```python
-s = ';Balance Sheet,,,;.'
-print(s.rstrip(',.;'))
-# Prints ';Balance Sheet'
+s = '  Income Statement  '
+print(s.strip())
+# Prints 'Income Statement'
 ```
 
-The code above tells Python to remove _all_ commas, periods, and semicolons from the end of the string. Note that the `rstrip()` method will _only_ remove the given characters from the end.
+To remove all whitespaces from just the beginning _or_ just the end of a string, use the `lstrip()` (left strip) or `rstrip()` (right strip) methods.
+
+```python
+s = '  Income Statement  '
+
+print(s.lstrip())
+# Prints 'Income Statement  '
+
+print(s.rstrip())
+# Prints '  Income Statement'
+```
+
+Note that `strip()`, `lstrip()`, and `rstrip()` methods all return new strings without modifying the original string.
+
+```python
+name = '  Mitch  '
+
+print(name.strip())
+# Prints 'Mitch'
+
+print(name)
+# Prints '  Mitch  '
+# Although you've called the strip() method on name, the variable remains unchanged
+```
