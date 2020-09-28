@@ -2,4 +2,6 @@
 title: Summary
 ---
 
-- After-class Exercise #5 due 09/14 Tuesday 11:59 PM CST!
+- After-class Exercise #4 due 09/08 Thursday 11:59 PM CST!
+- This is your first assignment using a Jupyter notebook!
+- From next class: may test out live features

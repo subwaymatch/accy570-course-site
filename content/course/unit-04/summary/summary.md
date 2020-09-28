@@ -2,6 +2,6 @@
 title: Summary
 ---
 
-- After-class Exercise #4 due 09/08 Thursday 11:59 PM CST!
-- This is your first assignment using a Jupyter notebook!
-- From next class: may test out live features
+- We've only covered the basic ones.
+- There are many more data types!
+- After-class Exercise #3 due 09/03 Thursday 11:59 PM!

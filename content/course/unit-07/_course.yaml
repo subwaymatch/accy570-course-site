@@ -1,8 +1,8 @@
-title: "More Functions"
-description: We aren't over with functions yet. It's just that important.
+title: "Dictionaries and Functions"
+description: A Python dictionary is another commonly used data type. We also start discussing functions.
 modules:
   - announcements
-  - inputs-and-outputs
-  - scopes
-  - using-modules
-  - summary
+  - dictionaries
+  - working-with-a-dictionary
+  - tuples
+  - introduction-to-functions

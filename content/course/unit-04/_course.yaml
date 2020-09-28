@@ -1,10 +1,10 @@
-title: "Operators and the print function"
-description: What are the different types of operators in Python? How do we use the print function (we already know, but will discuss advanced techniques)?
+title: "Data Types"
+description: Every value in Python has a data type. What are some of the basic (primitive) types?
 modules:
   - announcements
-  - arithmetic-and-comparison-operaters
-  - logical-operators
-  - membership-operators
-  - operator-precedence
-  - print-function
+  - introduction
+  - number-types
+  - strings
+  - booleans
+  - type-checks-and-conversions
   - summary

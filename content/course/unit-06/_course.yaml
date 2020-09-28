@@ -1,8 +1,7 @@
-title: "Dictionaries and Functions"
-description: A Python dictionary is another commonly used data type. We also start discussing functions.
+title: 'Collections of Data - List'
+description: List is a commonly used data type to contain multiple values. List can do all sort of things.
 modules:
   - announcements
-  - dictionaries
-  - working-with-a-dictionary
-  - tuples
-  - introduction-to-functions
+  - introduction-to-lists
+  - retrieving-multiple-elements
+  - working-with-a-list

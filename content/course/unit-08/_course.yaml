@@ -1,8 +1,8 @@
-title: "Strings"
-description: We discuss many built-in string methods.
+title: "More Functions"
+description: We aren't over with functions yet. It's just that important.
 modules:
   - announcements
-  - intro-to-strings
-  - objects-and-methods
-  - useful-string-methods
+  - inputs-and-outputs
+  - scopes
+  - using-modules
   - summary

@@ -2,8 +2,9 @@
 title: Announcements 📣
 ---
 
+- Problem Set 1 (group assignment)
 - Group sign-up link ([Google Sheet Link](https://docs.google.com/spreadsheets/d/1DEWe4AwOhTwK1D7bTE29EgQ4nvkNumxxV7a8bhRWZ-c/edit?usp=sharing)) 👈
-- We will start using Jupyter Lab in classes.
-- I plan to slowly shift you away from the course site to Jupyter Lab.
+- Again, joining a group is optional.
 - Any questions 🙋?
-- After class exercise 6 due Thursday (09/15) 11:59 PM
+- Feedback on After-class Exercise 4 (Thanks to Michael for super-fast grading) 🦾💥🔥
+- After class exercise 5 due Tuesday (09/15) 11:59 PM

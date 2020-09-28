@@ -1,0 +1,10 @@
+title: "Visualizations: Bar Charts and Histograms"
+description: Visualizations are cool.
+modules:
+  - announcements
+  - intro-to-viz
+  - bokeh
+  - tableau
+  - bar-charts
+  - histograms
+  - summary

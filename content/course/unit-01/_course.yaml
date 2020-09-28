@@ -1,7 +1,5 @@
-title: "Introduction to Programming"
-description: Computers are dumb. Then cannot think. However, they can be extremely efficient in following precise instructions.
+title: 'Course Overview'
+description: What is Data Analytics and why do we care? This unit outlines how Data Analytics can be useful in different fields and what topics this course will cover.
 modules:
-  - announcements
-  - computer-programs
-  - logic
-  - exercises
+  - introduction
+  - administrative-stuff
