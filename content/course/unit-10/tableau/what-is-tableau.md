@@ -4,6 +4,8 @@ title: What is Tableau? 📈
 
 Tableau is an interactive data visualization software.
 
+![Tableau Image](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/tableau-superstore-example.png)
+
 - It does not require programming (although you can).
 - You can drag and drop variables into the visualization.
 - This makes creating visualizations easy.
