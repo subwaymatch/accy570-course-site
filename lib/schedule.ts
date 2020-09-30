@@ -113,7 +113,7 @@ const events = [
     text: 'Visualizations: Histograms and box plots',
   },
   {
-    date: '1002',
+    date: '1003',
     type: ScheduleType.AfterClassAssignment,
     text: 'After Class Exercise #8 due by 11:59pm',
   },
