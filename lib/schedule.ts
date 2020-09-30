@@ -327,6 +327,17 @@ const events = [
   },
 ];
 
+// Sort the events list by date
+events.sort((a, b) => (a.date > b.date ? 1 : -1));
+
+export const lectureNumberByDate = events
+  .filter((evt) => evt.type === ScheduleType.Lecture)
+  .reduce((acc, evt, index) => {
+    acc[evt.date] = index + 1;
+
+    return acc;
+  }, {});
+
 const organizeEventsByDate = (events) => {
   const eventsByDate = {};
 
