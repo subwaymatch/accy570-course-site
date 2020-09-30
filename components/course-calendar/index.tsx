@@ -3,14 +3,25 @@ import classNames from 'classnames/bind';
 import moment from 'moment';
 import { eventsByDate } from 'lib/schedule';
 import { ScheduleType } from 'typings/schedule';
+import {
+  BsArrowsExpand,
+  BsArrowsCollapse,
+  BsChevronUp,
+  BsChevronDown,
+} from 'react-icons/bs';
 import { IoMdArrowDown } from 'react-icons/io';
+import { useState } from 'react';
 
 const cx = classNames.bind(styles);
 
 const startWeek = moment('20200824').week();
 const endWeek = moment('20201212').week();
+const currentWeek = moment().week();
 
 let calendar = [];
+
+console.log(currentWeek);
+console.log(currentWeek - startWeek);
 
 for (let week = startWeek; week <= endWeek; week++) {
   calendar.push(
@@ -27,13 +38,42 @@ for (let week = startWeek; week <= endWeek; week++) {
 }
 
 export default function CourseCalendar() {
+  const [showPrev, setShowPrev] = useState(false);
   const todayKey = moment().format('MMDD');
   let lectureNumber = 1;
 
   return (
-    <div className={cx('calendar')}>
-      {calendar.map((week) => (
-        <div key={week} className={cx('calendarRow')}>
+    <div
+      className={cx('calendar', {
+        hidePrev: !showPrev,
+      })}
+    >
+      <div
+        className={cx('togglePrevButton')}
+        onClick={() => {
+          setShowPrev(!showPrev);
+        }}
+      >
+        {showPrev ? (
+          <>
+            <BsChevronUp className={styles.reactIcon} />
+            <span>Hide Past Weeks</span>
+          </>
+        ) : (
+          <>
+            <BsChevronDown className={styles.reactIcon} />
+            <span>Show All Weeks</span>
+          </>
+        )}
+      </div>
+
+      {calendar.map((week, weekIndex) => (
+        <div
+          key={`week-${week}`}
+          className={cx('calendarRow', {
+            isPrevWeek: weekIndex < currentWeek - startWeek,
+          })}
+        >
           {week.map((day) => {
             const dayKey = day.format('MMDD');
             const dayEvents = eventsByDate[dayKey];

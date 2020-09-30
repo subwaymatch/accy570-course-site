@@ -11,6 +11,23 @@
   width: 98%;
   max-width: 1300px;
 
+  .togglePrevButton {
+    display: flex;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 0.4rem;
+    font-size: 1.1rem;
+
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+
+    .reactIcon {
+      margin-right: 0.5rem;
+    }
+  }
+
   .calendarRow {
     display: flex;
     padding: 0.5rem 0;
@@ -124,7 +141,10 @@
     }
 
     &.empty {
-      opacity: 0.6;
+      .dayHeader,
+      .dayContent {
+        opacity: 0.5;
+      }
     }
 
     &.today {
@@ -148,6 +168,12 @@
       .dayHeader {
         font-weight: 700;
       }
+    }
+  }
+
+  &.hidePrev {
+    .isPrevWeek {
+      display: none;
     }
   }
 }
