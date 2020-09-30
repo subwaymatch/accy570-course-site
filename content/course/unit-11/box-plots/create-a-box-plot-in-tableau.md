@@ -4,10 +4,6 @@ title: Create a box plot in Tableau 🟩
 
 **Business Question**: You work for a professional sports team that is considering building a new stadium. Given the seating capacity for all stadiums in the NBA, MLB and NFL, half of the stadiums are larger than what amount (median)? The lower quarter of the stadiums are between what amounts? The upper quarter of the stadiums are between what amounts?
 
-Create a box plot in Bokeh to answer this question.
-
-### Creating a Box Plot in Tableau
-
 If you have time: Experiment with the filter to filter between NBA, MLS and NFL stadiums, or create multiple box plots.
 
 - There are multiple ways to create a box plot in Tableau. This guide showcases only one of them.
