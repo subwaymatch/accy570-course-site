@@ -6,11 +6,6 @@ title: Create a box plot in Tableau 🟩
 
 If you have time: Experiment with the filter to filter between NBA, MLS and NFL stadiums, or create multiple box plots.
 
-- There are multiple ways to create a box plot in Tableau. This guide showcases only one of them.
-- First, drag our variable of interest into either columns or rows (depending on whether we want a vertical or horizontal box).
-- Next, Go to "Analysis" menu on top and uncheck "Aggregate Measures".
-- Right click on the axis and
-
 Open up Tableau.
 
 ![https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/tableau-initial-screen-01.png](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/tableau-initial-screen-01.png)
