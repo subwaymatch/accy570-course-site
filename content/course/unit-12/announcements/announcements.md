@@ -8,4 +8,5 @@ title: Announcements 📣
   - Python piece
   - Tableau piece
 - 📚 Problem Set #1 and After-class Exercise #8 are being graded (please be patient 🦥).
+- 📽️ Lecture recordings will be made available from this week.
 - 🙋 Any questions?

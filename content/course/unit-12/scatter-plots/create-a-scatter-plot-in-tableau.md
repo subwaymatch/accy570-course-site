@@ -14,7 +14,7 @@ Open up Tableau.
 
 Drag `ScatterExampleData.xlsx` file into the Tableau window.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/21302f13-b3f7-4c50-baf9-33e140665738/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/21302f13-b3f7-4c50-baf9-33e140665738/Untitled.png)
+![https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/scatter-tableau-00-drag-file-into-tableau.png](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/scatter-tableau-00-drag-file-into-tableau.png)
 
 Drag `Number of Units in Contract` variable into the "Columns" pane.
 
