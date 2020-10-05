@@ -2,6 +2,8 @@
 title: How to create a line chart in Tableau 📉
 ---
 
+![Equipment](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/isometric-concept-people-working-with-technology-006.jpg)
+
 **Example in Tableau** 🦮
 
 Your company is considering leasing a piece of equipment for 10 years at a 10% rate. This lease would be a financing lease (capital lease). Payments of 100,000 are made annually. Your CFO would like to know how the value of the lease liability and the lease asset (ROU asset) would look each year on the balance sheet and how they would change over time.
