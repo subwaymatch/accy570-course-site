@@ -38,4 +38,4 @@ You should be able to see two line charts merged into a single figure.
 
 Leased asset decreases in a straight line. What does this tell you? The leased asset is amortized using a straight line depreciation. However, the lease liability decreases at a different rate. This is because the liability is reduced depending on the interest for the period.
 
-Note that there are multiple ways to create line charts in Tableau. This guide showcases only one of them. In the upcoming in-class exercise, we will discuss another way of creating a line chart (using **measure values**).
+Note that there are multiple ways to create line charts in Tableau. This guide showcases only one of them. In the upcoming in-class exercise, we will discuss another way of creating line charts (using **measure values**).
