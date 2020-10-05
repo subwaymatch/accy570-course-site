@@ -1,0 +1,6 @@
+title: "Visualizations: Line Charts and Scatter Plots"
+description: Line charts are use for visualizing changes over time. Scatter plots are useful when visualizing the relationship between two variables.
+modules:
+  - announcements
+  - line-charts
+  - scatter-plots
