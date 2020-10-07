@@ -67,24 +67,24 @@ export default function Home() {
 
       <div className={cx('row', 'section')}>
         <div className="col-md-3">
-          <h2>Group Signup</h2>
+          <h2>🎥 Lecture Videos</h2>
         </div>
 
         <div className="col-md-9">
-          If you plan to work in a group, please use{' '}
+          You can watch the lecture videos at{' '}
           <a
-            href="https://docs.google.com/spreadsheets/d/1DEWe4AwOhTwK1D7bTE29EgQ4nvkNumxxV7a8bhRWZ-c/edit?usp=sharing"
-            title="Group Signup Link"
+            href="https://mediaspace.illinois.edu/channel/Data%2BAnalytics%2BFoundations%2B%2528ACCY%2B570%2BAD5%2529%2BFall%2B2020/175748091"
+            title="ACCY 570 AD5 Mediaspace Channel"
           >
-            this link
-          </a>{' '}
-          to enter your group information.
+            this Mediaspace Channel
+          </a>
+          .
         </div>
       </div>
 
       <div className={cx('row', 'section', 'zoomLinksSection')}>
         <div className="col-md-3">
-          <h2>Zoom Links</h2>
+          <h2>💻 Zoom Links</h2>
         </div>
         <div className="col-md-9">
           <div className="row">
@@ -110,7 +110,7 @@ export default function Home() {
 
       <div className={cx('row', 'section')}>
         <div className="col-md-3">
-          <h2>Instructor Information</h2>
+          <h2>🧟‍♂️ Instructor</h2>
         </div>
 
         <div className="col-md-9">
@@ -147,7 +147,7 @@ export default function Home() {
 
       <div className={cx('row', 'section')}>
         <div className="col-md-3">
-          <h2>Lab Instructor</h2>
+          <h2>👨‍🏫 Lab Instructor</h2>
         </div>
 
         <div className="col-md-9">
@@ -167,7 +167,7 @@ export default function Home() {
 
       <div className={cx('row', 'section')}>
         <div className="col-md-3">
-          <h2>Teaching Assistant</h2>
+          <h2>👨‍🚀 Teaching Assistant</h2>
         </div>
 
         <div className="col-md-9">
@@ -202,7 +202,7 @@ export default function Home() {
 
       <div className={cx('row', 'section')}>
         <div className="col-md-3">
-          <h2>Grades Breakdown</h2>
+          <h2>📚 Grades Breakdown</h2>
         </div>
 
         <div className="col-md-9">
@@ -268,7 +268,7 @@ export default function Home() {
 
       <div className={cx('row', 'section')}>
         <div className="col-md-3">
-          <h2>Attendance</h2>
+          <h2>👀 Attendance</h2>
         </div>
 
         <div className="col-md-9">
@@ -290,7 +290,7 @@ export default function Home() {
 
       <div className={cx('row', 'section')}>
         <div className="col-md-3">
-          <h2>Participation</h2>
+          <h2>🦍 Participation</h2>
         </div>
 
         <div className="col-md-9">
@@ -311,7 +311,7 @@ export default function Home() {
 
       <div className={cx('row', 'section')}>
         <div className="col-md-3">
-          <h2>Grading Disputes</h2>
+          <h2>💢 Grading Disputes</h2>
         </div>
 
         <div className="col-md-9">
@@ -327,7 +327,7 @@ export default function Home() {
 
       <div className={cx('row', 'section')}>
         <div className="col-md-3">
-          <h2>Late Submissions</h2>
+          <h2>🐲 Late Submissions</h2>
         </div>
 
         <div className="col-md-6">
