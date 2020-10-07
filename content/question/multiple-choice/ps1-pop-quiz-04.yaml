@@ -1,0 +1,14 @@
+text: |
+  What is the output of the following code? 🌽
+
+  ```python
+  my_list = ['1188', '8811', '8888']
+  print(my_list.count('88'))
+  ```
+options:
+  - "`0`[o]"
+  - "`2`"
+  - "`3`"
+  - "`8`"
+explanation: |
+  We'll discuss the solution together.

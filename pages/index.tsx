@@ -42,15 +42,15 @@ export default function Home() {
 
             <div className={cx('meetingTimes')}>
               <div>
-                <span className="color-primary">Section AD5</span> (MW 3:30-4:50
-                PM) - BIF 2063
+                <span className="color-primary">Section AD5</span> ⏰ MW
+                3:30-4:50 PM - BIF 2063
               </div>
               <div>
-                <span className="color-primary">Section OD5</span> (MW 3:30-4:50
-                PM) - Online
+                <span className="color-primary">Section OD5</span> ⏰ MW
+                3:30-4:50 PM - Online
               </div>
               <div>
-                Lab Sessions for both AD5 & OD5 (MW 6:00-6:50 PM) - Online
+                Lab Sessions for both AD5 & OD5 ⏰ MW 6:00-6:50 PM - Online
               </div>
             </div>
 
@@ -67,7 +67,7 @@ export default function Home() {
 
       <div className={cx('row', 'section')}>
         <div className="col-md-3">
-          <h2>🎥 Lecture Videos</h2>
+          <h2>🎞️ Lecture Videos</h2>
         </div>
 
         <div className="col-md-9">
@@ -121,14 +121,14 @@ export default function Home() {
             </div>
 
             <div className="col-md-6">
-              <h3>Email</h3>
+              <h3>Email 📧</h3>
               <a href="mailto:ypark32@illinois.edu">ypark32@illinois.edu</a>
             </div>
           </div>
 
           <div className={cx('row', 'topSpacing')}>
             <div className="col-md-6">
-              <h3>Office Hours</h3>
+              <h3>Office Hours ⏰</h3>
               Thursdays 4-5 PM
             </div>
 
@@ -158,7 +158,7 @@ export default function Home() {
             </div>
 
             <div className="col-md-6">
-              <h3>Email</h3>
+              <h3>Email 📧</h3>
               <a href="mailto:zllu2@illinois.edu">zllu2@illinois.edu</a>
             </div>
           </div>
@@ -178,14 +178,14 @@ export default function Home() {
             </div>
 
             <div className="col-md-6">
-              <h3>Email</h3>
+              <h3>Email 📧</h3>
               <a href="mailto:myip5@illinois.edu">myip5@illinois.edu</a>
             </div>
           </div>
 
           <div className={cx('row', 'topSpacing')}>
             <div className="col-md-6">
-              <h3>Office Hours</h3>
+              <h3>Office Hours ⏰</h3>
               Mondays 11 AM – 12 PM
             </div>
 
@@ -273,7 +273,7 @@ export default function Home() {
 
         <div className="col-md-9">
           <p>
-            I will grade attendance. It's only to incentivize you to not fall
+            I will grade attendance 🦉. It's only to incentivize you to not fall
             behind. Building a solid foundation in 570 will enable you to excel
             in other data analytics courses.
           </p>
@@ -295,16 +295,19 @@ export default function Home() {
 
         <div className="col-md-9">
           <p>
-            Normally, your participation grades would be based on two criteria.
+            Normally, your participation grades would be based on three
+            criteria.
           </p>
           <ol>
-            <li>Participation in discussion</li>
-            <li>Participation in in-class exercises</li>
+            <li>🙋🏽‍♂️Participation in discussions</li>
+            <li>👩🏼‍🔬 Participation in in-class exercises</li>
+            <li>🤹🏻 Participation in group assignments</li>
           </ol>
           <p>
             Since our class structure (simultaneous in-person and Zoom-delivery)
             makes it diffcult to facilitate discussions, your participation
-            grade will be mostly based on #2 (in-class exercises).
+            grade will be mostly based on #2 and #3 (in-class exercises and
+            groupa assignments).
           </p>
         </div>
       </div>
@@ -358,7 +361,7 @@ export default function Home() {
 
         <div className="col-md-6">
           <p>
-            This class is accompanied by{' '}
+            This course is accompanied by{' '}
             <strong>
               <a href="https://www.datacamp.com/">DataCamp</a>
             </strong>

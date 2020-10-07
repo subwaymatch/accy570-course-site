@@ -1,0 +1,16 @@
+text: |
+  What is the output of the following code? 🍍
+
+  ```python
+  l = ["570", "575", "515"]
+  course = [int(i[1]) for i in l]
+  print(course)
+  ```
+options:
+  - '`"570"` (`str` type)'
+  - '`"575"` (`str` type)'
+  - "`575` (`int` type)"
+  - "`[7, 7, 1]` (`list` type)[o]"
+  - "`[575, 575, 575]` (`list` type)"
+explanation: |
+  We'll discuss the solution together.

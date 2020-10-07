@@ -1,0 +1,21 @@
+text: |
+  What is the output of the following code? 🍊
+
+  ```python
+  my_dict = {
+      10: 1,
+      20: 2,
+      30: 3
+  }
+
+  v = sum(my_dict.values())
+  print(v)
+  ```
+options:
+  - "`0`"
+  - "`3`"
+  - "`6`[o]"
+  - "`60`"
+  - "`66`"
+explanation: |
+  We'll discuss the solution together.
