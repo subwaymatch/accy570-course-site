@@ -1,0 +1,7 @@
+title: "Visualizations: Pie Charts and Heat Maps"
+description: Pie Charts are just like... pies! Heat maps is a very cool type of visualization. But what does it do?
+modules:
+  - announcements
+  - pivot-tables
+  - pie-charts
+  - heat-maps
