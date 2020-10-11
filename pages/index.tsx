@@ -307,7 +307,7 @@ export default function Home() {
             Since our class structure (simultaneous in-person and Zoom-delivery)
             makes it diffcult to facilitate discussions, your participation
             grade will be mostly based on #2 and #3 (in-class exercises and
-            groupa assignments).
+            group assignments).
           </p>
         </div>
       </div>
