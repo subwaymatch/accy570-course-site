@@ -4,3 +4,4 @@ modules:
   - announcements
   - heatmaps
   - location-based-maps
+  - summary
