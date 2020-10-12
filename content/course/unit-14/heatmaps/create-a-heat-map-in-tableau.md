@@ -17,19 +17,15 @@ Let's create a heat map of LA traffic collision with shapes.
 - `Time slot` is our rows.
 - The number of records determines the size of our shape. ◾️◼️⬛️
 
-Drag `LA–traffic-collision-data-from-2010-to-present.xlsx` into Tableau. Since the file is large, you will only see the column headers. Click on "Update Now" to load the data. this will take up to a few minutes.
+Drag `LA–traffic-collision-data-from-2010-to-present-condensed.csv` into Tableau. Once the data is loaded, click on "Sheet 1" at the bottom.
 
 ![https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/tableau-hm-example-01-load-data.png](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/tableau-hm-example-01-load-data.png)
-
-Once the data is loaded, click on "Sheet 1" at the bottom.
-
-![https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/tableau-hm-example-02-go-to-sheet.png](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/tableau-hm-example-02-go-to-sheet.png)
 
 Drag `Day` into the _Columns_ pane and `Time Slot` into the _Rows_ pane.
 
 ![https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/tableau-hm-example-03-drag-variables.png](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/tableau-hm-example-03-drag-variables.png)
 
-Drag `LA traffic-collision-data-from- (Count)` into the _Size_ box in the _Marks_ pane.
+Drag `LA traffic-collision-data... (Count)` into the _Size_ box in the _Marks_ pane.
 
 ![https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/tableau-hm-example-04-drag-count-into-size.png](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/tableau-hm-example-04-drag-count-into-size.png)
 
@@ -37,7 +33,7 @@ Cool, huh? 🐵
 
 ![https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/tableau-hm-example-05-intermediate-result.png](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/tableau-hm-example-05-intermediate-result.png)
 
-**(Optional) Steps from here are optional.** What if you want to use a different color? First, drag `LA traffic-collision-data-from- (Count)` into the _Color_ box in the _Marks_ pane. This adds a gradient to your shapes based on counts.
+**(Optional) Steps from here are optional.** What if you want to use a different color? First, drag `LA traffic-collision-data... (Count)` into the _Color_ box in the _Marks_ pane. This adds a gradient to your shapes based on counts.
 
 ![https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/tableau-hm-example-06-drag-count-into-color.png](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/tableau-hm-example-06-drag-count-into-color.png)
 
