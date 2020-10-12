@@ -12,7 +12,7 @@ Let's create a heat map of LA traffic collision with shapes.
 
 ![https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/two-cars-after-collision-illustration@2x.png](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/two-cars-after-collision-illustration@2x.png)
 
-- Use `LA–traffic-collision-data-from-2010-to-present.xlsx`.
+- Use `LA–traffic-collision-data-from-2010-to-present-condensed.csv`.
 - `Day` (day of the week) is our columns.
 - `Time slot` is our rows.
 - The number of records determines the size of our shape. ◾️◼️⬛️
