@@ -1,0 +1,6 @@
+title: "Visualizations: Heat Maps (continued) and Location-based Maps"
+description: We discuss another type of heat map using shapes. We also see how easy it is to create a geographic map visualization in Tableau.
+modules:
+  - announcements
+  - heatmaps
+  - location-based-maps

@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <LiveSessionBar show={true} />
+      <LiveSessionBar show={false} />
 
       <div className={styles.headerMenuWrapper}>
         <nav className={cx('headerMenu')}>
