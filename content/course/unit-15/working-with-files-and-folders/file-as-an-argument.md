@@ -18,7 +18,7 @@ If you're on a Mac:
 
 ```python
 import os
-os.path.exists('/users/park/downloads/dog.xlsx')
+os.path.exists('/users/park/Downloads/dog.xlsx')
 ```
 
 If you're on Windows:

@@ -11,7 +11,7 @@ title: File Path ⚓️
 Assume, you're working with the primary drive on your computer (i.e., not a USB drive, SD card, or external hard drives).
 
 - **On Windows**: The root folder is usually `C:\` 💾.
-- **On Mac**: The root foler is `/` (yes, that's a single forward slash) 🧰.
+- **On Mac**: The root folder is `/` (yes, that's a single forward slash) 🧰.
 
 You often need to know your _username_. Sometimes, your operating system may have already chosen one for you! To find your username, run the following code on your Jupyter notebook.
 
