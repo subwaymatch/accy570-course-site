@@ -1,0 +1,17 @@
+text: |
+  Say I have the following data in my CSV file:
+
+  ```
+  A,B,C
+  1,2,3
+  5,Z,5
+  8,8,8
+  ```
+
+  True or False: This is a clean CSV file.
+
+options:
+  - "`True`"
+  - "`False`[o]"
+explanation: |
+  The second column has mixed data types of numbers and strings (`2`, `Z`, `8`).

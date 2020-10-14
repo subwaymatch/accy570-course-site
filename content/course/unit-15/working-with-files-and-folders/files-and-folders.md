@@ -1,5 +1,8 @@
 ---
 title: Files and folders 📂
+questions:
+  - multiple-choice/directory-folder-synonyms-01
+  - multiple-choice/subfolders-and-files-01
 ---
 
 **Files 🗄️**

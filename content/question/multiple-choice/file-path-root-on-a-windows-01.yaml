@@ -1,0 +1,6 @@
+text: On most Windows computers, the root folder of the primary drive is `E:\`.
+options:
+  - "`True`"
+  - "`False`[o]"
+explanation: |
+  The root folder of the primary driver is usually `C:\`.

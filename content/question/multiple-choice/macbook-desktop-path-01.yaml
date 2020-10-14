@@ -1,0 +1,9 @@
+text: Ramail owns a MacBook Pro and his username is `ramail`. Ramail is browsing the web and saves a file named `GetRichQuickTradingStocks.pdf`. His web browser saves the file to his downloads folder. What is the full path of the file **after he has moved it to his desktop?**
+options:
+  - "`/Users/ramail/Desktop/GetRichQuickTradingStocks.pdf`[o]"
+  - "`/GetRichQuickTradingStocks.pdf`"
+  - "`/Users/ramail/GetRichQuickTradingStocks.pdf`"
+  - "`/Users/ramail/Downloads/GetrickQuickTradingStocks.pdf`"
+  - "`/Users/ramail/Desktop`"
+explanation: |
+  The path to a user's desktop is `/Users/username/Desktop`.

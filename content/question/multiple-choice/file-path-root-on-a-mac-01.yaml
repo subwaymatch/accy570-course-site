@@ -1,0 +1,7 @@
+text: Sangmin saves the file `cat.csv` 🐱 to the **root folder** of his Mac. Assume Sangmin's username is `sangmin`. What is the full path of this file?
+options:
+- "`/Users/sangmin/cat.csv`"
+- "`/Users/sangmin/Downloads/cat.csv`"
+- "`/cat.csv`[o]"
+explanation: |
+  The root directory of a Mac is `/`.

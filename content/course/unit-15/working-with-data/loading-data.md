@@ -18,6 +18,8 @@ Loading data is the process of importing data from somewhere into a software pac
 - Power BI
 - Tableau
 
+![https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/analytics-software-cat-ai-robot-01-resized.png](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/analytics-software-cat-ai-robot-01-resized.png)
+
 The software you use will often automate the process of importing the data. **However, lots of data are dirty.** Your task is to learn and clean them! 🧹
 
 Imagine you are given a column of dates. The first few dates are:

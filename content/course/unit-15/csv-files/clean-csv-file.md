@@ -1,5 +1,8 @@
 ---
 title: A "Clean" CSV file ✨
+questions:
+  - multiple-choice/is-clean-csv-file-01
+  - multiple-choice/is-clean-csv-file-02
 ---
 
 There are two characteristics of a "clean" CSV file.

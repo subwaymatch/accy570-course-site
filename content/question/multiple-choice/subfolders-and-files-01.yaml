@@ -1,0 +1,6 @@
+text: A folder can contain subfolders and files.
+options:
+  - "`True`[o]"
+  - "`False`"
+explanation: |
+  Yes, a folder can contain other folders and files.

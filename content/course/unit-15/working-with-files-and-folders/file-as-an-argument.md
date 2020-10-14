@@ -1,5 +1,7 @@
 ---
 title: Passing a file to function as an argument 🦌
+questions:
+  - multiple-choice/macbook-desktop-path-01
 ---
 
 Assume that your username is `park`. Again, you can get your username by using the code below.

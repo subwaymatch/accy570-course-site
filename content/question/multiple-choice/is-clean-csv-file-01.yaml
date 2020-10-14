@@ -1,0 +1,16 @@
+text: |
+  Say I have the following data in my CSV file:
+
+  ```
+  A,B,C
+  1,2,3
+  5,5,5
+  8,8,8,10
+  ```
+  True or False: This is a clean CSV file.
+
+options:
+  - "`True`"
+  - "`False`[o]"
+explanation: |
+  The last row has 4 columns while all other rows have 3 columns.

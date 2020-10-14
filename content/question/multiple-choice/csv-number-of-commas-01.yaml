@@ -1,0 +1,19 @@
+text: |
+  Say I have the following data in my CSV file:
+
+  ```
+  | A | B | C |
+  |---|---|---|
+  | 1 | 2 | 3 |
+  | 5 | 5 | 5 |
+  | 8 | 8 | 8 |
+  ```
+
+  You decide to save this data as a CSV file. How many commas will be in your CSV file? In other words, if you open the CSV file in a text editor and count the commas, how many will there be?
+options:
+  - "3"
+  - "4"
+  - "8[o]"
+  - "12"
+explanation: |
+  There are 2 commas per row * 4 rows.

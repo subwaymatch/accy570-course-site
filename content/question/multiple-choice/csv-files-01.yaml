@@ -1,0 +1,9 @@
+text: |
+  Which of the following statements are true?
+options:
+  - "CSV files are Excel files."
+  - "CSV files are text files.[o]"
+  - "On a Windows PC, Excel is usually the default program used to open CSV files (assume Excel is installed).[o]"
+  - "Only old grandparents use CSV files. No techie would use a CSV file. 🐒"
+explanation: |
+  CSV files are text files, not Excel files. Assuming you have Excel installed, Excel is usually the default program to open up CSV files.

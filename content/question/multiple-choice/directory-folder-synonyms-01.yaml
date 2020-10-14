@@ -1,0 +1,6 @@
+text: The words "directory" and "folder" can be thought of synonyms.
+options:
+  - "`True`[o]"
+  - "`False`"
+explanation: |
+  You can think of them as synonyms. There are technical differences, but not for the purpose of this couse.

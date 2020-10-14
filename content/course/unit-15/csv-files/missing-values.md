@@ -1,5 +1,5 @@
 ---
-title: Missing Values
+title: Missing Values 🐽
 ---
 
 Excel Spreadsheet:

@@ -1,0 +1,18 @@
+text: |
+  Say I have the following data in my CSV file:
+
+  ```
+  | A | B | C |
+  |---|---|---|
+  | 1 | 2 | 3 |
+  | 5 | 5 | 5 |
+  | 8 | 8 | 8 |
+  ```
+
+  What will the **first row** of the CSV file be?
+
+options:
+  - "`A,B,C`[o]"
+  - "`1,2,3`"
+explanation: |
+  The first row is the header row, which is `A,B,C`.

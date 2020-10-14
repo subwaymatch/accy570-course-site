@@ -1,5 +1,8 @@
 ---
 title: File Path ⚓️
+questions:
+  - multiple-choice/file-path-root-on-a-windows-01
+  - multiple-choice/file-path-root-on-a-mac-01
 ---
 
 - Every file has only one "parent" folder. The "child" folder is also known as a subfolder.
