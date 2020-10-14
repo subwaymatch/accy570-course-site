@@ -1,0 +1,7 @@
+title: "Intro to Working with Data Files and File Systems"
+description: Before jumping onto Pandas, we need to understand how file paths works. Also, what are CSV files? Are they just another format of Excel spreadsheets?
+modules:
+  - announcements
+  - working-with-data
+  - working-with-files-and-folders
+  - csv-files

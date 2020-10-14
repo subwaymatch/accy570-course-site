@@ -1,0 +1,7 @@
+title: Working with Files and Folders
+pages:
+  - what-you-are-thinking
+  - files-and-folders
+  - file-path
+  - file-as-an-argument
+  - current-working-directory-in-jupyter
