@@ -1,0 +1,7 @@
+title: "Overview of Pandas"
+description: Finally, we're going to start using Pandas! 🐼 Just wait and see how powerful the Pandas module is.
+modules:
+  - announcements
+  - overview-of-pandas
+  - pandas-dataframe
+  - working-with-a-dataframe

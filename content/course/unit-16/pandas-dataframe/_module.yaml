@@ -1,0 +1,6 @@
+title: Pandas DataFrame
+pages:
+  - import-pandas
+  - dataframe-vs-excel-worksheets
+  - what-is-a-pandas-series
+  - create-a-dataframe-from-scratch
