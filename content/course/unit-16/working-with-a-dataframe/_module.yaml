@@ -6,4 +6,5 @@ pages:
   - create-a-dataframe-from-a-dict
   - row-indices
   - retrieve-a-single-value-with-custom-labels
+  - head-tail-sample
   - getting-the-dimension-of-a-dataframe
