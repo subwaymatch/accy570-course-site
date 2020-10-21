@@ -1,0 +1,8 @@
+title: Importing an Excel File
+pages:
+  - overview
+  - excel-hierarchy
+  - pandas-read-excel
+  - in-class-exercise-multiple-worksheets
+  - in-class-exercise-missing-header-row
+  - in-class-exercise-skipping-rows

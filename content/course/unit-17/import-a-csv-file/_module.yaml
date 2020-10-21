@@ -1,0 +1,9 @@
+title: Importing a CSV file
+pages:
+  - overview
+  - similarities-and-differences-between-read-csv-excel
+  - accounting-number-strings
+  - pandas-string-functions
+  - in-class-exercise-clean-accounting-numbers
+  - convert-date-strings-to-dates
+  - final-in-class-exercise

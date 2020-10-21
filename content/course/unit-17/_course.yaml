@@ -1,0 +1,7 @@
+title: 'Loading Data with Pandas'
+description: Last time, we looked at what DataFrames are. 🐼 Today, we discuss ways to load and clean Excel and CSV files.
+modules:
+  - announcements
+  - load-data
+  - import-an-excel-file
+  - import-a-csv-file
