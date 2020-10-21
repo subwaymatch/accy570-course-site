@@ -9,3 +9,9 @@ Today, we discuss how we can load data into a `DataFrame`. Common data sources i
 - Excel
 - CSV files
 - Databases
+
+Go to the terminal or command line where you would open up JupyterLab (Anaconda Prompt on Windows or Terminal on Mac). Type in the following command:
+
+```bash
+conda install -c conda-forge xlrd xlsxwriter openpyxl
+```
