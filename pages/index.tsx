@@ -299,7 +299,7 @@ export default function Home() {
             criteria.
           </p>
           <ol>
-            <li>🙋🏽‍♂️Participation in discussions</li>
+            <li>🙋🏽‍♂️ Participation in discussions</li>
             <li>👩🏼‍🔬 Participation in in-class exercises</li>
             <li>🤹🏻 Participation in group assignments</li>
           </ol>
