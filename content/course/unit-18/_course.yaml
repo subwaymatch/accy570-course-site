@@ -1,0 +1,7 @@
+title: 'Selecting and filtering data with Pandas'
+description: One of the most useful features of Pandas is the ability to quickly select only the columns you want. You can also filter rows with a few lines of code ⛏.
+modules:
+  - announcements
+  - selecting-and-filtering-data
+  - test-value-in-a-series
+  - working-with-missing-values
