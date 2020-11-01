@@ -193,7 +193,7 @@ const events = [
     text: 'After Class Exercise #12 due by 11:59pm',
   },
   {
-    date: '1030',
+    date: '1101',
     type: ScheduleType.Midterm,
     text: 'Midterm Project due by 11:59pm',
   },
