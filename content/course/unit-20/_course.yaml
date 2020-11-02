@@ -1,4 +1,4 @@
-title: 'Midterm Project Workday'
-description: Lecture 19 is a full workday for the midterm project.
+title: 'Missing Values and Creating New Columns'
+description: How do we create new columns? Creating new columns - either from scratch or by transforming other columns is a frequently used operation in data analysis.
 modules:
   - announcements
