@@ -1,0 +1,4 @@
+title: 'Sorting and Modifying Data'
+description: While sorting may seem straightforward, you may encounter complex cases. How do you sort by multiple columns? How do you sort in ascending/descending orders? We also go over how to drop/rename columns and concatenate DataFrames.
+modules:
+  - announcements
