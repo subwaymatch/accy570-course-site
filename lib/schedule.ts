@@ -218,7 +218,7 @@ const events = [
     text: 'Sorting and modifying data in Pandas',
   },
   {
-    date: '1105',
+    date: '1106',
     type: ScheduleType.AfterClassAssignment,
     text: 'After Class Exercise #14 due by 11:59pm',
   },
