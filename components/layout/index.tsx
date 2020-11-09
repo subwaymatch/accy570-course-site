@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
 import { ToastContainer } from 'react-toastify';
 import Footer from '../footer';
@@ -28,6 +29,14 @@ export default function Layout({
   if (backgroundColor) {
     mainStyle.backgroundColor = backgroundColor;
   }
+
+  useEffect(() => {
+    (window as any).MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+      },
+    };
+  }, []);
 
   return (
     <>

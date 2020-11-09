@@ -17,9 +17,7 @@ Keep in mind that we are barely scratching the surface. There's so much more to 
 
 - Some employees are paid more than others.
 - What is the mean salary?
-- If there are \(a \ne 0\) employees, and the salary of $i$-th employee is $x_{i}$:
-
-\(a \ne 0\)
+- If there are \\(n\\) employees, and the salary of \\(i\\)-th employee is \\(x\_{i}\\):
 
 $$\mu = {\frac {\sum _{i=1}^{n}x_i}{n}}$$
 
