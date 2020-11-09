@@ -1,5 +1,5 @@
 ---
-title: What is descriptive statistics?
+title: What is descriptive statistics? 📑
 ---
 
 - After you loaded and cleaned your data, you typically explore it.

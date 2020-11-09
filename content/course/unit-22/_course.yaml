@@ -3,3 +3,4 @@ description: Finally, it's time to analyze data! To be precise, we did some data
 modules:
   - announcements
   - descriptive-statistics
+  - mean-median-corr

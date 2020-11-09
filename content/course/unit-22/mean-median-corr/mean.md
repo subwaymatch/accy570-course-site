@@ -1,5 +1,8 @@
 ---
-title: Mean (Average)
+title: Mean (Average) 🦒
+questions:
+  - multiple-choice/mean-of-five-numbers-01
+  - multiple-choice/mean-of-five-numbers-02
 ---
 
 First, let's create a histogram of all employees' annual salaries (`chicago-payroll.csv` file).

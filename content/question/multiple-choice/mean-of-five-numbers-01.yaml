@@ -1,0 +1,14 @@
+text: |
+  What is the mean of the following 5 numbers?
+
+  ```
+  1, 2, 3, 4, 5
+  ```
+options:
+  - 1
+  - 2
+  - 3[o]
+  - 4
+  - 5
+explanation: |
+  Sum of the 5 numbers is 15. 15 divided by 5 is 3.

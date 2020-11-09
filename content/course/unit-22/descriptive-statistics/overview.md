@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: Overview 🧟
 ---
 
 - **Descriptive Statistics (today)**

@@ -1,0 +1,13 @@
+text: |
+  What is the mean of the following 5 numbers?
+
+  ```
+  1, 2, 3, 4, 90
+  ```
+options:
+  - 3
+  - 5
+  - 20[o]
+  - 30
+explanation: |
+  Sum of the 5 numbers is 100. 100 divided by 5 is 20.

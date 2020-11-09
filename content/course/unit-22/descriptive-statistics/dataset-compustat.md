@@ -1,5 +1,5 @@
 ---
-title: Dataset - Compustat
+title: Dataset - Compustat 🗽
 ---
 
 - For all U.S. companies in 2018

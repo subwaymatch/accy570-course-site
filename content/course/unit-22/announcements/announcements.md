@@ -3,7 +3,9 @@ title: Announcements 📣
 ---
 
 - 📐 Quiz 5 due Wednesday 3:30 PM (right before our class).
-- 📚 After-class exercise #14 due Thursday 11:59 PM.
-- 📰 Problem Set #3 will be posted on Friday (you'll have a week to work on it).
+- 📚 After-class exercise #15 due Tuesday at 11:59 PM CST
+- 📰 Problem Set #3 due Friday at 11:59 PM CST
+- 📊 Graded midterm will be returned this week.
+- 📚 After-class exercise #14 submissions have been graded and updated on Compass (no feedback file).
 - 🎯 Today, we only work with a Jupyter notebook. The solution file is already posted.
-- 📊 If you have any undergraduate friends who may be interested in Data Analytics, Data Visualization, or Python, I am teaching a new course - BDI 475 Introduction to Data Analytics Applications in Business. I'm going to upload the course outline to [https://bdi475.org/](https://bdi475.org/) soon.
+- 👊 Today, we come back to the course website!
