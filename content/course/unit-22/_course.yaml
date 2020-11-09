@@ -1,0 +1,5 @@
+title: 'Descriptive Statistics'
+description: Finally, it's time to analyze data! To be precise, we did some data analysis with data visualization. But for the most part, we've familiarized ourselves with Python and Pandas to prepare the data for analysis.
+modules:
+  - announcements
+  - descriptive-statistics
