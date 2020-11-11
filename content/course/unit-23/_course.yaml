@@ -1,0 +1,4 @@
+title: 'Pivot Tables'
+description: A pivot table computes something for unique values. This may sound vague, but that's all there is to it. We walk through the powerful pivot table feature in both Python and Excel.
+modules:
+  - announcements
