@@ -1,5 +1,8 @@
 ---
 title: Regression in Python 📯
+questions:
+  - multiple-choice/regression-in-python-01
+  - multiple-choice/regression-in-python-02
 ---
 
 There are lots of available packages. We use `statsmodels`.

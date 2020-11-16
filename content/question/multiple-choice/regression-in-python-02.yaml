@@ -1,0 +1,7 @@
+text: |
+  Given the `statsmodel` formula `price ~ total_sqft` what is the independent variable?
+options:
+  - '`price`'
+  - '`total_sqft`[o]'
+explanation: |
+  The independent variables are on the right side of the model equation.

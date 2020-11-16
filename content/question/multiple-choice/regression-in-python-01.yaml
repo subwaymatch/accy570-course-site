@@ -1,0 +1,7 @@
+text: |
+  Given the `statsmodel` formula `price ~ num_bedrooms` what is the dependent variable?
+options:
+  - '`price`[o]'
+  - '`num_bedrooms`'
+explanation: |
+  The dependent variable is on the left side of the model equation.

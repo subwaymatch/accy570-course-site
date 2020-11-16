@@ -2,10 +2,10 @@
 title: Announcements 📣
 ---
 
-- 📝 Midterm Team Contribution Survey
+- 📝 Midterm Team Contribution Survey [Link Here](https://uiuc.qualtrics.com/jfe/form/SV_884i8SEZtZwIBHT)
 - 📚 After-class Exercise #17 due Tuesday 11/17 end of the day.
 - 🐥 Quiz 6 due Tuesday 11/17 end of the day
-  - Summary of topics to be posted as well
+  - [Summary of topics](https://www.notion.so/accy570/Quiz-6-5e8f4ffe85684b85afa060d321eb71a5)
 - 📰 Problem Set 4
   - Will be released this week
   - **We don't want you to work during the break.**
