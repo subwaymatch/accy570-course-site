@@ -8,8 +8,8 @@ Python Code:
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
 
-results = smf.ols('mpg ~ weight + C(origin)', data=df).fit()
-print(results.summary())
+model_weight_origin = smf.ols('mpg ~ weight + C(origin)', data=df).fit()
+print(model_weight_origin.summary())
 ```
 
 - Notice the `C()` around `origin`.

@@ -14,6 +14,6 @@ Python code:
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
 
-results = smf.ols('mpg ~ weight + horsepower', data=df).fit()
-print(results.summary())
+model_weight_hp = smf.ols('mpg ~ weight + horsepower', data=df).fit()
+print(model_weight_hp.summary())
 ```
