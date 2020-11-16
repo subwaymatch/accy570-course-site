@@ -4,6 +4,8 @@ title: First Regression Example 🎳
 
 Our first dataset is the "Auto MPG Data Set". 🚘
 
+![https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/isometric-car-illustration-001_tn.jpg](https://accy570-fa2020-course-site-assets.s3-us-west-2.amazonaws.com/images/isometric-car-illustration-001_tn.jpg)
+
 - It contains data on cars from the 1970's and 1980's.
 - There are 398 rows and 9 columns.
 - It's maintained by UC Irvine Machine Learning Repository ([link here](https://archive.ics.uci.edu/ml/datasets/Auto%2BMPG)).
