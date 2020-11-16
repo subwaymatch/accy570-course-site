@@ -1,0 +1,9 @@
+title: 'Regression'
+description: You have probably taken some sort of a Statistics course. We provide a refresher on your regression knowledge.
+modules:
+  - announcements
+  - regression
+  - multiple-regression
+  - categorical-and-indicator-variables
+  - forecasting
+  - post-class
