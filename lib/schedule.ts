@@ -248,7 +248,7 @@ const events = [
     text: 'Problem Set #3 due by 11:59pm',
   },
   {
-    date: '1116',
+    date: '1117',
     type: ScheduleType.Quiz,
     text: 'Quiz 6',
   },
