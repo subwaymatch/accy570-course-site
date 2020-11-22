@@ -33,7 +33,7 @@ sys.stderr = io.StringIO()`);
 
           this.isLoaded = true;
 
-          resolve();
+          resolve(null);
         })
         .catch((err) => {
           reject(err);
