@@ -1,0 +1,8 @@
+text: Which of the following task characteristics are best suited for RPA?
+options:
+  - High volume tasks[o]
+  - Repetitive tasks[o]
+  - Tasks involving human judgment
+  - Rule-based tasks[o]
+explanation: |
+  Human judgment is not suited for an automation.

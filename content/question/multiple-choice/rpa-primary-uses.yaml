@@ -1,0 +1,8 @@
+text: Which of the following is **NOT** a primary use of RPA?
+options:
+  - Data movement
+  - Personalized tasks[o]
+  - Data processing
+  - Digital enablement
+explanation: |
+  Personalized tasks cannot be processed by a software since it requires human inputs.
