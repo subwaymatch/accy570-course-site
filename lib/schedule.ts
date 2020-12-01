@@ -290,7 +290,7 @@ const events = [
     text: 'UiPath software for RPA',
   },
   {
-    date: '1202',
+    date: '1203',
     type: ScheduleType.ProblemSet,
     text: 'Problem Set #4 due by 11:59pm',
   },
